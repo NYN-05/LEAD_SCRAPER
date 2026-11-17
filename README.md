@@ -1,3 +1,4 @@
+
 # LEAD_SCRAPER
 
 <p align="center">
@@ -151,18 +152,18 @@ flowchart TD
 
 - Windows with PowerShell, or another environment capable of running Python.
 - Python **3.10 or later**.
+- Git for cloning the repository.
 - Internet access for public search and collection sources.
 - Approved API credentials in `.env` where required.
 - Playwright Chromium for browser-based collection.
 
 ## Installation
 
-### 1. Open the project directory
-
-Update the path below if the project is stored elsewhere.
+### 1. Clone the repository and open the project directory
 
 ```powershell
-cd C:\Users\JHASHANK\Downloads\AKSHARA_ASSIGNMENT
+git clone https://github.com/NYN-05/LEAD_SCRAPER.git
+cd LEAD_SCRAPER
 ```
 
 ### 2. Create and activate a virtual environment
