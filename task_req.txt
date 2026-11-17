@@ -1,0 +1,32 @@
+Please build a Web Scraper with three lead scraping tools, as outlined below.
+Tool 1: Google Maps Lead Scraper
+Input: keyword + location (e.g., “photography studio Bengaluru”)
+Output: business name, category, address, phone, website, rating, reviews, Maps URL
+Handle scrolling and pagination, and remove duplicates
+Tool 2: LinkedIn and Instagram Profile Scraper
+Input: profile URLs, or a keyword/hashtag/location search that returns profiles
+LinkedIn profile data: name, headline, current company, location, about, profile URL
+Instagram profile data: username, full name, bio, followers, following, post count, email/phone in bio, profile URL
+Use delays, rate limiting and proxy rotation to avoid blocks
+Tool 3: Photography Leads Scraper
+Find people searching for or interested in photography services
+Capture: name/handle, source link, intent post or query, location, public contact
+Tag each lead as Hot, Warm or Cold
+Tech Stack
+Language: Python 3.10+
+Scraping: Playwright (dynamic pages), Beautiful Soup/Requests (static pages), Scrapy (optional, for crawling)
+Anti-blocking: rotating proxies, user-agent rotation, random delays
+Data: Pandas, regex for phone/email extraction
+Storage: SQLite, with CSV/Excel export
+UI: Streamlit or Flask dashboard with one tab per tool
+Rules
+Scrape public data only, and respect robots.txt and platform terms.
+Prefer official APIs where available, and do not store private data.
+Timeline (Deadline: Tuesday, 17 Nov)
+Sat–Sun: Google Maps scraper and photography leads scraper
+Mon: LinkedIn and Instagram profile scraper
+Tue: Dashboard, testing, and final submission
+Deliverables
+GitHub repo with working code
+README with setup and usage steps
+Sample output files (100+ leads per tool)
