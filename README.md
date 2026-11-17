@@ -116,23 +116,23 @@ subgraph group_discovery["Lead discovery"]
   node_photo["Photography collectors<br/>[scrapers.py]"]
 end
 
-subgraph group_processing["Processing and configuration"]
-  node_settings["Configuration<br/>[config.py]"]
+subgraph group_processing["Photography processing"]
+  node_config["Configuration<br/>[config.py]"]
   node_normalize["Post normalization<br/>[processing.py]"]
   node_classify["Lead classification<br/>[processing.py]"]
   node_score["Lead scoring<br/>[processing.py]"]
 end
 
-subgraph group_persistence["Persistence and exports"]
-  node_database_api["Database and exports<br/>[storage.py]"]
+subgraph group_persistence["Storage and exports"]
+  node_storage["Database and exports<br/>[storage.py]"]
   node_sqlite[("SQLite database<br/>[leads.db]")]
   node_exports["CSV JSON Excel<br/>[storage.py]"]
 end
 
 node_user(("User"))
-node_public_sources{{"Public sources"}}
-node_search_providers{{"Search providers"}}
 node_maps_service{{"Google Maps"}}
+node_search{{"Search providers"}}
+node_public_sources{{"Public post sources"}}
 
 node_user -->|"runs command"| node_cli
 node_user -->|"uses dashboard"| node_dashboard
@@ -142,33 +142,33 @@ node_cli -->|"runs collectors"| node_photo
 node_dashboard -->|"starts collection"| node_maps
 node_dashboard -->|"starts collection"| node_social
 node_dashboard -->|"starts collection"| node_photo
+node_cli -->|"loads settings"| node_config
 node_maps -->|"collects listings"| node_maps_service
-node_social -->|"searches profiles"| node_search_providers
+node_social -->|"searches profiles"| node_search
 node_photo -->|"collects posts"| node_public_sources
-node_cli -->|"loads settings"| node_settings
+node_photo -->|"submits posts"| node_normalize
 node_cli -->|"normalizes posts"| node_normalize
 node_cli -->|"classifies posts"| node_classify
 node_cli -->|"scores leads"| node_score
-node_photo -->|"submits posts"| node_normalize
-node_normalize -->|"feeds normalized posts"| node_classify
+node_normalize -->|"feeds posts"| node_classify
 node_classify -->|"provides classification"| node_score
-node_cli -->|"persists results"| node_database_api
-node_maps -->|"stores listings"| node_database_api
-node_social -->|"stores profiles"| node_database_api
-node_dashboard -->|"reads stored data"| node_database_api
-node_database_api -->|"reads and writes"| node_sqlite
-node_database_api -->|"writes exports"| node_exports
+node_cli -->|"persists results"| node_storage
+node_maps -->|"stores listings"| node_storage
+node_social -->|"stores profiles"| node_storage
+node_dashboard -->|"reads stored data"| node_storage
+node_storage -->|"reads and writes"| node_sqlite
+node_storage -->|"writes exports"| node_exports
 
 click node_cli "https://github.com/nyn-05/lead_scraper/blob/main/main.py"
 click node_dashboard "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/dashboard.py"
+click node_config "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/config.py"
 click node_maps "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/scrapers.py"
 click node_social "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/scrapers.py"
 click node_photo "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/scrapers.py"
-click node_settings "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/config.py"
 click node_normalize "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/processing.py"
 click node_classify "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/processing.py"
 click node_score "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/processing.py"
-click node_database_api "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/storage.py"
+click node_storage "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/storage.py"
 click node_sqlite "https://github.com/nyn-05/lead_scraper/blob/main/data/leads.db"
 click node_exports "https://github.com/nyn-05/lead_scraper/blob/main/lead_scraper/storage.py"
 
@@ -181,9 +181,9 @@ classDef toneIndigo fill:#e0e7ff,stroke:#4f46e5,stroke-width:1.5px,color:#312e81
 classDef toneTeal fill:#ccfbf1,stroke:#0f766e,stroke-width:1.5px,color:#134e4a
 class node_cli,node_dashboard,node_user toneBlue
 class node_maps,node_social,node_photo toneAmber
-class node_settings,node_normalize,node_classify,node_score toneMint
-class node_database_api,node_sqlite,node_exports toneRose
-class node_public_sources,node_search_providers,node_maps_service toneIndigo
+class node_config,node_normalize,node_classify,node_score toneMint
+class node_storage,node_sqlite,node_exports toneRose
+class node_maps_service,node_search,node_public_sources toneIndigo
 ```
 
 ### Module responsibilities
