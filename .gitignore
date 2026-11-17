@@ -1,0 +1,60 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# SQLite temporary files (data/leads.db itself is intentionally tracked)
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Playwright / browser test artifacts
+test-results/
+playwright-report/
+.playwright/
+
+# Logs and tooling caches
+*.log
+.npm-cache/
+structure.txt
+
+# Editors and operating systems
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local scratch files
+*.tmp
+*.bak
+scratch/
+tmp/
+
+# Sample exports and the seeded SQLite database are intentionally tracked:
+# output/**, data/leads.db, README.md, and the source/test files.
