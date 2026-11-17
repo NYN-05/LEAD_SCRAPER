@@ -48,11 +48,11 @@ The project includes a Streamlit dashboard, a shared SQLite database, and CSV, J
 
 ## Project overview
 
-| Tool | Purpose | Main information collected |
-| --- | --- | --- |
-| **Google Maps** | Find businesses matching a keyword and location | Business name, category, address, phone, website, rating, review count, and Maps URL |
-| **LinkedIn** | Discover public professional profiles | Name, headline, current company, location, About excerpt, and profile URL |
-| **Instagram** | Discover public creator and business profiles | Username, full name, bio, follower/following/post counts, public email/phone values, and profile URL |
+| Tool                        | Purpose                                                   | Main information collected                                                                                       |
+| --------------------------- | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Google Maps**       | Find businesses matching a keyword and location           | Business name, category, address, phone, website, rating, review count, and Maps URL                             |
+| **LinkedIn**          | Discover public professional profiles                     | Name, headline, current company, location, About excerpt, and profile URL                                        |
+| **Instagram**         | Discover public creator and business profiles             | Username, full name, bio, follower/following/post counts, public email/phone values, and profile URL             |
 | **Photography leads** | Identify public expressions of photography-service intent | Author/handle, post URL, post content, location when explicitly stated, intent evidence, and lead classification |
 
 The social-profile collectors use public search-result snippets rather than logged-in profile pages. Missing information remains blank instead of being inferred or fabricated. Records include `verification`, `data_quality`, and `field_status` labels to make extraction limitations visible.
@@ -61,12 +61,12 @@ The social-profile collectors use public search-result snippets rather than logg
 
 The sample exports in `output/` were generated on **17 November 2026**. Counts may vary between runs because public search results and archives change.
 
-| Tool | Sample result | Collection notes |
-| --- | --- | --- |
-| Google Maps | **105 unique Bengaluru photography listings** | 120 candidates were requested; 105 valid unique rows remained after extraction failures and URL deduplication. |
-| LinkedIn | **100 unique profiles** | 99 names/headlines, 50 current companies, 27 locations, and 67 public About excerpts. One URL-only record is retained and labeled `url_only_unverified`. |
-| Instagram | **100 unique profiles** | 95 full names/bios, 96 follower/following/post-count sets, and 28 public email/phone values. |
-| Photography | **111 qualified leads** | All Hot; 111 unique post URLs; no duplicate author/title crossposts; 27 titles name a location; drawn from 2,009 stored public posts. |
+| Tool        | Sample result                                       | Collection notes                                                                                                                                           |
+| ----------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Google Maps | **105 unique Bengaluru photography listings** | 120 candidates were requested; 105 valid unique rows remained after extraction failures and URL deduplication.                                             |
+| LinkedIn    | **100 unique profiles**                       | 99 names/headlines, 50 current companies, 27 locations, and 67 public About excerpts. One URL-only record is retained and labeled `url_only_unverified`. |
+| Instagram   | **100 unique profiles**                       | 95 full names/bios, 96 follower/following/post-count sets, and 28 public email/phone values.                                                               |
+| Photography | **111 qualified leads**                       | All Hot; 111 unique post URLs; no duplicate author/title crossposts; 27 titles name a location; drawn from 2,009 stored public posts.                      |
 
 These are recorded sample results, not promises about future collection runs.
 
@@ -119,14 +119,14 @@ flowchart TD
 
 ### Module responsibilities
 
-| Module | Responsibility |
-| --- | --- |
-| `main.py` | CLI entry point and command dispatch for Maps, social profiles, and photography leads |
-| `lead_scraper/config.py` | Loads configuration and environment variables |
-| `lead_scraper/scrapers.py` | Contains the collection implementations |
-| `lead_scraper/processing.py` | Handles processing, normalization, deduplication, and photography-intent scoring |
-| `lead_scraper/storage.py` | Persists data in SQLite and writes JSON, CSV, and Excel exports |
-| `lead_scraper/dashboard.py` | Provides the Streamlit dashboard |
+| Module                         | Responsibility                                                                        |
+| ------------------------------ | ------------------------------------------------------------------------------------- |
+| `main.py`                    | CLI entry point and command dispatch for Maps, social profiles, and photography leads |
+| `lead_scraper/config.py`     | Loads configuration and environment variables                                         |
+| `lead_scraper/scrapers.py`   | Contains the collection implementations                                               |
+| `lead_scraper/processing.py` | Handles processing, normalization, deduplication, and photography-intent scoring      |
+| `lead_scraper/storage.py`    | Persists data in SQLite and writes JSON, CSV, and Excel exports                       |
+| `lead_scraper/dashboard.py`  | Provides the Streamlit dashboard                                                      |
 
 `lead_scraper/config.py` loads the single root `.env` file using an absolute path, so commands work regardless of the current working directory. Existing shell environment variables take precedence. Secrets are not stored in Python source files.
 
@@ -134,16 +134,16 @@ flowchart TD
 
 ## Technology stack
 
-| Area | Technology |
-| --- | --- |
-| Language | Python 3.10+ |
-| Dynamic-page automation | Playwright |
-| Static-page requests and parsing | Requests and Beautiful Soup |
-| Search and collection | Configured public search providers and public-source collectors |
-| Data processing | Pandas and regular expressions |
-| Database | SQLite |
-| Exports | CSV, JSON, and Excel |
-| Dashboard | Streamlit |
+| Area                             | Technology                                                      |
+| -------------------------------- | --------------------------------------------------------------- |
+| Language                         | Python 3.10+                                                    |
+| Dynamic-page automation          | Playwright                                                      |
+| Static-page requests and parsing | Requests and Beautiful Soup                                     |
+| Search and collection            | Configured public search providers and public-source collectors |
+| Data processing                  | Pandas and regular expressions                                  |
+| Database                         | SQLite                                                          |
+| Exports                          | CSV, JSON, and Excel                                            |
+| Dashboard                        | Streamlit                                                       |
 
 ---
 
@@ -387,10 +387,10 @@ Reddit requests back off after HTTP 429 responses and transient connection failu
 
 Classification is intent-based and explainable. When a post has a title, the classifier evaluates the title rather than the body because long Reddit bodies often mention photography only in passing, such as in stories, novels, or gear questions.
 
-| Classification | Meaning | Examples of intent |
-| --- | --- | --- |
-| **Hot** | The author explicitly expresses a buying or hiring intent. | Asks to hire a photographer, requests a recommendation, or asks about pricing or quotes. |
-| **Warm** | The author describes an upcoming or planned photography requirement. | Mentions a future event or a planned need for photography services. |
+| Classification | Meaning                                                                             | Examples of intent                                                                                               |
+| -------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Hot**  | The author explicitly expresses a buying or hiring intent.                          | Asks to hire a photographer, requests a recommendation, or asks about pricing or quotes.                         |
+| **Warm** | The author describes an upcoming or planned photography requirement.                | Mentions a future event or a planned need for photography services.                                              |
 | **Cold** | The content indicates general interest rather than a qualified service requirement. | General photography interest, hobby discussion, gear questions, provider promotion, or third-party testimonials. |
 
 Cold posts are not saved as qualified leads.
@@ -429,12 +429,12 @@ The following tables document the supported command-line arguments. Explicit val
 
 ### Task 1: Google Maps
 
-| Argument | Purpose | Default |
-| --- | --- | --- |
-| `--keyword` | Business or search keyword | `"photography studio"` |
-| `--location` | Search location | `"Bengaluru"` |
-| `--max-results` | Maximum Maps listings to collect | `100` |
-| `--headed` | Show the browser window instead of using headless mode | Disabled |
+| Argument          | Purpose                                                | Default                  |
+| ----------------- | ------------------------------------------------------ | ------------------------ |
+| `--keyword`     | Business or search keyword                             | `"photography studio"` |
+| `--location`    | Search location                                        | `"Bengaluru"`          |
+| `--max-results` | Maximum Maps listings to collect                       | `100`                  |
+| `--headed`      | Show the browser window instead of using headless mode | Disabled                 |
 
 **Examples**
 
@@ -445,30 +445,30 @@ py main.py maps --keyword "wedding photographer" --location "Mumbai" --max-resul
 
 ### Task 2: LinkedIn and Instagram
 
-| Argument | Purpose | Default |
-| --- | --- | --- |
-| `--input-json` | Load search/profile inputs from a JSON file | None |
-| `--linkedin-urls` | Comma-separated LinkedIn profile URLs | `""` |
-| `--instagram-urls` | Comma-separated Instagram profile URLs | `""` |
-| `--linkedin-keywords` | LinkedIn discovery keywords | `"Data Scientist"` |
-| `--instagram-keywords` | Instagram discovery keywords | `"photographer"` |
-| `--hashtag` | Hashtag filter | `""` |
-| `--location` | Search location for both platforms | `"Bengaluru"` |
-| `--max-results` | Maximum profiles per platform | `100` |
-| `--min-delay` | Minimum delay between search requests, in seconds | `2.0` |
-| `--max-delay` | Maximum delay between search requests, in seconds | `4.0` |
-| `--retries` | Number of transient search retries | `2` |
-| `--backend` | Comma-separated DDGS backends in priority order | `"yahoo,auto"` |
-| `--pages` | Result pages requested per query | `15` |
-| `--max-search-requests` | Search-request budget per platform | `80` |
-| `--region` | DDGS region code | `"in-en"` |
-| `--output-dir` | Profile output directory | `"output/social"` |
-| `--no-targeted-lookup` | Disable individual lookup for supplied URLs | Disabled |
-| `--no-profile-fetch` | Use search-result snippets only | Disabled |
-| `--request-timeout` | Public profile request timeout, in seconds | `15.0` |
-| `--self-test` | Run offline parser tests and exit | Disabled |
-| `--check-search` | Run a search-provider connectivity check and exit | Disabled |
-| `--log-level` | Logging level | `"INFO"` |
+| Argument                  | Purpose                                           | Default              |
+| ------------------------- | ------------------------------------------------- | -------------------- |
+| `--input-json`          | Load search/profile inputs from a JSON file       | None                 |
+| `--linkedin-urls`       | Comma-separated LinkedIn profile URLs             | `""`               |
+| `--instagram-urls`      | Comma-separated Instagram profile URLs            | `""`               |
+| `--linkedin-keywords`   | LinkedIn discovery keywords                       | `"Data Scientist"` |
+| `--instagram-keywords`  | Instagram discovery keywords                      | `"photographer"`   |
+| `--hashtag`             | Hashtag filter                                    | `""`               |
+| `--location`            | Search location for both platforms                | `"Bengaluru"`      |
+| `--max-results`         | Maximum profiles per platform                     | `100`              |
+| `--min-delay`           | Minimum delay between search requests, in seconds | `2.0`              |
+| `--max-delay`           | Maximum delay between search requests, in seconds | `4.0`              |
+| `--retries`             | Number of transient search retries                | `2`                |
+| `--backend`             | Comma-separated DDGS backends in priority order   | `"yahoo,auto"`     |
+| `--pages`               | Result pages requested per query                  | `15`               |
+| `--max-search-requests` | Search-request budget per platform                | `80`               |
+| `--region`              | DDGS region code                                  | `"in-en"`          |
+| `--output-dir`          | Profile output directory                          | `"output/social"`  |
+| `--no-targeted-lookup`  | Disable individual lookup for supplied URLs       | Disabled             |
+| `--no-profile-fetch`    | Use search-result snippets only                   | Disabled             |
+| `--request-timeout`     | Public profile request timeout, in seconds        | `15.0`             |
+| `--self-test`           | Run offline parser tests and exit                 | Disabled             |
+| `--check-search`        | Run a search-provider connectivity check and exit | Disabled             |
+| `--log-level`           | Logging level                                     | `"INFO"`           |
 
 **Examples**
 
@@ -479,22 +479,22 @@ py main.py social --max-results 50 --location Mumbai
 
 ### Task 3: Photography leads
 
-| Argument | Purpose | Default |
-| --- | --- | --- |
-| `--location` | Target location filter | None / root `.env` value |
-| `--keywords` | One or more search phrases | Root-configured keywords |
-| `--sources` | Comma-separated public sources | `mastodon,reddit` |
-| `--mastodon-instances` | Comma-separated Mastodon servers | `mastodon.social` |
-| `--subreddits` | Comma-separated Reddit subreddits | All / default |
-| `--discourse-sites` | Comma-separated Discourse URLs | None |
-| `--rss-feeds` | Comma-separated RSS / Atom feed URLs | None |
-| `--max-posts` | Maximum posts per source | `100` |
-| `--min-score` | Minimum lead score | `0` |
-| `--delay` | Request delay, in seconds | `1.0` |
-| `--db` | SQLite database path | `data/leads.db` |
-| `--output` | Output directory | `output/photography` |
-| `--excel` | Enable Excel export | Enabled |
-| `--no-excel` | Disable Excel export | Disabled |
+| Argument                 | Purpose                              | Default                    |
+| ------------------------ | ------------------------------------ | -------------------------- |
+| `--location`           | Target location filter               | None / root `.env` value |
+| `--keywords`           | One or more search phrases           | Root-configured keywords   |
+| `--sources`            | Comma-separated public sources       | `mastodon,reddit`        |
+| `--mastodon-instances` | Comma-separated Mastodon servers     | `mastodon.social`        |
+| `--subreddits`         | Comma-separated Reddit subreddits    | All / default              |
+| `--discourse-sites`    | Comma-separated Discourse URLs       | None                       |
+| `--rss-feeds`          | Comma-separated RSS / Atom feed URLs | None                       |
+| `--max-posts`          | Maximum posts per source             | `100`                    |
+| `--min-score`          | Minimum lead score                   | `0`                      |
+| `--delay`              | Request delay, in seconds            | `1.0`                    |
+| `--db`                 | SQLite database path                 | `data/leads.db`          |
+| `--output`             | Output directory                     | `output/photography`     |
+| `--excel`              | Enable Excel export                  | Enabled                    |
+| `--no-excel`           | Disable Excel export                 | Disabled                   |
 
 **Examples**
 
@@ -512,13 +512,13 @@ py main.py --max-posts 50 --sources mastodon,rss
 
 ### Canonical exports
 
-| Tool | Canonical output location | Formats |
-| --- | --- | --- |
-| Google Maps | `output/maps/google_maps_leads.*` | CSV, JSON, Excel |
-| LinkedIn | `output/social/linkedin_profiles.*` | CSV, JSON, Excel |
-| Instagram | `output/social/instagram_profiles.*` | CSV, JSON, Excel |
-| Photography | `output/photography/leads.*` | CSV, JSON, Excel |
-| Photography raw collection | `output/photography/raw_posts.json` | JSON |
+| Tool                       | Canonical output location              | Formats          |
+| -------------------------- | -------------------------------------- | ---------------- |
+| Google Maps                | `output/maps/google_maps_leads.*`    | CSV, JSON, Excel |
+| LinkedIn                   | `output/social/linkedin_profiles.*`  | CSV, JSON, Excel |
+| Instagram                  | `output/social/instagram_profiles.*` | CSV, JSON, Excel |
+| Photography                | `output/photography/leads.*`         | CSV, JSON, Excel |
+| Photography raw collection | `output/photography/raw_posts.json`  | JSON             |
 
 ### Compatibility copies
 
@@ -601,16 +601,16 @@ This check reports the number of rows and the number of unique source URLs for e
 
 ## Assignment deliverables
 
-| Deliverable | Implementation or location |
-| --- | --- |
-| **Task 1: Google Maps leads** | `py main.py maps` — `MapsScraper` in `lead_scraper/scrapers.py` |
-| **Task 2: LinkedIn and Instagram profiles** | `py main.py social` — `scrape_platform` in `lead_scraper/scrapers.py` |
-| **Task 3: Photography buying-intent leads** | `py main.py` — `run_photography` in `main.py` |
-| **Dashboard** | `py -m streamlit run main.py` |
-| **Maps sample exports** | `output/maps/google_maps_leads.csv`, `.json`, `.xlsx` |
-| **Social sample exports** | `output/social/linkedin_profiles.*` and `output/social/instagram_profiles.*` |
-| **Photography sample exports** | `output/photography/leads.csv`, `.json`, `.xlsx` |
-| **Shared storage** | `data/leads.db` |
+| Deliverable                                       | Implementation or location                                                       |
+| ------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **Task 1: Google Maps leads**               | `py main.py maps` — `MapsScraper` in `lead_scraper/scrapers.py`           |
+| **Task 2: LinkedIn and Instagram profiles** | `py main.py social` — `scrape_platform` in `lead_scraper/scrapers.py`     |
+| **Task 3: Photography buying-intent leads** | `py main.py` — `run_photography` in `main.py`                             |
+| **Dashboard**                               | `py -m streamlit run main.py`                                                  |
+| **Maps sample exports**                     | `output/maps/google_maps_leads.csv`, `.json`, `.xlsx`                      |
+| **Social sample exports**                   | `output/social/linkedin_profiles.*` and `output/social/instagram_profiles.*` |
+| **Photography sample exports**              | `output/photography/leads.csv`, `.json`, `.xlsx`                           |
+| **Shared storage**                          | `data/leads.db`                                                                |
 
 The `100` values are collection targets. Restrictions, duplicate removal, unavailable sources, and validation may result in fewer valid records. The printed summaries and `data_quality` / `field_status` columns report any shortfall instead of concealing it.
 
