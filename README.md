@@ -1,4 +1,3 @@
-
 # LEAD_SCRAPER
 
 <p align="center">
@@ -65,8 +64,8 @@ The sample exports in `output/` were generated on **17 November 2026**. Counts m
 | Tool        | Sample result                                       | Collection notes                                                                                                                                           |
 | ----------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Google Maps | **105 unique Bengaluru photography listings** | 120 candidates were requested; 105 valid unique rows remained after extraction failures and URL deduplication.                                             |
-| LinkedIn    | **100 unique profiles**                       | 99 names/headlines, 50 current companies, 27 locations, and 67 public About excerpts. One URL-only record is retained and labeled `url_only_unverified`. |
-| Instagram   | **100 unique profiles**                       | 95 full names/bios, 96 follower/following/post-count sets, and 28 public email/phone values.                                                               |
+| LinkedIn    | **240 unique profiles**                       | 236 names/headlines, 128 current companies, 84 locations, and 141 public About excerpts. Snippet-only records remain labeled unverified.                   |
+| Instagram   | **125 unique profiles**                       | 121 full names, 103 bios, 122 follower/following/post-count sets, and 30 public email/phone values.                                                        |
 | Photography | **111 qualified leads**                       | All Hot; 111 unique post URLs; no duplicate author/title crossposts; 27 titles name a location; drawn from 2,009 stored public posts.                      |
 
 These are recorded sample results, not promises about future collection runs.

@@ -13,7 +13,7 @@ from lead_scraper.scrapers import (
     MapsScraper,
     main as social_main,
 )
-from lead_scraper.storage import LeadDatabase, export_leads, export_maps
+from lead_scraper.storage import LeadDatabase, export_leads, export_maps_from_database
 
 
 def build_photography_parser() -> argparse.ArgumentParser:
@@ -145,29 +145,75 @@ def run_photography(argv: list[str] | None = None) -> int:
     return 0
 
 
+def _positive_int(value: str) -> int:
+    try:
+        parsed = int(value)
+    except (TypeError, ValueError) as exc:
+        raise argparse.ArgumentTypeError("must be a whole number") from exc
+    if parsed < 1:
+        raise argparse.ArgumentTypeError("must be at least 1")
+    return parsed
+
+
 def run_maps(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description="Collect public Google Maps business listings.")
     parser.add_argument("--keyword", default="photography studio")
     parser.add_argument("--location", default="Bengaluru")
-    parser.add_argument("--max-results", type=int, default=100)
+    parser.add_argument("--max-results", type=_positive_int, default=100)
     parser.add_argument("--headed", action="store_true")
     args = parser.parse_args(argv)
-    scraper = MapsScraper(headless=not args.headed)
-    leads = scraper.scrape(args.keyword, args.location, args.max_results)
+
+    keyword = args.keyword.strip()
+    location = args.location.strip()
+    if not keyword or not location:
+        print("error: --keyword and --location must not be empty.", file=sys.stderr)
+        return 2
+
+    def progress(message: str) -> None:
+        print(f"[maps] {message}", file=sys.stderr)
+
+    try:
+        scraper = MapsScraper(headless=not args.headed, progress=progress)
+        leads = scraper.scrape(keyword, location, args.max_results)
+    except ValueError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 2
+    except Exception as exc:
+        print(f"error: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 1
+
     database = LeadDatabase(project_path("data/leads.db"))
     try:
         for lead in leads:
             database.save_map_lead(lead)
+        for error in scraper.errors:
+            database.save_collection_error(
+                "maps", json.dumps(error, ensure_ascii=False)
+            )
+        stored = export_maps_from_database(database, project_path("output/maps"))
+        # Keep the historical output/ root files in sync for compatibility.
+        export_maps_from_database(database, project_path("output"))
+        total = len(stored)
     finally:
         database.close()
-    export_maps(leads, project_path("output/maps"))
-    # Keep the historical output/ root files in sync for compatibility.
-    export_maps(leads, project_path("output"))
+
+    print("\nGOOGLE MAPS LEAD SCRAPER")
+    print("=" * 48)
+    print(f"Keyword: {keyword}")
+    print(f"Location: {location}")
+    print(f"Requested: {args.max_results}")
+    print(f"Collected this run: {len(leads)}")
+    print(f"Total stored (all runs): {total}")
+    print(f"Diagnostics: {len(scraper.errors)}")
+    print(f"CSV: {project_path('output/maps/google_maps_leads.csv')}")
+    print(f"Excel: {project_path('output/maps/google_maps_leads.xlsx')}")
     print(json.dumps(leads, indent=2, ensure_ascii=False))
     if scraper.errors:
         print("\nExtraction diagnostics:")
         print(json.dumps(scraper.errors, indent=2, ensure_ascii=False))
-    return 0
+    # A failed run that produced no rows is an error; a genuinely empty search
+    # (no diagnostics) is a valid successful run.
+    return 0 if leads or not scraper.errors else 1
 
 
 def main(argv: list[str] | None = None) -> int:

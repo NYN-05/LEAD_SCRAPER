@@ -58,3 +58,5 @@ tmp/
 
 # Sample exports and the seeded SQLite database are intentionally tracked:
 # output/**, data/leads.db, README.md, and the source/test files.
+.ua
+project_audit.txt

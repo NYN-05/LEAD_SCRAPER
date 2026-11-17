@@ -228,6 +228,17 @@ class LeadDatabase:
         query += " ORDER BY updated_at DESC"
         return [json.loads(row["profile_json"]) for row in self.conn.execute(query, params)]
 
+    def save_collection_error(
+        self, source: str, error: str, run_id: int | None = None
+    ) -> None:
+        """Persist a collection diagnostic for dashboard/overview visibility."""
+        self.conn.execute(
+            """INSERT INTO collection_errors(run_id, source, error, created_at)
+               VALUES (?, ?, ?, ?)""",
+            (run_id, source, error, datetime.now(timezone.utc).isoformat()),
+        )
+        self.conn.commit()
+
     def get_recent_runs(self, limit: int = 10) -> list[dict]:
         if limit < 1:
             raise ValueError("limit must be at least 1.")
@@ -257,12 +268,29 @@ class LeadDatabase:
         return [dict(row) for row in rows]
 
 
-def _write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
+def _export_value(value):
+    """Render structured values consistently in CSV and Excel exports."""
+    if value is None:
+        return ""
+    if isinstance(value, (dict, list, tuple)):
+        return json.dumps(value, ensure_ascii=False, sort_keys=True)
+    return value
+
+
+def _write_csv(
+    path: Path, rows: list[dict], fields: list[str], structured: bool = False
+) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8-sig") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
-        writer.writerows(rows)
+        if structured:
+            for row in rows:
+                writer.writerow(
+                    {field: _export_value(row.get(field)) for field in fields}
+                )
+        else:
+            writer.writerows(rows)
 
 
 EXCEL_CELL_LIMIT = 32767
@@ -307,7 +335,12 @@ def export_social_profiles(output_dir: Path, linkedin: list[dict], instagram: li
         ("linkedin", linkedin, LINKEDIN_FIELDS),
         ("instagram", instagram, INSTAGRAM_FIELDS),
     ):
-        _write_csv(output_dir / f"{platform}_profiles.csv", rows, fields + ["data_quality"])
+        _write_csv(
+            output_dir / f"{platform}_profiles.csv",
+            rows,
+            fields + ["data_quality"],
+            structured=True,
+        )
         (output_dir / f"{platform}_profiles.json").write_text(
             json.dumps({"platform": platform, "total_profiles": len(rows), "profiles": rows},
                        ensure_ascii=False, indent=2),
@@ -318,8 +351,8 @@ def export_social_profiles(output_dir: Path, linkedin: list[dict], instagram: li
             export_rows = []
             for row in rows:
                 flattened = dict(row)
-                flattened["field_status"] = json.dumps(
-                    row.get("field_status", {}), ensure_ascii=False, sort_keys=True
+                flattened["field_status"] = _export_value(
+                    row.get("field_status", {})
                 )
                 export_rows.append(flattened)
             pd.DataFrame(export_rows, columns=fields + ["data_quality"]).to_excel(
@@ -336,7 +369,9 @@ def export_social_profile_platform(output_dir: Path, platform: str, rows: list[d
         raise ValueError("platform must be 'linkedin' or 'instagram'.")
     filename = f"{platform}_profiles.csv"
     output_dir.mkdir(parents=True, exist_ok=True)
-    _write_csv(output_dir / filename, rows, fields + ["data_quality"])
+    _write_csv(
+        output_dir / filename, rows, fields + ["data_quality"], structured=True
+    )
     (output_dir / f"{platform}_profiles.json").write_text(
         json.dumps({"platform": platform, "total_profiles": len(rows), "profiles": rows},
                    ensure_ascii=False, indent=2),
@@ -347,9 +382,7 @@ def export_social_profile_platform(output_dir: Path, platform: str, rows: list[d
         export_rows = []
         for row in rows:
             flattened = dict(row)
-            flattened["field_status"] = json.dumps(
-                row.get("field_status", {}), ensure_ascii=False, sort_keys=True
-            )
+            flattened["field_status"] = _export_value(row.get("field_status", {}))
             export_rows.append(flattened)
         pd.DataFrame(export_rows, columns=fields + ["data_quality"]).to_excel(
             output_dir / f"{platform}_profiles.xlsx", index=False
@@ -358,18 +391,56 @@ def export_social_profile_platform(output_dir: Path, platform: str, rows: list[d
         raise RuntimeError("Social profile Excel export requires pandas and openpyxl.") from exc
 
 
+def export_social_profiles_from_database(
+    database: LeadDatabase, output_dir: str | Path
+) -> tuple[list[dict], list[dict]]:
+    """Export every persisted profile so empty runs never erase earlier results."""
+    linkedin = database.get_social_profiles("linkedin")
+    instagram = database.get_social_profiles("instagram")
+    export_social_profiles(Path(output_dir), linkedin, instagram)
+    return linkedin, instagram
+
+
+def export_social_profile_from_database(
+    database: LeadDatabase, output_dir: str | Path, platform: str
+) -> list[dict]:
+    """Export the durable profile set for one platform."""
+    rows = database.get_social_profiles(platform)
+    export_social_profile_platform(Path(output_dir), platform, rows)
+    return rows
+
+
+def _map_export_rows(leads: list[dict]) -> list[dict]:
+    """Keep export columns stable and render absent values as empty strings."""
+    return [
+        {
+            field: "" if lead.get(field) is None else str(lead.get(field))
+            for field in MAP_FIELDS
+        }
+        for lead in leads
+    ]
+
+
 def export_maps(leads: list[dict], output_dir: str | Path) -> None:
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
+    rows = _map_export_rows(leads)
     (out / "google_maps_leads.json").write_text(
-        json.dumps({"total_leads": len(leads), "leads": leads}, ensure_ascii=False, indent=2),
+        json.dumps({"total_leads": len(rows), "leads": rows}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    _write_csv(out / "google_maps_leads.csv", leads, MAP_FIELDS)
+    _write_csv(out / "google_maps_leads.csv", rows, MAP_FIELDS)
     try:
         import pandas as pd
-        pd.DataFrame(leads, columns=MAP_FIELDS).to_excel(
+        pd.DataFrame(rows, columns=MAP_FIELDS).to_excel(
             out / "google_maps_leads.xlsx", index=False
         )
     except ImportError as exc:
         raise RuntimeError("Google Maps Excel export requires pandas and openpyxl.") from exc
+
+
+def export_maps_from_database(database: LeadDatabase, output_dir: str | Path) -> list[dict]:
+    """Export the durable Maps dataset instead of only the latest scrape result."""
+    leads = database.get_map_leads()
+    export_maps(leads, output_dir)
+    return leads

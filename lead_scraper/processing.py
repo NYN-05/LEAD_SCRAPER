@@ -11,26 +11,30 @@ EMAIL_RE = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.I)
 PHONE_RE = re.compile(r"(?<!\w)(?:\+?\d[\d\s().-]{7,}\d)(?!\w)")
 
 HOT_PATTERNS = [
-    r"\b(?:need|needing|seeking|looking for|hiring|looking to hire|want|wanting)\s+"
-    r"(?:a|an|some|the|help with|to hire)?\s*"
-    r"(?:professional\s+|freelance\s+|wedding\s+|event\s+|product\s+|food\s+|"
-    r"portrait\s+|family\s+|corporate\s+)?"
+    # Explicit requests to hire, book, or purchase photography services.
+    r"\b(?:looking to hire|looking for a|need a|need an|hiring|seek(?:ing)? a)\s+"
+    r"(?:a\s+)?(?:[\w-]+\s+)?(?:professional\s+|freelance\s+|wedding\s+|event\s+|product\s+|food\s+|"
+    r"portrait\s+|family\s+|corporate\s+|newborn\s+|maternity\s+|headshot\s+)?"
     r"(?:photographer|photography|photoshoot|photo shoot)\b",
-    r"\b(?:photo|photographer|photography|photoshoot|photo shoot)\b[^.!?\n]{0,60}"
-    r"\b(?:needed|required|wanted)\b",
-    r"\b(?:photographer|photography)\b[^.!?\n]{0,60}"
-    r"\b(?:recommend(?:ation|ations)?|suggestions?|anyone know)\b",
-    r"\b(?:recommend|suggest)\b[^.!?\n]{0,50}\b(?:photographer|photography)\b",
-    r"\b(?:how much|quote|quotation|price|pricing|cost)\b[^.!?\n]{0,60}"
-    r"\b(?:photograph|photoshoot|photo shoot|photographer)\b",
+    r"\b(?:photographer|photography|photoshoot|photo shoot)\s+(?:needed|required|wanted)\b",
+    r"\b(?:recommend(?:ation|ations)?|suggestions?|anyone know)\s+[^.!?\n]{0,50}\b"
+    r"(?:photographer|photography|photoshoot|photo shoot)\b",
+    r"\b(?:how much|quote|quotation|price|pricing|cost)\s+[^.!?\n]{0,60}\b"
+    r"(?:photographer|photography|photoshoot|photo shoot|photography service)\b",
+    r"\b(?:book|booking)\s+(?:a|an|the)?\s*(?:professional\s+|freelance\s+)?"
+    r"(?:wedding\s+|event\s+|product\s+|food\s+|portrait\s+|family\s+|corporate\s+|newborn\s+|maternity\s+|headshot\s+)?"
+    r"(?:photographer|photography|photoshoot|photo shoot)\b",
 ]
 WARM_PATTERNS = [
-    r"\b(?:next month|this month|upcoming|coming up|planning|plan to|book(?:ing)?)\b"
+    # Genuine interest, future plans, comparisons — no immediate booking request.
+    r"\b(?:next month|this month|upcoming|coming up|planning|plan to)\b"
     r"[^.!?\n]{0,100}\b(?:wedding|engagement|birthday|anniversary|conference|event|"
-    r"photoshoot|photo shoot|photograph)\b",
+    r"photoshoot|photo shoot|photography|photographer)\b",
     r"\b(?:wedding|engagement|birthday|anniversary|conference|event)\b"
-    r"[^.!?\n]{0,100}\b(?:photographer|photography|photoshoot|photo shoot|"
+    r"[^.!?\n]{0,100}\b(?:photographer|photographers|photography|photoshoot|photo shoot|"
     r"photo coverage|photography coverage)\b",
+    r"\b(?:compar(?:ing|ison)|versus|vs\.?|which|better|best)\b"
+    r"[^.!?\n]{0,100}\b(?:photographer|photography|photoshoot|photo shoot)\b",
 ]
 EVENT_TERMS = [
     "wedding", "engagement", "birthday", "anniversary", "conference",
@@ -42,28 +46,20 @@ PHOTO_TERMS = [
     "product photos", "food photos", "wedding photos", "event photos",
 ]
 PROMO_PATTERNS = [
-    r"\b(?:book me|book now|dm me|message me|contact me|hire me|"
-    r"available for bookings|open for bookings|taking bookings)\b[^.!?\n]{0,100}"
-    r"\b(?:photo|photograph|photoshoot|photo shoot|shoot|session|portrait|wedding|event)\b",
-    r"\b(?:photo|photograph|photography|photoshoot|photo shoot|shoot|portrait)\b"
-    r"[^.!?\n]{0,100}\b(?:dm me|message me|contact me|hire me|book me)\b",
-    r"\b(?:we offer|i offer|our services include|my photography services|"
-    r"our photography services|our packages|my packages)\b[^.!?\n]{0,100}"
-    r"\b(?:photo|photograph|photoshoot|photo shoot|shoot)\b",
-    r"\b(?:i am|i'm|we are|we're)\b[^.!?\n]{0,40}"
-    r"\b(?:a |an )?(?:professional |freelance )?"
-    r"(?:photographer|photography (?:studio|company|business))\b",
-    r"\b(?:i|we)\b[^.!?\n]{0,20}\b(?:can|could|would love to|will)\b[^.!?\n]{0,30}"
-    r"\b(?:help|capture|photograph|shoot)\b[^.!?\n]{0,60}"
-    r"\b(?:photo|event|wedding|product|portrait|shoot)\b",
-    r"\b(?:let us|we'll|we can)\b[^.!?\n]{0,40}\b(?:capture|photograph|shoot)\b",
-    r"\b(?:iso|seeking|accepting|booking|taking)\b[^.!?\n]{0,30}\b(?:new )?clients\b",
-    r"\b(?:explore|discover|browse)\b[^.!?\n]{0,60}"
-    r"\b(?:photoshoot|photography|photo shoot|packages?)\b",
-    r"\b(?:seeking|looking for|need(?:ing)?)\b[^.!?\n]{0,40}"
-    r"\b(?:photography )?(?:gigs?|clients?|paid work|freelance work)\b",
-    r"\b(?:photography|photographer)\b[^.!?\n]{0,30}\bclients?\b",
-    r"\b(?:[0-9]+|several|multiple)\s+photographers?\s+wanted\b",
+    # Author offering services directly: "book me", "hire me", "dm me" + photography context
+    r"\b(?:book me|book now|dm me|message me|contact me|hire me)\b[^.!?\n]{0,100}\b(?:photo|photograph|photography|photoshoot|photo shoot|shoot|session|portrait|wedding|event)\b",
+    r"\b(?:available for bookings|open for bookings|taking bookings)\b[^.!?\n]{0,100}\b(?:photo|photograph|photography|photoshoot|photo shoot|shoot|session|portrait|wedding|event)\b",
+    # Author offering service packages
+    r"\b(?:we offer|i offer|our services include|my photography services|our photography services|our packages|my packages)\b[^.!?\n]{0,100}",
+    # Author self-identifying as photographer
+    r"\b(?:i am|i'm|we are|we're)\b[^.!?\n]{0,40}\b(?:a\s+)?(?:professional\s+|freelance\s+)?(?:photographer|photography (?:studio|company|business))\b",
+    # Author offering to do photography work
+    r"\b(?:i|we)\b[^.!?\n]{0,20}\b(?:can|could|would love to|will)\b[^.!?\n]{0,30}\b(?:capture|photograph|shoot)\b[^.!?\n]{0,60}\b(?:photo|event|wedding|product|portrait|shoot)\b",
+    # Author seeking photography clients
+    r"\b(?:seeking|accepting|booking|taking)\b[^.!?\n]{0,30}\b(?:new )?clients\b[^.!?\n]{0,30}\b(?:photo|photograph|photography|wedding|event)\b",
+    # Photographer business name/title at start of post: "Event Photographer", "Wedding Photographer"
+    r"^(?:[A-Z][\w'-]\s+)?(?:wedding|event|portrait|family|corporate|product|food|birthday|engagement)\s+photographer\b",
+    # Photo sharing app/platform promotion
     r"\bphoto[-\s]?sharing (?:app|platform|tool)\b",
 ]
 DISCUSSION_TERMS = ["my hobby", "photography tips", "camera settings", "photo editing tutorial"]
@@ -211,12 +207,6 @@ def classify_post(post: dict) -> dict:
         (match for pattern in WARM_PATTERNS if (match := re.search(pattern, text, re.I))),
         None,
     )
-    strong_hot = re.search(
-        r"\b(looking to hire|looking for|hiring|recommend(?:ation|ations)?|"
-        r"anyone know|how much|quote|quotation|price|pricing|cost)\b",
-        text,
-        re.I,
-    )
     promo = any(re.search(pattern, text, re.I) for pattern in PROMO_PATTERNS)
     off_topic = any(re.search(pattern, text, re.I) for pattern in OFF_TOPIC_PATTERNS)
     testimonial = re.search(
@@ -239,10 +229,10 @@ def classify_post(post: dict) -> dict:
         category, temperature, qualified, reason, evidence = "general_discussion", "Cold", False, "Post is about photography gear, learning, or unrelated topics rather than hiring.", ""
     elif testimonial:
         category, temperature, qualified, reason, evidence = "third_party_testimonial", "Cold", False, "Post recommends a named studio rather than requesting photography services.", ""
-    elif hot_match and is_photo and (strong_hot or not warm_match):
+    elif hot_match and is_photo:
         category, temperature, qualified, reason, evidence = "direct_request", "Hot", True, "Post explicitly asks to hire, price, or get recommendations for photography.", hot_match.group(0)
-    elif warm_match and is_photo and request_signal and personal_signal:
-        category, temperature, qualified, reason, evidence = "potential_requirement", "Warm", True, "Post describes an upcoming photography-related requirement.", warm_match.group(0)
+    elif warm_match and is_photo:
+        category, temperature, qualified, reason, evidence = "potential_requirement", "Warm", True, "Post describes a future or potential photography-related requirement.", warm_match.group(0)
     elif discussion:
         category, temperature, qualified, reason, evidence = "general_discussion", "Cold", False, "Post appears informational or hobby-related.", ""
     elif is_photo:

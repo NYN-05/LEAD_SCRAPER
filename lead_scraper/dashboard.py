@@ -110,13 +110,21 @@ def _safe_count(value: Any) -> int:
         return 0
 
 
-def _submit_job(st, key: str, callback: Callable[[], dict[str, Any]]) -> None:
+def _submit_job(
+    st, key: str, callback: Callable[[Callable[[str], None]], dict[str, Any]]
+) -> None:
     jobs = st.session_state.setdefault("jobs", {})
     job = jobs.get(key)
     if job and not job["future"].done():
         st.warning("This collection is already running.")
         return
-    jobs[key] = {"future": _EXECUTOR.submit(callback), "started_at": time.time()}
+    job = {"stage": "Queued", "started_at": time.time()}
+
+    def report(stage: str) -> None:
+        job["stage"] = stage
+
+    job["future"] = _EXECUTOR.submit(callback, report)
+    jobs[key] = job
     st.session_state.pop(f"{key}_result", None)
 
 
@@ -132,7 +140,7 @@ def _job_result(st, key: str) -> dict[str, Any] | None:
         with st.container(border=True):
             st.markdown("**Collection in progress**")
             st.caption(f"The scraper is running in the background · elapsed {minutes:02d}:{seconds:02d}")
-            st.caption("Status: running · waiting for the scraper to return results")
+            st.caption(f"Current stage: {job.get('stage', 'Running')}")
             if st.button("Refresh collection status", key=f"refresh-{key}"):
                 st.rerun()
         return None
@@ -221,53 +229,73 @@ def _filtered_table(st, rows: list[dict], key: str, default_sort: str | None = N
         st.dataframe(frame, width="stretch", hide_index=True, height=min(560, max(220, 38 * min(len(frame), 14) + 42)))
 
 
-def _maps_job(keyword: str, location: str, maximum: int) -> dict[str, Any]:
+def _maps_job(
+    keyword: str, location: str, maximum: int, report: Callable[[str], None]
+) -> dict[str, Any]:
     from .scrapers import MapsScraper
-    from .storage import export_maps
+    from .storage import export_maps_from_database
 
-    scraper = MapsScraper()
+    scraper = MapsScraper(progress=report)
+    report("Collecting Maps listings")
     rows = scraper.scrape(keyword, location, maximum)
+    report("Saving unique listings")
     database = _database()
     try:
         for row in rows:
             database.save_map_lead(row)
+        for error in scraper.errors:
+            database.save_collection_error(
+                "maps", json.dumps(error, ensure_ascii=False)
+            )
+        report("Writing persistent CSV/Excel exports")
+        directory = OUTPUT_ROOT / "maps"
+        export_maps_from_database(database, directory)
+        export_maps_from_database(database, OUTPUT_ROOT)
+        total = len(database.get_map_leads())
     finally:
         database.close()
-    directory = OUTPUT_ROOT / "maps"
-    export_maps(rows, directory)
-    export_maps(rows, OUTPUT_ROOT)
-    return {"rows": rows, "errors": scraper.errors}
+    return {"rows": rows, "errors": scraper.errors, "total": total}
 
 
-def _social_job(platform: str, urls: str, keywords: str, hashtag: str, location: str, maximum: int) -> dict[str, Any]:
+def _social_job(
+    platform: str, urls: str, keywords: str, hashtag: str, location: str,
+    maximum: int, report: Callable[[str], None],
+) -> dict[str, Any]:
     from .config import ScrapeConfig
     from .scrapers import ProfileQuery, SearchManager, scrape_platform
-    from .storage import export_social_profile_platform
+    from .storage import export_social_profile_from_database
 
     config = ScrapeConfig(
         max_results=maximum, output_dir=str(OUTPUT_ROOT / "social"),
         min_delay=1.0, max_delay=2.0,
     )
     config.validate()
+    report(f"Discovering {platform.title()} profiles")
     query = ProfileQuery(
         profile_urls=[item.strip() for item in urls.replace(",", "\n").splitlines() if item.strip()],
         keywords=keywords, hashtag=hashtag, location=location, max_results=maximum,
     )
     manager = SearchManager(config)
     rows = scrape_platform(platform, manager, query, config)
-    directory = OUTPUT_ROOT / "social"
-    export_social_profile_platform(directory, platform, rows)
-    export_social_profile_platform(OUTPUT_ROOT, platform, rows)
     database = _database()
     try:
+        report("Saving unique profiles")
         for row in rows:
             database.save_social_profile(platform, row)
+        report("Writing persistent profile exports")
+        directory = OUTPUT_ROOT / "social"
+        stored = export_social_profile_from_database(database, directory, platform)
+        export_social_profile_from_database(database, OUTPUT_ROOT, platform)
+        total = len(stored)
     finally:
         database.close()
-    return {"rows": rows, "issues": manager.issues}
+    return {"rows": rows, "issues": manager.issues, "total": total}
 
 
-def _photography_job(location: str, keywords: list[str], sources: list[str], maximum: int) -> dict[str, Any]:
+def _photography_job(
+    location: str, keywords: list[str], sources: list[str], maximum: int,
+    report: Callable[[str], None],
+) -> dict[str, Any]:
     from main import run_photography
 
     args = [
@@ -276,7 +304,9 @@ def _photography_job(location: str, keywords: list[str], sources: list[str], max
         "--delay", "1", "--db", str(DB_PATH),
         "--output", str(OUTPUT_ROOT / "photography"), "--excel",
     ]
+    report("Collecting public intent posts")
     run_photography(args)
+    report("Reading classified lead records")
     database = _database()
     try:
         return {
@@ -370,27 +400,46 @@ def _maps_section(st) -> None:
         with st.form("maps-form"):
             c1, c2 = st.columns([1.2, 1])
             keyword = c1.text_input("Business keyword", "photography studio", help="What type of business should be discovered?")
-            location = c2.text_input("Location", "Bengaluru")
+            location = c2.text_input("Location", "Bengaluru, Karnataka")
             maximum = st.number_input("Maximum results", min_value=1, max_value=200, value=100)
             submitted = st.form_submit_button("Start Maps collection", type="primary", width="stretch")
     if submitted:
         if not keyword.strip() or not location.strip():
             st.error("Keyword and location are required.")
         else:
-            _submit_job(st, "maps", lambda: _maps_job(keyword, location, int(maximum)))
+            _submit_job(st, "maps", lambda report: _maps_job(keyword, location, int(maximum), report))
     result = _job_result(st, "maps")
     if result and result.get("error"):
         st.error(result["error"])
     elif result and "rows" in result:
-        st.success(f"Collection completed · {len(result['rows']):,} Maps lead(s) collected.")
+        collected = len(result.get("rows") or [])
+        total = int(result.get("total", collected))
+        if collected:
+            st.success(
+                f"Collection completed · {collected:,} listing(s) collected this run · "
+                f"{total:,} stored in SQLite."
+            )
+        elif result.get("errors"):
+            st.error("No listings could be collected. Existing records were preserved.")
+        else:
+            st.warning("No listings matched this search. Existing records were preserved.")
         if result.get("errors"):
-            st.warning(f"{len(result['errors'])} listing issue(s) were recorded.")
+            with st.expander(f"{len(result['errors'])} listing issue(s) recorded"):
+                if pd is not None:
+                    st.dataframe(
+                        pd.DataFrame(result["errors"]),
+                        width="stretch",
+                        hide_index=True,
+                    )
+                else:
+                    st.json(result["errors"])
     database = _database()
     try:
         rows = database.get_map_leads()
     finally:
         database.close()
     st.markdown("### Business directory")
+    st.caption("Records are read from SQLite, so a failed or empty scrape never removes earlier listings.")
     _filtered_table(st, rows, "maps-table", "business_name")
     _downloads(st, OUTPUT_ROOT / "maps", "google_maps_leads")
 
@@ -417,12 +466,26 @@ def _social_section(st) -> None:
                 if not any((urls.strip(), keywords.strip(), hashtag.strip(), location.strip())):
                     st.error("Provide a URL, keyword, hashtag, or location.")
                 else:
-                    _submit_job(st, job_key, lambda p=platform: _social_job(p, urls, keywords, hashtag, location, int(maximum)))
+                    _submit_job(st, job_key, lambda report, p=platform: _social_job(p, urls, keywords, hashtag, location, int(maximum), report))
             result = _job_result(st, job_key)
             if result and result.get("error"):
                 st.error(result["error"])
             elif result and "rows" in result:
-                st.success(f"Collection completed · {len(result['rows']):,} {platform} profile(s) collected.")
+                collected = len(result.get("rows") or [])
+                total = int(result.get("total", collected))
+                if collected:
+                    st.success(
+                        f"Collection completed · {collected:,} {platform} profile(s) "
+                        f"collected this run · {total:,} stored in SQLite."
+                    )
+                elif result.get("issues"):
+                    st.error(
+                        "No profiles could be collected. Existing records were preserved."
+                    )
+                else:
+                    st.warning(
+                        "No profiles matched this search. Existing records were preserved."
+                    )
                 if result.get("issues"):
                     st.warning(f"{len(result['issues'])} provider issue(s) were recorded.")
             database = _database()
@@ -457,7 +520,7 @@ def _photography_section(st) -> None:
         if not keywords or not sources:
             st.error("Add at least one keyword and one source.")
         else:
-            _submit_job(st, "photography", lambda: _photography_job(location, keywords, sources, int(maximum)))
+            _submit_job(st, "photography", lambda report: _photography_job(location, keywords, sources, int(maximum), report))
     result = _job_result(st, "photography")
     if result and result.get("error"):
         st.error(result["error"])

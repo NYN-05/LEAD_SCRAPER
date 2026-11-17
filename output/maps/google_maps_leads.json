@@ -1,4 +1,2405 @@
 {
-  "total_leads": 0,
-  "leads": []
+  "total_leads": 240,
+  "leads": [
+    {
+      "business_name": "Home Visit Nurse",
+      "category": "Registered general nurse",
+      "address": "289, 8th Cross Rd, 3rd Block, Saraswathipura, Nandini Layout, Bengaluru, Karnataka 560096",
+      "phone": "09880782238",
+      "website": "",
+      "rating": "",
+      "reviews": "",
+      "maps_url": "https://www.google.com/maps/place/Home+Visit+Nurse/data=!4m7!3m6!1s0x3bae3deff1391a05:0x967a16aae7801537!8m2!3d13.0098893!4d77.5410771!16s%2Fg%2F11wj0m02_r!19sChIJBRo58e89rjsRNxWA56oWepY"
+    },
+    {
+      "business_name": "home nursing services in bangalore",
+      "category": "Nursing agency",
+      "address": "226, 90, Kengal Hanumanthaiah Rd, Sudhama Nagar, Bengaluru, Karnataka 560027",
+      "phone": "",
+      "website": "http://www.homenursingservice.in/",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/home+nursing+services+in+bangalore/data=!4m7!3m6!1s0x3bae15b3625b28c5:0x95ce29be3662dddf!8m2!3d12.9552538!4d77.5917283!16s%2Fg%2F11rxx6ty3w!19sChIJxShbYrMVrjsR391iNr4pzpU"
+    },
+    {
+      "business_name": "Aashirvad Nursing Home",
+      "category": "Hospital",
+      "address": "6th Cross Rd, Bashyam Nagar, Gowtham Nagar, Srirampura, Bengaluru, Karnataka 560021",
+      "phone": "08023126665",
+      "website": "http://www.aashirvadnursinghome.co.in/",
+      "rating": "3.5",
+      "reviews": "62",
+      "maps_url": "https://www.google.com/maps/place/Aashirvad+Nursing+Home/data=!4m7!3m6!1s0x3bae16219d464565:0xd3aa597a47dbb77a!8m2!3d12.9914885!4d77.5644847!16s%2Fg%2F11b6qvf3f7!19sChIJZUVGnSEWrjsRerfbR3pZqtM"
+    },
+    {
+      "business_name": "Manipal Hospitals Home Care Services | Bangalore",
+      "category": "Home health care service",
+      "address": "98, HAL Old Airport Rd, Kodihalli, Bengaluru, Karnataka 560017",
+      "phone": "18001026070",
+      "website": "https://www.manipalhospitals.com/home-health-care-services/?utm_source=Organic&utm_medium=GMB&utm_campaign=website-click",
+      "rating": "4.9",
+      "reviews": "1000",
+      "maps_url": "https://www.google.com/maps/place/Manipal+Hospitals+Home+Care+Services+%7C+Bangalore/data=!4m7!3m6!1s0x3bae15478ea6a97b:0xf47c8c09b75cb17d!8m2!3d12.9585858!4d77.6491116!16s%2Fg%2F11mkw2crd9!19sChIJe6mmjkcVrjsRfbFctwmMfPQ"
+    },
+    {
+      "business_name": "Al-Ameen Hospital",
+      "category": "General hospital",
+      "address": "3, Millers Tank Bund Rd, opposite Fortune Hotel, off Cunningham Road, Kaverappa Layout, Vasanth Nagar, Bengaluru, Karnataka 560001",
+      "phone": "08022260882",
+      "website": "",
+      "rating": "4.2",
+      "reviews": "153",
+      "maps_url": "https://www.google.com/maps/place/Al-Ameen+Hospital/data=!4m7!3m6!1s0x3bae1669d7f66469:0x47c77628f27eced3!8m2!3d12.9899701!4d77.5944249!16s%2Fg%2F1th1shcy!19sChIJaWT212kWrjsR085-8ih2x0c"
+    },
+    {
+      "business_name": "Nursing Service",
+      "category": "Nurse practitioner",
+      "address": "VMQG+F4J, Choodasandra Rd, Choodasandra, K.G.Cudasandra, Karnataka 560099",
+      "phone": "",
+      "website": "",
+      "rating": "4.2",
+      "reviews": "5",
+      "maps_url": "https://www.google.com/maps/place/Nursing+Service/data=!4m7!3m6!1s0x3bae130838af0dbf:0x5f8c766defa2347f!8m2!3d12.8887167!4d77.6752509!16s%2Fg%2F11j8thtzwl!19sChIJvw2vOAgTrjsRfzSi7212jF8"
+    },
+    {
+      "business_name": "STANDARD GROUP - MANPOWER & Home Nursing Care Service in Bangalore",
+      "category": "Home health care service",
+      "address": "BUILDING NO 45, 2nd Main Rd, beside HIZBULLA MASJID, Jai Bheema Nagar, Sampangiram Nagar, Seshadripuram, Bengaluru, Karnataka 560020",
+      "phone": "09845177442",
+      "website": "https://standardmanpower.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-blr-website-link",
+      "rating": "4.9",
+      "reviews": "16",
+      "maps_url": "https://www.google.com/maps/place/STANDARD+GROUP+-+MANPOWER+%26+Home+Nursing+Care+Service+in+Bangalore/data=!4m7!3m6!1s0x3bae1715cbf64817:0x1568396a23592412!8m2!3d12.9907629!4d77.5737141!16s%2Fg%2F11vrsz9bhs!19sChIJF0j2yxUXrjsREiRZI2o5aBU"
+    },
+    {
+      "business_name": "RAINBOW NURSE PLUS CARE",
+      "category": "Home health care service",
+      "address": "1st Cross Rd, Chikka Bommasandra, Yelahanka New Town, Bengaluru, Karnataka 560064",
+      "phone": "07795969373",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "6",
+      "maps_url": "https://www.google.com/maps/place/RAINBOW+NURSE+PLUS+CARE/data=!4m7!3m6!1s0x3bae196949f38143:0xff4dfc613017e5fa!8m2!3d13.0930107!4d77.5816994!16s%2Fg%2F11zxhr__h_!19sChIJQ4HzSWkZrjsR-uUXMGH8Tf8"
+    },
+    {
+      "business_name": "Manjushree Speciality Hospital",
+      "category": "Doctor",
+      "address": "22/70, St Johns Rd, opposite RBANMS Ground, Halasuru, Sivanchetti Gardens, Bengaluru, Karnataka 560042",
+      "phone": "09945235615",
+      "website": "https://manjushreespecialityhospital.in/",
+      "rating": "4.5",
+      "reviews": "201",
+      "maps_url": "https://www.google.com/maps/place/Manjushree+Speciality+Hospital/data=!4m7!3m6!1s0x3bae1689245bc68d:0xd3057e4a52babcd7!8m2!3d12.9825817!4d77.6124402!16s%2Fg%2F1tcw214y!19sChIJjcZbJIkWrjsR17y6Ukp-BdM"
+    },
+    {
+      "business_name": "GRV SCHOOL OF NURSING",
+      "category": "College",
+      "address": "19, 2nd cross, Road, Ganganagar, Bellary, Bengaluru, Karnataka 560032",
+      "phone": "09606452123",
+      "website": "http://www.grvnursing.com/",
+      "rating": "4.4",
+      "reviews": "43",
+      "maps_url": "https://www.google.com/maps/place/GRV+SCHOOL+OF+NURSING/data=!4m7!3m6!1s0x3bae23728e4d3c93:0x22f72317c5853b67!8m2!3d13.0215033!4d77.5849752!16s%2Fg%2F11pclt21bf!19sChIJkzxNjnIjrjsRZzuFxRcj9yI"
+    },
+    {
+      "business_name": "Nursingo (hcs)",
+      "category": "Home health care service",
+      "address": "nearby Address:, Channenahalli, Bengaluru, Karnataka 562130",
+      "phone": "",
+      "website": "https://nursingo-hcs.grexa.site/",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/Nursingo+%28hcs%29/data=!4m7!3m6!1s0x3bae3b8854133057:0xa11bdcd17fface64!8m2!3d12.9745309!4d77.4250215!16s%2Fg%2F11z7jy7lr7!19sChIJVzATVIg7rjsRZM76f9HcG6E"
+    },
+    {
+      "business_name": "East West Nursing Institutions",
+      "category": "Nursing school",
+      "address": "XHX7+H2X, Maruthi Extension, Gayatrinagar, Rajajinagar, Bengaluru, Karnataka 560021",
+      "phone": "09686932999",
+      "website": "https://eastwestnursinginstitutions.com/",
+      "rating": "4.2",
+      "reviews": "6",
+      "maps_url": "https://www.google.com/maps/place/East+West+Nursing+Institutions/data=!4m7!3m6!1s0x3bae1627efffffff:0xe1ae060869bf65ba!8m2!3d12.9989863!4d77.5625999!16s%2Fg%2F1w4f6k2z!19sChIJ____7ycWrjsRumW_aQgGruE"
+    },
+    {
+      "business_name": "CSI Nursing School",
+      "category": "Nursing school",
+      "address": "XJR2+G7M, Sulthangunta, Shivaji Nagar, Bengaluru, Karnataka 560051",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/CSI+Nursing+School/data=!4m7!3m6!1s0x3bae17077f74b727:0x841a282b2c88f887!8m2!3d12.9913351!4d77.6006571!16s%2Fg%2F11h26b4k60!19sChIJJ7d0fwcXrjsRh_iILCsoGoQ"
+    },
+    {
+      "business_name": "Ramakrishna Nursing Home",
+      "category": "Nursing home",
+      "address": "79/18, 1st Cross, 6th Main, Gayathri Devi Park Extension, Near-Thirumala Temple, Vyalikaval, Bengaluru, Karnataka 560003",
+      "phone": "08023367159",
+      "website": "",
+      "rating": "3.5",
+      "reviews": "70",
+      "maps_url": "https://www.google.com/maps/place/Ramakrishna+Nursing+Home/data=!4m7!3m6!1s0x3bae163040000001:0xa9dd879e0e0f0195!8m2!3d13.0059277!4d77.5769334!16s%2Fg%2F1tcztczt!19sChIJAQAAQDAWrjsRlQEPDp6H3ak"
+    },
+    {
+      "business_name": "Sri Shankara College of Nursing",
+      "category": "Nursing school",
+      "address": "XH29+WWV, Shankar Mutt Rd, Shankarapura, Bengaluru, Karnataka 560004",
+      "phone": "08026981000",
+      "website": "http://shankaracollegeofnursing.org/",
+      "rating": "4.3",
+      "reviews": "28",
+      "maps_url": "https://www.google.com/maps/place/Sri+Shankara+College+of+Nursing/data=!4m7!3m6!1s0x3bae15f0fabc9aa9:0x14314d32be97b959!8m2!3d12.9523665!4d77.5698058!16s%2Fg%2F11j006px9q!19sChIJqZq8-vAVrjsRWbmXvjJNMRQ"
+    },
+    {
+      "business_name": "Jupiter School And College Of Nursing",
+      "category": "Nursing school",
+      "address": "BLOCK-A, Kailash Apartment, 28, 7th Main Rd, Malleshwaram, Bengaluru, Karnataka 560003",
+      "phone": "09341220446",
+      "website": "",
+      "rating": "3.7",
+      "reviews": "54",
+      "maps_url": "https://www.google.com/maps/place/Jupiter+School+And+College+Of+Nursing/data=!4m7!3m6!1s0x3bae16214728a56d:0xcf2fb1fa52dedc66!8m2!3d13.0008423!4d77.5660261!16s%2Fg%2F11j8k8n8_n!19sChIJbaUoRyEWrjsRZtzeUvqxL88"
+    },
+    {
+      "business_name": "ABC HOME NURSING",
+      "category": "Nursing home",
+      "address": "NO. 3055, Kuppaiah Naidu Mansion 1st Floor, MKK Road, 10th Main Rd, C Block, Gayathri, Rajajinagar, Karnataka 560021",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/ABC+HOME+NURSING/data=!4m7!3m6!1s0x3bae17442525b55f:0x7858442782039425!8m2!3d12.9976216!4d77.5598906!16s%2Fg%2F11ngp8ywmn!19sChIJX7UlJUQXrjsRJZQDgidEWHg"
+    },
+    {
+      "business_name": "V-Care Mediscon Hospital",
+      "category": "Hospital",
+      "address": "10, Tannery Rd, Pillanna Garden 3rd Stage, Pillanna Garden, Stage 3, Kadugondanahalli, Bengaluru, Karnataka 560045",
+      "phone": "08025470533",
+      "website": "http://vcaremedisconhospital.com/",
+      "rating": "3.8",
+      "reviews": "390",
+      "maps_url": "https://www.google.com/maps/place/V-Care+Mediscon+Hospital/data=!4m7!3m6!1s0x3bae16fd08266bc9:0x62c4fafe793e06a5!8m2!3d13.0114448!4d77.6164204!16s%2Fg%2F11f03tdjcg!19sChIJyWsmCP0WrjsRpQY-ef76xGI"
+    },
+    {
+      "business_name": "Lovely Good Service Home Nursing",
+      "category": "Nursing agency",
+      "address": "3rd Cross, Sathya Murthy Road, No 56/A, Kammanahalli Main Rd, near Usha Hospital, Ramaswamipalya, Banaswadi, Bengaluru, Karnataka 560033",
+      "phone": "08553883255",
+      "website": "",
+      "rating": "4.3",
+      "reviews": "",
+      "maps_url": "https://www.google.com/maps/place/Lovely+Good+Service+Home+Nursing/data=!4m7!3m6!1s0x3bae16dea4ba7fcb:0xfd2325c7f21457f0!8m2!3d13.0093826!4d77.6354436!16s%2Fg%2F11kjpqyvjj!19sChIJy3-6pN4WrjsR8FcU8sclI_0"
+    },
+    {
+      "business_name": "JK Nursing Home",
+      "category": "Hospital",
+      "address": "116, Anwar Layout, Kadugondanahalli, Bengaluru, Karnataka 560045",
+      "phone": "",
+      "website": "",
+      "rating": "3.7",
+      "reviews": "3",
+      "maps_url": "https://www.google.com/maps/place/JK+Nursing+Home/data=!4m7!3m6!1s0x3bae17004e4ae663:0xe01391b66293fc92!8m2!3d13.0142714!4d77.6135372!16s%2Fg%2F11m5_jfr1j!19sChIJY-ZKTgAXrjsRkvyTYraRE-A"
+    },
+    {
+      "business_name": "Government School of Nursing @ KC General Hospital",
+      "category": "Educational institution",
+      "address": "XHWC+73V, 3rd Cross Rd, Malleshwaram, Bengaluru, Karnataka 560003",
+      "phone": "",
+      "website": "",
+      "rating": "4.6",
+      "reviews": "9",
+      "maps_url": "https://www.google.com/maps/place/Government+School+of+Nursing+@+KC+General+Hospital/data=!4m7!3m6!1s0x3bae1706d9415e91:0xbd9bdef72163a462!8m2!3d12.9957366!4d77.5701797!16s%2Fg%2F11nh4hbg37!19sChIJkV5B2QYXrjsRYqRjIffem70"
+    },
+    {
+      "business_name": "Sri Raghavendra College Of Nursing",
+      "category": "College",
+      "address": "XHCV+JQQ, Unnamed Road, KG Halli, D' Souza Layout, Ashok Nagar, Bengaluru, Karnataka 560001",
+      "phone": "08028392221",
+      "website": "",
+      "rating": "3.9",
+      "reviews": "31",
+      "maps_url": "https://www.google.com/maps/place/Sri+Raghavendra+College+Of+Nursing/data=!4m7!3m6!1s0x3bae16773e7dc413:0xe043c9da00ca6fa9!8m2!3d12.971599!4d77.5944895!16s%2Fg%2F1v44nw21!19sChIJE8R9PncWrjsRqW_KANrJQ-A"
+    },
+    {
+      "business_name": "Shaker Nursing Home",
+      "category": "Nursing home",
+      "address": "260, Sampige Rd, Malleshwaram, Bengaluru, Karnataka 560003",
+      "phone": "09880874750",
+      "website": "https://www.shakernursinghome.in/",
+      "rating": "3.9",
+      "reviews": "56",
+      "maps_url": "https://www.google.com/maps/place/Shaker+Nursing+Home/data=!4m7!3m6!1s0x3bae162db1a85aad:0xbf303deec4e4a7b5!8m2!3d13.007434!4d77.5709849!16s%2Fg%2F1tykstpf!19sChIJrVqosS0WrjsRtafkxO49ML8"
+    },
+    {
+      "business_name": "Uvincare Hospitals Pvt Ltd.",
+      "category": "Gynecologist",
+      "address": "117, Old Madras Rd, opposite Metro Pillar Number 110, Halasuru, Lingayana Palya, Bengaluru, Karnataka 560008",
+      "phone": "08277480000",
+      "website": "http://www.uvincarehospital.com/",
+      "rating": "4.7",
+      "reviews": "838",
+      "maps_url": "https://www.google.com/maps/place/Uvincare+Hospitals+Pvt+Ltd./data=!4m7!3m6!1s0x3bae173f1245c14d:0xd8b65a417b6eee68!8m2!3d12.9776897!4d77.6283733!16s%2Fg%2F11qsv7pb0f!19sChIJTcFFEj8XrjsRaO5ue0Fattg"
+    },
+    {
+      "business_name": "World Congress on Nursing and Healthcare Summit",
+      "category": "Nursing agency",
+      "address": "H.No. 362, 2nd Floor, 11th Cross, 4th Main, 2nd Block, Behind B.D.A Shopping Complex, RT Nagar, Bengaluru, Karnataka 560032",
+      "phone": "08023330446",
+      "website": "http://worldcongressonnursing.com/",
+      "rating": "5.0",
+      "reviews": "",
+      "maps_url": "https://www.google.com/maps/place/World+Congress+on+Nursing+and+Healthcare+Summit/data=!4m7!3m6!1s0x3bae17ae189ce12d:0x68fbe45063ca2eb6!8m2!3d13.02043!4d77.596384!16s%2Fg%2F11h5lkt231!19sChIJLeGcGK4XrjsRti7KY1Dk-2g"
+    },
+    {
+      "business_name": "Kamala Krishna Royal Nursing College",
+      "category": "Nursing school",
+      "address": "Upparpete, Cottonpete, Bengaluru, Karnataka 560053",
+      "phone": "08041221333",
+      "website": "",
+      "rating": "4.1",
+      "reviews": "64",
+      "maps_url": "https://www.google.com/maps/place/Kamala+Krishna+Royal+Nursing+College/data=!4m7!3m6!1s0x3bae16016a125d67:0x5703e13efeeb776b!8m2!3d12.972954!4d77.5699578!16s%2Fg%2F11b807ghvj!19sChIJZ10SagEWrjsRa3fr_j7hA1c"
+    },
+    {
+      "business_name": "SAANVI HOME NURSING SERVICES",
+      "category": "Home health care service",
+      "address": "3rd Cross Rd, Dee Enclave Layout, Defence Layout, Sahakar Nagar, Bengaluru, Karnataka 560092",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "3",
+      "maps_url": "https://www.google.com/maps/place/SAANVI+HOME+NURSING+SERVICES/data=!4m7!3m6!1s0x3bae19ffc90a1b4b:0x8f6b17353e0ac3ba!8m2!3d13.0591628!4d77.5814798!16s%2Fg%2F11xs8dsqzc!19sChIJSxsKyf8ZrjsRusMKPjUXa48"
+    },
+    {
+      "business_name": "M M Home Nursing Services",
+      "category": "Home health care service",
+      "address": "Sanjay nagar, New BEL road, Vayunandana Layout, Hebbal Kempapura, Bengaluru, Karnataka 560094",
+      "phone": "08494900963",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "6",
+      "maps_url": "https://www.google.com/maps/place/M+M+Home+Nursing+Services/data=!4m7!3m6!1s0x3bae17718457a5b7:0x2a0c8dfdd8433345!8m2!3d13.0477287!4d77.6011895!16s%2Fg%2F11zzhm77dv!19sChIJt6VXhHEXrjsRRTND2P2NDCo"
+    },
+    {
+      "business_name": "Lifeline nursing home health services",
+      "category": "Nursing agency",
+      "address": "Vinayaka layout, 08.2nd cross, Nagadevanahalli Main Rd, 1st Block, Shirke Layout, Kengeri Satellite Town, Bengaluru, Karnataka 560056",
+      "phone": "08660089479",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "30",
+      "maps_url": "https://www.google.com/maps/place/Lifeline+nursing+home+health+services/data=!4m7!3m6!1s0x3bae3f7bbf665469:0x3a444d3ac39f1e07!8m2!3d12.9313426!4d77.4927185!16s%2Fg%2F11l31r8wbx!19sChIJaVRmv3s_rjsRBx6fwzpNRDo"
+    },
+    {
+      "business_name": "Santosh Institute of Nursing & Research",
+      "category": "Nursing school",
+      "address": "6, Coles park, 1, Promenade Rd, coles park Pulikeshi Nagar, coles park, Pulikeshi Nagar, Fraser Town, Bengaluru, Karnataka 560005",
+      "phone": "",
+      "website": "",
+      "rating": "4.7",
+      "reviews": "18",
+      "maps_url": "https://www.google.com/maps/place/Santosh+Institute+of+Nursing+%26+Research/data=!4m7!3m6!1s0x3bae17bb9ec8255f:0x12403866d5dbecf5!8m2!3d12.9958226!4d77.6083191!16s%2Fg%2F11rb5l97r7!19sChIJXyXInrsXrjsR9ezb1WY4QBI"
+    },
+    {
+      "business_name": "Home Nursing",
+      "category": "Home health care service",
+      "address": "#315, 6th Cross Rd, Veerabhadra Nagar, Banashankari 3rd Stage, Banashankari, Bengaluru, Karnataka 560085",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "8",
+      "maps_url": "https://www.google.com/maps/place/Home+Nursing/data=!4m7!3m6!1s0x3bae3fad2eba6c67:0xdb68849436fefd1e!8m2!3d12.9380029!4d77.5354311!16s%2Fg%2F11h63kl1w3!19sChIJZ2y6Lq0_rjsRHv3-NpSEaNs"
+    },
+    {
+      "business_name": "BEDFORD HEALTH CARE SOLUTION is a most effective geriatric nursing care center in Bangalore for elder's.",
+      "category": "Home health care service",
+      "address": "Muniswamappa Nilaya, 55, Mestri, Babusapalya, Chelekare, Hennur Gardens, Bengaluru, Karnataka 560113",
+      "phone": "08549992299",
+      "website": "",
+      "rating": "4.7",
+      "reviews": "23",
+      "maps_url": "https://www.google.com/maps/place/BEDFORD+HEALTH+CARE+SOLUTION+is+a+most+effective+geriatric+nursing+care+center+in+Bangalore+for+elder%27s./data=!4m7!3m6!1s0x3bae175b2f2ac231:0x6b00dec57d64bde2!8m2!3d13.0237127!4d77.6478416!16s%2Fg%2F11t30_b938!19sChIJMcIqL1sXrjsR4r1kfcXeAGs"
+    },
+    {
+      "business_name": "ESIC College Of Nursing",
+      "category": "College",
+      "address": "70, 7th Main Rd, Cambridge Layout, Indiranagar, Bengaluru, Karnataka 560008",
+      "phone": "",
+      "website": "",
+      "rating": "4.7",
+      "reviews": "79",
+      "maps_url": "https://www.google.com/maps/place/ESIC+College+Of+Nursing/data=!4m7!3m6!1s0x3bae16a0c639194b:0x20ff4a0d4899531f!8m2!3d12.9708127!4d77.635637!16s%2Fg%2F11bwysh01_!19sChIJSxk5xqAWrjsRH1OZSA1K_yA"
+    },
+    {
+      "business_name": "Exodus Nursing Care",
+      "category": "Home health care service",
+      "address": "95,Muniswamappa layout, maruthi vidyalaya Road, Dodda Banaswadi Main Rd, opp. Uttam Sagar, Bengaluru, Karnataka 560033",
+      "phone": "09986856373",
+      "website": "https://www.exodusnursingcare.com/",
+      "rating": "5.0",
+      "reviews": "20",
+      "maps_url": "https://www.google.com/maps/place/Exodus+Nursing+Care/data=!4m7!3m6!1s0x3bae17bc025cce51:0x64e2dcdffee4cb6e!8m2!3d13.0090299!4d77.6441252!16s%2Fg%2F11y98nvd3t!19sChIJUc5cArwXrjsRbsvk_t_c4mQ"
+    },
+    {
+      "business_name": "Nurse home and health care",
+      "category": "Home health care service",
+      "address": "Kothanur, Bengaluru, Karnataka 560077",
+      "phone": "",
+      "website": "http://sakirprince.website3.me/",
+      "rating": "5.0",
+      "reviews": "",
+      "maps_url": "https://www.google.com/maps/place/Nurse+home+and+health+care/data=!4m7!3m6!1s0x3bae193ecb0d666f:0x9c25a50c2d501788!8m2!3d13.0700318!4d77.6532777!16s%2Fg%2F11y0ylp762!19sChIJb2YNyz4ZrjsRiBdQLQylJZw"
+    },
+    {
+      "business_name": "Anugraha Nursing Home",
+      "category": "Nursing home",
+      "address": "No. 2, Vinayaka Circle, 2nd Main Rd, Palace Guttahalli, Bengaluru, Karnataka 560003",
+      "phone": "08023562042",
+      "website": "https://drsheelavmane.getmy.clinic/?utm_source=gmb&utm_medium=web&utm_campaign=tu",
+      "rating": "4.3",
+      "reviews": "102",
+      "maps_url": "https://www.google.com/maps/place/Anugraha+Nursing+Home/data=!4m7!3m6!1s0x3bae163a17286b29:0x360635cd9c910728!8m2!3d12.9990074!4d77.5777232!16s%2Fg%2F1tkc0k8q!19sChIJKWsoFzoWrjsRKAeRnM01BjY"
+    },
+    {
+      "business_name": "PH Home Nursing Services",
+      "category": "Nursing agency",
+      "address": "108/39, 8th Main Cross Rd, 4th Block, Nandini Layout, Bengaluru, Karnataka 560096",
+      "phone": "",
+      "website": "https://www.homenursingservice.in/",
+      "rating": "4.5",
+      "reviews": "4",
+      "maps_url": "https://www.google.com/maps/place/PH+Home+Nursing+Services/data=!4m7!3m6!1s0x3bae3dbe88fca143:0x4f3e56fd5a0a8a9!8m2!3d13.0165075!4d77.5315725!16s%2Fg%2F11j2wmlp05!19sChIJQ6H8iL49rjsRqaig1W_l8wQ"
+    },
+    {
+      "business_name": "Santosh Institute of Nursing & Research, Bangalore",
+      "category": "Educational institution",
+      "address": "43252, Cantonment Railway Station Rd, Sulthangunta, Shivaji Nagar, Bengaluru, Karnataka 560051",
+      "phone": "08590000547",
+      "website": "",
+      "rating": "4.5",
+      "reviews": "10",
+      "maps_url": "https://www.google.com/maps/place/Santosh+Institute+of+Nursing+%26+Research,+Bangalore/data=!4m7!3m6!1s0x3bae17c7bca79bff:0xd5c87d3433831b59!8m2!3d12.9916612!4d77.602387!16s%2Fg%2F11rqcfd6yl!19sChIJ_5unvMcXrjsRWRuDMzR9yNU"
+    },
+    {
+      "business_name": "The Honest home nursing care service🩺",
+      "category": "Home health care service",
+      "address": "1st Cross Rd, Sinthan Nagar, Sanchar Nagar MCECHS Layout, Ashwath Nagar, Thanisandra, Bengaluru, Karnataka 560077",
+      "phone": "",
+      "website": "",
+      "rating": "4.3",
+      "reviews": "6",
+      "maps_url": "https://www.google.com/maps/place/The+Honest+home+nursing+care+service%F0%9F%A9%BA/data=!4m7!3m6!1s0x3bae1725b4c0748d:0x691f703e03f6df1d!8m2!3d13.0510785!4d77.6366182!16s%2Fg%2F11yq260vyv!19sChIJjXTAtCUXrjsRHd_2Az5wH2k"
+    },
+    {
+      "business_name": "NAYANA HOME NURSING CARE",
+      "category": "Home health care service",
+      "address": "No -14 . Krishnappa , Vaderahall Layout Lakshmipura Cross, M.S. Palya Rd, next to Ganesh Tempal, Bengaluru, Karnataka 560097",
+      "phone": "08971559950",
+      "website": "http://nayanahomenursingcare.com/",
+      "rating": "4.3",
+      "reviews": "6",
+      "maps_url": "https://www.google.com/maps/place/NAYANA+HOME+NURSING+CARE/data=!4m7!3m6!1s0x3bae2297b2076287:0x4e10a291e3a3beea!8m2!3d13.0801142!4d77.5479398!16s%2Fg%2F11j8pjl2f7!19sChIJh2IHspcirjsR6r6j45GiEE4"
+    },
+    {
+      "business_name": "Kanaka Home Nursing Home",
+      "category": "Home help service agency",
+      "address": "05 Mavnaguru Temple Road, Doddigunta Main Rd, Jeevanhalli, Cox Town, Bengaluru, Karnataka 560005",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/Kanaka+Home+Nursing+Home/data=!4m7!3m6!1s0x3bae16e980fb05db:0xdec5fd4e506d4475!8m2!3d12.9972056!4d77.6280518!16s%2Fg%2F11xrl5d29v!19sChIJ2wX7gOkWrjsRdURtUE79xd4"
+    },
+    {
+      "business_name": "A.S Health Care Pvt Ltd Home Nursing Home care service",
+      "category": "Home health care service",
+      "address": "8th main, 1st Cross Rd, Bhuvaneshwari Nagar, T. Dasarahalli, Bengaluru, Karnataka 560057",
+      "phone": "08618069828",
+      "website": "https://ashealthcareservices.in/",
+      "rating": "4.9",
+      "reviews": "129",
+      "maps_url": "https://www.google.com/maps/place/A.S+Health+Care+Pvt+Ltd+Home+Nursing+Home+care+service/data=!4m7!3m6!1s0x3bae239cd869ec41:0x1bb926f23044de1!8m2!3d13.0495328!4d77.5042706!16s%2Fg%2F11vbtv1kby!19sChIJQexp2JwjrjsR4U0EI2-SuwE"
+    },
+    {
+      "business_name": "Healthy Home Nursing Services",
+      "category": "Home help service agency",
+      "address": "No 72/2, Tippu Circle Road, near Glass Factory, Om Shakthi Layout, Om Shiva Shakthi Nagar, JP Nagar 7th Phase, Anjanapura, Bengaluru, Karnataka 560078",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/Healthy+Home+Nursing+Services/data=!4m7!3m6!1s0x3bae155ca42a9edf:0xf4409ce062f9596f!8m2!3d12.893053!4d77.572503!16s%2Fg%2F11xp6_xnp7!19sChIJ354qpFwVrjsRb1n5YuCcQPQ"
+    },
+    {
+      "business_name": "NEW HELPLINE NURSING HOME(UNIT OF DUBEY HEALTH CARE PRIVATE LIMITED)",
+      "category": "Hospital",
+      "address": "23,12th crsoss, BSA Rd, opp. citizen school, Bengaluru, Karnataka 560084",
+      "phone": "08296522777",
+      "website": "https://helplinemedicalcentre.in/",
+      "rating": "4.1",
+      "reviews": "48",
+      "maps_url": "https://www.google.com/maps/place/NEW+HELPLINE+NURSING+HOME%28UNIT+OF+DUBEY+HEALTH+CARE+PRIVATE+LIMITED%29/data=!4m7!3m6!1s0x3bae3f74f1fd56b1:0xefb311ec537ddf2a!8m2!3d13.0075402!4d77.6132744!16s%2Fg%2F11rpfl527s!19sChIJsVb98XQ_rjsRKt99U-wRs-8"
+    },
+    {
+      "business_name": "Prathibanvitha Healthcare",
+      "category": "Nursing agency",
+      "address": "21, Gnanabharathi main road, circle, near SLV grand Hotel, Nagarbhavi, Bengaluru, Karnataka 560072",
+      "phone": "06363957317",
+      "website": "",
+      "rating": "4.3",
+      "reviews": "30",
+      "maps_url": "https://www.google.com/maps/place/Prathibanvitha+Healthcare/data=!4m7!3m6!1s0x3bae3fc1e669be83:0x30659cc9e3a6f6f3!8m2!3d12.9584098!4d77.5191829!16s%2Fg%2F11t30zb242!19sChIJg75p5sE_rjsR8_am48mcZTA"
+    },
+    {
+      "business_name": "Geri Care Skilled Nursing Facility & Senior Citizens Clinic- Ulsoor, Bengaluru",
+      "category": "Assisted living facility",
+      "address": "BBMP Ward, 1/1, 90, St Johns Rd, Halasuru, Bengaluru, Karnataka 560042",
+      "phone": "09944459444",
+      "website": "https://www.gericare.in/",
+      "rating": "4.8",
+      "reviews": "75",
+      "maps_url": "https://www.google.com/maps/place/Geri+Care+Skilled+Nursing+Facility+%26+Senior+Citizens+Clinic-+Ulsoor,+Bengaluru/data=!4m7!3m6!1s0x3bae177aad122d0f:0x8ba8880fcd54a57d!8m2!3d12.9879634!4d77.6170868!16s%2Fg%2F11y4szv83d!19sChIJDy0SrXoXrjsRfaVUzQ-IqIs"
+    },
+    {
+      "business_name": "Nursing assistants",
+      "category": "Patients support association",
+      "address": "2nd cross, SGR Dental College Rd, Bengaluru, Karnataka 560037",
+      "phone": "09945986909",
+      "website": "",
+      "rating": "",
+      "reviews": "",
+      "maps_url": "https://www.google.com/maps/place/Nursing+assistants/data=!4m7!3m6!1s0x3bae13da557e76ed:0xd402d54c8e176d83!8m2!3d12.9475478!4d77.706744!16s%2Fg%2F11zc_820vt!19sChIJ7XZ-VdoTrjsRg20XjkzVAtQ"
+    },
+    {
+      "business_name": "NIMHANS Department of Nursing & College of Nursing",
+      "category": "Nursing school",
+      "address": "WHQW+535, Hosur Road, Marigowda Road, Lakkasandra, Wilson Garden, Hombegowda Nagar, Bengaluru, Karnataka 560011",
+      "phone": "08026995818",
+      "website": "https://nimhans.ac.in/nursing/",
+      "rating": "4.2",
+      "reviews": "49",
+      "maps_url": "https://www.google.com/maps/place/NIMHANS+Department+of+Nursing+%26+College+of+Nursing/data=!4m7!3m6!1s0x3bae15ba165ea0bd:0xf41f53188d8be57e!8m2!3d12.9378946!4d77.5952208!16s%2Fg%2F1pp2xb179!19sChIJvaBeFroVrjsRfuWLjRhTH_Q"
+    },
+    {
+      "business_name": "Tapasya Home Care Services",
+      "category": "Nursing agency",
+      "address": "No. 1, 2nd Floor, Muniswamy Naidu Layout Near Subramanyapura Police Station, Subramanyapura, Bengaluru, Karnataka 560005",
+      "phone": "09382844888",
+      "website": "http://www.amarjyothi.online/",
+      "rating": "3.0",
+      "reviews": "2",
+      "maps_url": "https://www.google.com/maps/place/Tapasya+Home+Care+Services/data=!4m7!3m6!1s0x3bae16f233baf0eb:0x5cfa7fc970ae43dd!8m2!3d12.9954409!4d77.6166783!16s%2Fg%2F1tr7b7ng!19sChIJ6_C6M_IWrjsR3UOucMl_-lw"
+    },
+    {
+      "business_name": "Bengaluru Baptist Hospital | College Of Nursing | Rebekah Ann Naylor School Of Nursing",
+      "category": "Nursing school",
+      "address": "38, Vinayakanagar, Hebbal, Bengaluru, Karnataka 560032",
+      "phone": "",
+      "website": "http://www.bbh.org.in/",
+      "rating": "4.5",
+      "reviews": "344",
+      "maps_url": "https://www.google.com/maps/place/Bengaluru+Baptist+Hospital+%7C+College+Of+Nursing+%7C+Rebekah+Ann+Naylor+School+Of+Nursing/data=!4m7!3m6!1s0x3bae17be16e3e481:0xdbbe331e249992f!8m2!3d13.0337502!4d77.5891959!16s%2Fg%2F11bwql732m!19sChIJgeTjFr4XrjsRL5lJ4jHjuw0"
+    },
+    {
+      "business_name": "St Philomena's College Of Nursing",
+      "category": "Nursing school",
+      "address": "XJ76+Q6M, Xavier Layout, Victoria Layout, Bengaluru, Karnataka 560047",
+      "phone": "08025575705",
+      "website": "http://www.philomenasnursingcollege.com/",
+      "rating": "4.1",
+      "reviews": "50",
+      "maps_url": "https://www.google.com/maps/place/St+Philomena%27s+College+Of+Nursing/data=!4m7!3m6!1s0x3bae142ba888ecef:0xd8a99c695b0cef9b!8m2!3d12.9644602!4d77.6105615!16s%2Fg%2F1tg7qg6g!19sChIJ7-yIqCsUrjsRm-8MW2mcqdg"
+    },
+    {
+      "business_name": "Nurse Practitioner",
+      "category": "Nurse practitioner",
+      "address": "1st Cross Rd, near Royal Tours and Travels, PNS Layout, Jaibharath Nagar, Kalyan Nagar, Bengaluru, Karnataka 560033",
+      "phone": "",
+      "website": "",
+      "rating": "",
+      "reviews": "",
+      "maps_url": "https://www.google.com/maps/place/Nurse+Practitioner/data=!4m7!3m6!1s0x3bae172c4d8fac7d:0x373c0cd7e4b28b9c!8m2!3d13.0013694!4d77.6293804!16s%2Fg%2F11l724y9v9!19sChIJfayPTSwXrjsRnIuy5NcMPDc"
+    },
+    {
+      "business_name": "St. John's College of Nursing",
+      "category": "Nursing school",
+      "address": "WJJC+975, Sarjapur - Marathahalli Rd, John Nagar, Koramangala, Bengaluru, Karnataka 560034",
+      "phone": "08022065000",
+      "website": "http://www.stjohns.in/",
+      "rating": "3.7",
+      "reviews": "99",
+      "maps_url": "https://www.google.com/maps/place/St.+John%27s+College+of+Nursing/data=!4m7!3m6!1s0x3bae14513edee589:0xae09412f7f352fce!8m2!3d12.9308848!4d77.6207209!16s%2Fg%2F11c602h8w5!19sChIJieXePlEUrjsRzi81fy9BCa4"
+    },
+    {
+      "business_name": "A.M Nursing Home and Maternity Center",
+      "category": "Hospital",
+      "address": "23/1, Dispensary Rd, Kalasipalya, Bengaluru, Karnataka 560002",
+      "phone": "09036868303",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "175",
+      "maps_url": "https://www.google.com/maps/place/A.M+Nursing+Home+and+Maternity+Center/data=!4m7!3m6!1s0x3bae153ff1cf42ff:0x8cfa9e421bf5aad8!8m2!3d12.9579408!4d77.5763026!16s%2Fg%2F11tc6q86lx!19sChIJ_0LP8T8VrjsR2Kr1G0Ke-ow"
+    },
+    {
+      "business_name": "Government College Of Nursing",
+      "category": "Nursing school",
+      "address": "Victoria Hospital Campus, Thyagi M Palanivelu Road, New Tharagupet, Bengaluru, Karnataka 560002",
+      "phone": "08026708745",
+      "website": "",
+      "rating": "4.3",
+      "reviews": "181",
+      "maps_url": "https://www.google.com/maps/place/Government+College+Of+Nursing/data=!4m7!3m6!1s0x3bae16773e7dc413:0x46403421a477f0ce!8m2!3d12.9629856!4d77.5726373!16s%2Fg%2F1vs5v4d9!19sChIJE8R9PncWrjsRzvB3pCE0QEY"
+    },
+    {
+      "business_name": "Jk Neolife Hospital And Diagnostic",
+      "category": "Hospital",
+      "address": "187, Khan Bahadur Abdul Rehman Rd, Austin Town, Neelasandra, Bengaluru, Karnataka 560047",
+      "phone": "09845033228",
+      "website": "http://www.jkneolifehospital.com/",
+      "rating": "4.5",
+      "reviews": "243",
+      "maps_url": "https://www.google.com/maps/place/Jk+Neolife+Hospital+And+Diagnostic/data=!4m7!3m6!1s0x3bae15813d588129:0x3247b2807a11ac84!8m2!3d12.9597601!4d77.6147058!16s%2Fg%2F11t1f6yhlr!19sChIJKYFYPYEVrjsRhKwReoCyRzI"
+    },
+    {
+      "business_name": "Home Care nursing in Bangalore",
+      "category": "Home health care service",
+      "address": "36/3, geethaclinic road, Hale Devasandra, Krishnarajapuram, Bengaluru, Karnataka 560036",
+      "phone": "08904477159",
+      "website": "https://www.homecarenursing.in/",
+      "rating": "5.0",
+      "reviews": "4",
+      "maps_url": "https://www.google.com/maps/place/Home+Care+nursing+in+Bangalore/data=!4m7!3m6!1s0x24ed3850e0b30961:0x720ab9463cb6e321!8m2!3d13.006248!4d77.6989737!16s%2Fg%2F11ypm5cdb2!19sChIJYQmz4FA47SQRIeO2PEa5CnI"
+    },
+    {
+      "business_name": "St. Martha's College of Nursing",
+      "category": "Nursing school",
+      "address": "Nrupathunga Rd, Ambedkar Veedhi, Sampangi Rama Nagara, Bengaluru, Karnataka 560001",
+      "phone": "08022293669",
+      "website": "http://www.stmarthasnursingcollege.com/",
+      "rating": "4.1",
+      "reviews": "76",
+      "maps_url": "https://www.google.com/maps/place/St.+Martha%27s+College+of+Nursing/data=!4m7!3m6!1s0x3bae16749c6f9dad:0x168f4e51a78b58ed!8m2!3d12.9716972!4d77.5856737!16s%2Fg%2F1hc40v6vt!19sChIJrZ1vnHQWrjsR7ViLp1FOjxY"
+    },
+    {
+      "business_name": "Gracious home health care",
+      "category": "Home health care service",
+      "address": "4th cross, Srinivasa Temple Rd, Maruti Nagar, Bengaluru, Karnataka 560068",
+      "phone": "07907767485",
+      "website": "http://gracioushomehealthcare.com/",
+      "rating": "4.7",
+      "reviews": "95",
+      "maps_url": "https://www.google.com/maps/place/Gracious+home+health+care/data=!4m7!3m6!1s0x3bae155e7c730a07:0xd0dd622c6d01ac7c!8m2!3d12.9268137!4d77.6131365!16s%2Fg%2F11hk0yg_dj!19sChIJBwpzfF4VrjsRfKwBbSxi3dA"
+    },
+    {
+      "business_name": "Imayam Nursing Services Bengaluru",
+      "category": "Home health care service",
+      "address": "46, 4th Main Rd, 3rd Cross, Hutting Colony, Domlur, Bengaluru, Karnataka 560071",
+      "phone": "08056100339",
+      "website": "https://www.imayamnursing.com/",
+      "rating": "4.9",
+      "reviews": "",
+      "maps_url": "https://www.google.com/maps/place/Imayam+Nursing+Services+Bengaluru/data=!4m7!3m6!1s0x3bae1539e024f14f:0x2dccc7b67216e69!8m2!3d12.9638165!4d77.6382378!16s%2Fg%2F11vx1wl_0b!19sChIJT_Ek4DkVrjsRaW4hZ3vM3AI"
+    },
+    {
+      "business_name": "SIDDHARTH HOME NURSING SERVICES",
+      "category": "Nursing home",
+      "address": "2nd floor, 4/4, 12th Cross Rd, Vyalikaval, Kodandarampura, Malleshwaram, Bengaluru, Karnataka 560003",
+      "phone": "",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "112",
+      "maps_url": "https://www.google.com/maps/place/SIDDHARTH+HOME+NURSING+SERVICES/data=!4m7!3m6!1s0x3bae171d6f0708c7:0xdc39ed3bb4286485!8m2!3d13.0027031!4d77.5764911!16s%2Fg%2F11px95408y!19sChIJxwgHbx0XrjsRhWQotDvtOdw"
+    },
+    {
+      "business_name": "Home Nursing Services provider",
+      "category": "Nursing agency",
+      "address": "services, 108, 39, 7th Main, Road, Jai Bhuvaneshwarinagar, Nandini Layout, Bengaluru, Karnataka 560096",
+      "phone": "08029916698",
+      "website": "https://www.sajjalashreehomenursingservices.com/",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/Home+Nursing+Services+provider/data=!4m7!3m6!1s0x3bae3d762bbfdedd:0x441b2e28ff054908!8m2!3d13.0167291!4d77.5337947!16s%2Fg%2F11krhlvwgw!19sChIJ3d6_K3Y9rjsRCEkF_yguG0Q"
+    },
+    {
+      "business_name": "Shradha Nursing Home",
+      "category": "Hospital",
+      "address": "63, 5th Main Rd, opp. Shiva Theatre Compound, Mallappa Reddy Layout, Koramangala 8th Block, Adugodi, Bengaluru, Karnataka 560095",
+      "phone": "09980722588",
+      "website": "https://shradhaanursinghome.com/",
+      "rating": "4.6",
+      "reviews": "611",
+      "maps_url": "https://www.google.com/maps/place/Shradha+Nursing+Home/data=!4m7!3m6!1s0x3bae1437b8f30087:0xaa7a4acdbd7fd075!8m2!3d12.9436494!4d77.6179279!16s%2Fg%2F11sbbrk3tb!19sChIJhwDzuDcUrjsRddB_vc1Keqo"
+    },
+    {
+      "business_name": "Vaishnavi Medicare Trust | Home Nursing Services",
+      "category": "Aged care",
+      "address": "17th Cross Road, 11th Main Rd, Malleshwaram, Bengaluru, Karnataka 560055",
+      "phone": "09880741419",
+      "website": "",
+      "rating": "4.1",
+      "reviews": "105",
+      "maps_url": "https://www.google.com/maps/place/Vaishnavi+Medicare+Trust+%7C+Home+Nursing+Services/data=!4m7!3m6!1s0x3bae3d806358e9f1:0xd3d98155accaa472!8m2!3d13.0076829!4d77.5623183!16s%2Fg%2F11fzjhhj6z!19sChIJ8elYY4A9rjsRcqTKrFWB2dM"
+    },
+    {
+      "business_name": "Nurseva Home Health Care Services",
+      "category": "Home health care service",
+      "address": "3/D2, BESCOM OFFICE BEYOND, HMT Main Rd, M R J Colony, Mathikere, Bengaluru, Karnataka 560054",
+      "phone": "09740004222",
+      "website": "http://nurseva.in/",
+      "rating": "4.8",
+      "reviews": "74",
+      "maps_url": "https://www.google.com/maps/place/Nurseva+Home+Health+Care+Services/data=!4m7!3m6!1s0x3bae3d7650d63937:0x2ad979c5c0cb118f!8m2!3d13.0380515!4d77.5577857!16s%2Fg%2F11h_g0z3st!19sChIJNznWUHY9rjsRjxHLwMV52So"
+    },
+    {
+      "business_name": "NURSE ON CAL",
+      "category": "Home health care service",
+      "address": "206/1, 18th Cross Rd, Pragathi Layout, Doddanekundi, Doddanekkundi, Bengaluru, Karnataka 560037",
+      "phone": "07259358108",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/NURSE+ON+CAL/data=!4m7!3m6!1s0x3bae117865a2714f:0x40ca7d80a464666c!8m2!3d12.9748886!4d77.6937193!16s%2Fg%2F11zd8zvzmt!19sChIJT3GiZXgRrjsRbGZkpIB9ykA"
+    },
+    {
+      "business_name": "Karnataka State Nursing Council",
+      "category": "Nursing association",
+      "address": "71, A’ Street, 6th Cross Rd, near Movieland Theater, A.R. Extension, Gandhi Nagar, Bengaluru, Karnataka 560009",
+      "phone": "08022383230",
+      "website": "http://www.ksnc.karnataka.gov.in/",
+      "rating": "3.3",
+      "reviews": "4727",
+      "maps_url": "https://www.google.com/maps/place/Karnataka+State+Nursing+Council/data=!4m7!3m6!1s0x3bae1610153821a1:0xde6978b19dbe08d3!8m2!3d12.9792981!4d77.575687!16s%2Fg%2F1pp2x9g_j!19sChIJoSE4FRAWrjsR0wi-nbF4ad4"
+    },
+    {
+      "business_name": "CareNest Home Nursing Services",
+      "category": "Nursing agency",
+      "address": "8th Cross Rd, Binny Employyes Layout, Binny Mills Employees Colony, Vijayanagar, Bengaluru, Karnataka 560040",
+      "phone": "09019122909",
+      "website": "https://sites.google.com/view/carenesthomenursingservices/home",
+      "rating": "5.0",
+      "reviews": "4",
+      "maps_url": "https://www.google.com/maps/place/CareNest+Home+Nursing+Services/data=!4m7!3m6!1s0x3bae3f9be7e9ae9d:0x3590b9ebf0216c53!8m2!3d12.9597625!4d77.5311528!16s%2Fg%2F11nt_9v136!19sChIJna7p55s_rjsRU2wh8Ou5kDU"
+    },
+    {
+      "business_name": "Care at Home Homecare Nursing services Bangalore",
+      "category": "Home health care service",
+      "address": "2nd Cross Rd, Omkar Nagar, Bannerughatta, Bengaluru, Karnataka 560076",
+      "phone": "08891801239",
+      "website": "https://careathome.my.canva.site/",
+      "rating": "4.2",
+      "reviews": "29",
+      "maps_url": "https://www.google.com/maps/place/Care+at+Home+Homecare+Nursing+services+Bangalore/data=!4m7!3m6!1s0xc5f317cd32a903f:0x741586e92e11a754!8m2!3d12.8897621!4d77.5967243!16s%2Fg%2F11wpp07b36!19sChIJP5Aq03wxXwwRVKcRLumGFXQ"
+    },
+    {
+      "business_name": "Bangalore Nursing Home",
+      "category": "Hospital",
+      "address": "276, Nagawara Main Road, Arabic College Main Rd, Next To-Police Station, Vinobha Nagar, Kadugondanahalli, Bengaluru, Karnataka 560045",
+      "phone": "09535271129",
+      "website": "",
+      "rating": "4.6",
+      "reviews": "40",
+      "maps_url": "https://www.google.com/maps/place/Bangalore+Nursing+Home/data=!4m7!3m6!1s0x3bae1704ca808351:0x74174a419fae11c9!8m2!3d13.0207879!4d77.6191105!16s%2Fg%2F1tfgbp56!19sChIJUYOAygQXrjsRyRGun0FKF3Q"
+    },
+    {
+      "business_name": "Nursing services",
+      "category": "Nursing agency",
+      "address": "2M65+659, OMBR Layout, Banaswadi, Bengaluru, Karnataka 560043",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "",
+      "maps_url": "https://www.google.com/maps/place/Nursing+services/data=!4m7!3m6!1s0x3bae11538dbb9689:0xe72a30f0a41429ab!8m2!3d13.0105261!4d77.6579916!16s%2Fg%2F11vkbz3gq6!19sChIJiZa7jVMRrjsRqykUpPAwKuc"
+    },
+    {
+      "business_name": "Home care nursing services",
+      "category": "Home health care service",
+      "address": "No16, Pattalamma Temple Rd, Street, Basavanagudi, Bengaluru, Karnataka 560004",
+      "phone": "",
+      "website": "",
+      "rating": "4.7",
+      "reviews": "12",
+      "maps_url": "https://www.google.com/maps/place/Home+care+nursing+services/data=!4m7!3m6!1s0x3bae15e67f3afdeb:0x1855be0d880ad040!8m2!3d12.9447058!4d77.5729601!16s%2Fg%2F11h8h42qgr!19sChIJ6_06f-YVrjsRQNAKiA2-VRg"
+    },
+    {
+      "business_name": "Sri Matha Home Nursing Services (R.)",
+      "category": "Home health care service",
+      "address": "J P Nagar 6th Phase, #363,J.P.Nagar 6th Phase, 33rd Main Road,17th' A' Cross, Karnataka 560078",
+      "phone": "09739284443",
+      "website": "https://srimathahomenursingservice.com/",
+      "rating": "4.9",
+      "reviews": "216",
+      "maps_url": "https://www.google.com/maps/place/Sri+Matha+Home+Nursing+Services+%28R.%29/data=!4m7!3m6!1s0x3bae156c04a3bef3:0xdd49ff17c0c68ce9!8m2!3d12.9051053!4d77.5801935!16s%2Fg%2F11f0wjwhzb!19sChIJ876jBGwVrjsR6YzGwBf_Sd0"
+    },
+    {
+      "business_name": "Sajjalashree Home Nursing Services || Health Care Services",
+      "category": "Nursing agency",
+      "address": "2nd floor, 108/39 8th main, Dr Rajkumar Punyabhoomi Road, 4th B, Bengaluru, Karnataka 560096",
+      "phone": "09916172366",
+      "website": "https://sajjalashreehomenursingservices.com/",
+      "rating": "4.7",
+      "reviews": "208",
+      "maps_url": "https://www.google.com/maps/place/Sajjalashree+Home+Nursing+Services+%7C%7C+Health+Care+Services/data=!4m7!3m6!1s0x3bae3df544cf2c2b:0x41c3b27dfab40d2e!8m2!3d13.0165518!4d77.531578!16s%2Fg%2F11k45qs1r2!19sChIJKyzPRPU9rjsRLg20-n2yw0E"
+    },
+    {
+      "business_name": "Best Home Nursing Services",
+      "category": "Nursing agency",
+      "address": "NO- 33/5,OM SAI NILAYA 9TH CROSS, Bannerghatta Main Rd, Kodichikknahalli, Bilekahalli, Bengaluru, Karnataka 560102",
+      "phone": "",
+      "website": "",
+      "rating": "4.6",
+      "reviews": "12",
+      "maps_url": "https://www.google.com/maps/place/Best+Home+Nursing+Services/data=!4m7!3m6!1s0x3bae15e30be484b1:0x56d9fbf69b17ca4f!8m2!3d12.9210675!4d77.6473566!16s%2Fg%2F11hhf3gtj_!19sChIJsYTkC-MVrjsRT8oXm_b72VY"
+    },
+    {
+      "business_name": "s24c Nursing services",
+      "category": "Nursing agency",
+      "address": "No. 64/58, attached to Good shepherd clinic, Tulsi Theater Rd, opposite south indian bank ATM, Kaveri Layout, Marathahalli Village, Marathahalli, Bengaluru, Karnataka 560037",
+      "phone": "08431371790",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "31",
+      "maps_url": "https://www.google.com/maps/place/s24c+Nursing+services/data=!4m7!3m6!1s0x3bae1320182a1db3:0xa0372ef2f34c5345!8m2!3d12.951503!4d77.698027!16s%2Fg%2F11rpffq4_t!19sChIJsx0qGCATrjsRRVNM8_IuN6A"
+    },
+    {
+      "business_name": "Asha Nursing Home",
+      "category": "Nursing home",
+      "address": "Rose Garden, Sonena Halli, Vivek Nagar, Bengaluru, Karnataka 560047",
+      "phone": "",
+      "website": "",
+      "rating": "1.8",
+      "reviews": "17",
+      "maps_url": "https://www.google.com/maps/place/Asha+Nursing+Home/data=!4m7!3m6!1s0x3bae143a712e87a7:0x9b02e8c2f4e9a757!8m2!3d12.9533958!4d77.6193658!16s%2Fg%2F11bbrj6jxl!19sChIJp4cucToUrjsRV6fp9MLoAps"
+    },
+    {
+      "business_name": "LUNIQ HEALTH PVT LTD (Bengaluru)",
+      "category": "Home health care service",
+      "address": "2nd Floor, A V S Compound, Techno Park Building, 34 building number, 80 Feet Rd, Koramangala, Bengaluru, Karnataka 560034",
+      "phone": "06366996697",
+      "website": "https://luniqhealth.com/",
+      "rating": "4.6",
+      "reviews": "84",
+      "maps_url": "https://www.google.com/maps/place/LUNIQ+HEALTH+PVT+LTD+%28Bengaluru%29/data=!4m7!3m6!1s0xc01eed836831b41:0x95ef21a91622e15c!8m2!3d12.9368703!4d77.6284596!16s%2Fg%2F11ykkmfhz4!19sChIJQRuDNtjuAQwRXOEiFqkh75U"
+    },
+    {
+      "business_name": "GLOBAL HOME CARE NURSING SERVICES BANGALORE",
+      "category": "Home health care service",
+      "address": "469,8th Main, 15th Cross Rd, opposite Sagar Pharma Land mark Mobile vatika, Wilson Garden, Bengaluru, Karnataka 560030",
+      "phone": "08008585397",
+      "website": "https://globalhomenursingservices.com/",
+      "rating": "4.0",
+      "reviews": "8",
+      "maps_url": "https://www.google.com/maps/place/GLOBAL+HOME+CARE+NURSING+SERVICES+BANGALORE/data=!4m7!3m6!1s0xd882e68c0441593:0xb2544be29e9523e!8m2!3d12.9466879!4d77.600265!16s%2Fg%2F11w3g75ndn!19sChIJkxVEwGguiA0RPlLpKb5EJQs"
+    },
+    {
+      "business_name": "Shanti Healthcare - Best Home Nursing Services in Bangalore ಶಾಂತಿ ಹೆಲ್ತ್‌ಕೇರ್ - ಬೆಂಗಳೂರಿನಲ್ಲಿ ಅತ್ಯುತ್ತಮ ಹೋಮ್ ನರ್ಸಿಂಗ್ ಸೇವೆಗಳು",
+      "category": "Home health care service",
+      "address": "33/1, Hennur Bagalur Main Rd, opp. South Asian Bible College, Byrathi, Extension, Kothanur, Bengaluru, Karnataka 560077",
+      "phone": "09332385557",
+      "website": "https://shantihealthcare.com/",
+      "rating": "5.0",
+      "reviews": "257",
+      "maps_url": "https://www.google.com/maps/place/Shanti+Healthcare+-+Best+Home+Nursing+Services+in+Bangalore+%E0%B2%B6%E0%B2%BE%E0%B2%82%E0%B2%A4%E0%B2%BF+%E0%B2%B9%E0%B3%86%E0%B2%B2%E0%B3%8D%E0%B2%A4%E0%B3%8D%E2%80%8C%E0%B2%95%E0%B3%87%E0%B2%B0%E0%B3%8D+-+%E0%B2%AC%E0%B3%86%E0%B2%82%E0%B2%97%E0%B2%B3%E0%B3%82%E0%B2%B0%E0%B2%BF%E0%B2%A8%E0%B2%B2%E0%B3%8D%E0%B2%B2%E0%B2%BF+%E0%B2%85%E0%B2%A4%E0%B3%8D%E0%B2%AF%E0%B3%81%E0%B2%A4%E0%B3%8D%E0%B2%A4%E0%B2%AE+%E0%B2%B9%E0%B3%8B%E0%B2%AE%E0%B3%8D+%E0%B2%A8%E0%B2%B0%E0%B3%8D%E0%B2%B8%E0%B2%BF%E0%B2%82%E0%B2%97%E0%B3%8D+%E0%B2%B8%E0%B3%87%E0%B2%B5%E0%B3%86%E0%B2%97%E0%B2%B3%E0%B3%81/data=!4m7!3m6!1s0x3bae1b0e64b9b18d:0x22de58531f01fa89!8m2!3d13.070147!4d77.6532236!16s%2Fg%2F11v9k6mhqr!19sChIJjbG5ZA4brjsRifoBH1NY3iI"
+    },
+    {
+      "business_name": "Sumukha Home Nursing Services, Bangalore",
+      "category": "Home health care service",
+      "address": "3/2, 2nd floor, Sarjapur - Marathahalli Rd, opp. to 3m car care, Bellandur, Bengaluru, Karnataka 560102",
+      "phone": "09880024265",
+      "website": "https://homenursingservices.in/",
+      "rating": "4.5",
+      "reviews": "45",
+      "maps_url": "https://www.google.com/maps/place/Sumukha+Home+Nursing+Services,+Bangalore/data=!4m7!3m6!1s0x3bae417aaf01d2ef:0x5d8089c16c0bf215!8m2!3d12.9197402!4d77.6673368!16s%2Fg%2F11clfh9r1r!19sChIJ79IBr3pBrjsRFfILbMGJgF0"
+    },
+    {
+      "business_name": "Portea - Bangalore",
+      "category": "Home health care service",
+      "address": "69/B, 1st Cross Rd, Domlur I Stage, 1st Stage, Domlur, Bengaluru, Karnataka 560071",
+      "phone": "18001212323",
+      "website": "https://www.portea.com/?utm_source=GMBBengaluru&utm_medium=organic&utm_campaign=GoogleMyBusiness",
+      "rating": "4.3",
+      "reviews": "3550",
+      "maps_url": "https://www.google.com/maps/place/Portea+-+Bangalore/data=!4m7!3m6!1s0x3bae1405f14e99e9:0x9877a81407139795!8m2!3d12.9610327!4d77.6357561!16s%2Fg%2F1pp2wzfmv!19sChIJ6ZlO8QUUrjsRlZcTBxSod5g"
+    },
+    {
+      "business_name": "Well Nurse",
+      "category": "Home health care service",
+      "address": "47 2nd cross near aradhana academy aerekere micolayout Layout, 2nd Stage, Aradhana Layout, Arekere, Bengaluru, Karnataka 560076",
+      "phone": "09035720576",
+      "website": "http://www.wellnurse.in/",
+      "rating": "5.0",
+      "reviews": "28",
+      "maps_url": "https://www.google.com/maps/place/Well+Nurse/data=!4m7!3m6!1s0x3bae155d7ee37ec9:0x25dd85011a46f4d0!8m2!3d12.8852485!4d77.5907902!16s%2Fg%2F11nv0z04sk!19sChIJyX7jfl0VrjsR0PRGGgGF3SU"
+    },
+    {
+      "business_name": "Nursing placement network and consultancy",
+      "category": "Nursing agency",
+      "address": "10th Cross Rd, JC Nagar, Maruthi Nagar, Bengaluru, Karnataka 560086",
+      "phone": "08787643507",
+      "website": "https://nursingplacementnetwork.com/",
+      "rating": "4.9",
+      "reviews": "64",
+      "maps_url": "https://www.google.com/maps/place/Nursing+placement+network+and+consultancy/data=!4m7!3m6!1s0x3bae3db1f0740f85:0xb3974f3405daf999!8m2!3d13.0065403!4d77.536231!16s%2Fg%2F11yz5mgznj!19sChIJhQ908LE9rjsRmfnaBTRPl7M"
+    },
+    {
+      "business_name": "BHNS Health Care Pvt Ltd Banashankari Home Nursing services in Bangalore",
+      "category": "Home health care service",
+      "address": "95 1st floor 4th cross, 4th Main Rd, opposite to Hyundai service centre, Pai Layout, Hulimavu, Bengaluru, Karnataka 560076",
+      "phone": "08069409025",
+      "website": "https://bhns.in/",
+      "rating": "4.8",
+      "reviews": "308",
+      "maps_url": "https://www.google.com/maps/place/BHNS+Health+Care+Pvt+Ltd+Banashankari+Home+Nursing+services+in+Bangalore/data=!4m7!3m6!1s0x3bae15e0061b40ab:0xdec63ed00717b976!8m2!3d12.8811947!4d77.5975545!16s%2Fg%2F11vc1l62nt!19sChIJq0AbBuAVrjsRdrkXB9A-xt4"
+    },
+    {
+      "business_name": "Aayan Home Nursing Services",
+      "category": "Home health care service",
+      "address": "9th Cross Rd, 1st N Block Nagapura, Rajajinagar, Bengaluru, Karnataka 560010",
+      "phone": "08147297666",
+      "website": "https://aayanglobal.com/home-nursing-services-in-bangalore/",
+      "rating": "4.8",
+      "reviews": "106",
+      "maps_url": "https://www.google.com/maps/place/Aayan+Home+Nursing+Services/data=!4m7!3m6!1s0x3bae3dc2645bd6af:0x5de7f5fce4eff89e!8m2!3d13.0045806!4d77.5513885!16s%2Fg%2F11l1ybzxnc!19sChIJr9ZbZMI9rjsRnvjv5Pz1510"
+    },
+    {
+      "business_name": "Sri Vigneshwara Home Nursing Services",
+      "category": "Home health care service",
+      "address": "2nd Main Rd, Sampangiram Nagar, Seshadripuram, Bengaluru, Karnataka 560003",
+      "phone": "",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "121",
+      "maps_url": "https://www.google.com/maps/place/Sri+Vigneshwara+Home+Nursing+Services/data=!4m7!3m6!1s0x3bae17f6c2f3281d:0xb68fd635381966a7!8m2!3d12.9924582!4d77.5748564!16s%2Fg%2F11sjwfpwx5!19sChIJHSjzwvYXrjsRp2YZODXWj7Y"
+    },
+    {
+      "business_name": "Nursing services",
+      "category": "Nursing agency",
+      "address": "567, ITPL Main Rd, BEML Layout, Brookefield, Bengaluru, Karnataka 560037",
+      "phone": "08618784329",
+      "website": "http://www.jkhomehealthcare.com/",
+      "rating": "5.0",
+      "reviews": "48",
+      "maps_url": "https://www.google.com/maps/place/Nursing+services/data=!4m7!3m6!1s0x3bae13f2dbaaa2a3:0xfc0a6a90fa73a8bc!8m2!3d12.9561017!4d77.714825!16s%2Fg%2F11v08m74gw!19sChIJo6Kq2_ITrjsRvKhz-pBqCvw"
+    },
+    {
+      "business_name": "Nurseplus",
+      "category": "Home health care service",
+      "address": "109/2, 4th Cross Rd, manjunath nagar, Marathahalli, Bengaluru, Karnataka 560037",
+      "phone": "07019379994",
+      "website": "https://nurseplus.in/",
+      "rating": "5.0",
+      "reviews": "139",
+      "maps_url": "https://www.google.com/maps/place/Nurseplus/data=!4m7!3m6!1s0x3bae1322e658730d:0x7b7422592cbc5d94!8m2!3d12.9574041!4d77.6946149!16s%2Fg%2F11ynygw0pd!19sChIJDXNY5iITrjsRlF28LFkidHs"
+    },
+    {
+      "business_name": "Das Home Nursing Services in Bengaluru",
+      "category": "Nursing agency",
+      "address": "2nd Floor, 100, KHB Colony, 5th Block, Koramangala, Bengaluru, Karnataka 560095",
+      "phone": "08431298241",
+      "website": "http://homenursingservices.org/",
+      "rating": "4.9",
+      "reviews": "22",
+      "maps_url": "https://www.google.com/maps/place/Das+Home+Nursing+Services+in+Bengaluru/data=!4m7!3m6!1s0x3bae153f2402ee0d:0xac75168d6b2f0faf!8m2!3d12.9361349!4d77.6178309!16s%2Fg%2F11jnspfq4k!19sChIJDe4CJD8VrjsRrw8va40Wdaw"
+    },
+    {
+      "business_name": "NURSE-G Home Care Services",
+      "category": "Home health care service",
+      "address": "SOUTHERN NEST APARTMENT FLAT#101 2nd Main Road, 4th Cross Kuvempu Rd, Ambetkar Layout, kavalbysandra, Bengaluru, Karnataka 560084",
+      "phone": "09620763960",
+      "website": "https://nurseg.in/",
+      "rating": "5.0",
+      "reviews": "233",
+      "maps_url": "https://www.google.com/maps/place/NURSE-G+Home+Care+Services/data=!4m7!3m6!1s0x3bae171ae26e5999:0x6e12984c3f267935!8m2!3d13.0154306!4d77.6339408!16s%2Fg%2F11ll4_7qrl!19sChIJmVlu4hoXrjsRNXkmP0yYEm4"
+    },
+    {
+      "business_name": "iNurse Home Healthcare",
+      "category": "Home health care service",
+      "address": "29,4th Floor, NANJAPPA MANSION, Kengal Hanumanthaiah Rd, Shanti Nagar, Bengaluru, Karnataka 560027",
+      "phone": "07795008077",
+      "website": "https://inursehomecare.com/",
+      "rating": "4.7",
+      "reviews": "199",
+      "maps_url": "https://www.google.com/maps/place/iNurse+Home+Healthcare/data=!4m7!3m6!1s0x3bae3d3209077fc1:0xe4299ba4547f4fe2!8m2!3d12.9578345!4d77.5931432!16s%2Fg%2F11nx64qvgc!19sChIJwX8HCTI9rjsR4k9_VKSbKeQ"
+    },
+    {
+      "business_name": "Nurseplus Healthcare services - Injection at Home, Sterile Dressing at Home",
+      "category": "Home health care service",
+      "address": "Unit 101, Oxford Towers, 139, HAL Old Airport Rd, Kodihalli, Bengaluru, Karnataka 560008",
+      "phone": "09019671757",
+      "website": "https://nurseplus.in/",
+      "rating": "5.0",
+      "reviews": "13",
+      "maps_url": "https://www.google.com/maps/place/Nurseplus+Healthcare+services+-+Injection+at+Home,+Sterile+Dressing+at+Home/data=!4m7!3m6!1s0x3bae15e5c795642b:0x16b3cdee9922718a!8m2!3d12.9587609!4d77.6468052!16s%2Fg%2F11ntpcqmd_!19sChIJK2SVx-UVrjsRinEime7NsxY"
+    },
+    {
+      "business_name": "Bangalore Nurses Homecare",
+      "category": "Home health care service",
+      "address": "56/S1 6th cross road, 1st Main Rd, 1st Block Koramangala, Bengaluru, Karnataka 560034",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/Bangalore+Nurses+Homecare/data=!4m7!3m6!1s0x3bae15882c73b335:0x35f16316b457be37!8m2!3d12.9229246!4d77.6366929!16s%2Fg%2F11z0z06_lj!19sChIJNbNzLIgVrjsRN75XtBZj8TU"
+    },
+    {
+      "business_name": "Das Home Nursing Services in Bangalore",
+      "category": "Home health care service",
+      "address": "#46, 2nd Floor, Z Plaza, 2nd Main Road Near Sampige Theatre, Seshadripuram, Bengaluru, Karnataka 560020",
+      "phone": "09242730143",
+      "website": "https://www.homenursingservices.org/?utm_source=gmb&utm_medium=organic&utm_campaign=bangalore",
+      "rating": "4.9",
+      "reviews": "285",
+      "maps_url": "https://www.google.com/maps/place/Das+Home+Nursing+Services+in+Bangalore/data=!4m7!3m6!1s0x3bae177a2c6868ad:0x3ff7c3f050ae35a0!8m2!3d12.9909111!4d77.5736801!16s%2Fg%2F11hzc0w7_d!19sChIJrWhoLHoXrjsRoDWuUPDD9z8"
+    },
+    {
+      "business_name": "Spandhana Home Nursing Services(Home Nursing Care 24/7 and 12hrs)| Patient Nursing Care | Bedridden Patient Care At Home",
+      "category": "Home health care service",
+      "address": "1154, 6th Main, 19th A Cross Rd, behind Aasha Tiffins, 7th Sector, HSR Layout, Bengaluru, Karnataka 560102",
+      "phone": "09845259472",
+      "website": "https://spandhanapublictrust.com/",
+      "rating": "4.8",
+      "reviews": "423",
+      "maps_url": "https://www.google.com/maps/place/Spandhana+Home+Nursing+Services%28Home+Nursing+Care+24%2F7+and+12hrs%29%7C+Patient+Nursing+Care+%7C+Bedridden+Patient+Care+At+Home/data=!4m7!3m6!1s0x3bae1511d35c77c9:0x48353ba99658dbec!8m2!3d12.9107911!4d77.6328708!16s%2Fg%2F11nzt6tx3p!19sChIJyXdc0xEVrjsR7NtYlqk7NUg"
+    },
+    {
+      "business_name": "NursePlus",
+      "category": "Home health care service",
+      "address": "Ist Floor, 812, Opposite Mahadeshwara Temple, 13th Cross, 16th Main Rd, BTM Layout 2nd Stage, Bengaluru, Karnataka 560076",
+      "phone": "07022663917",
+      "website": "https://nurseplus.in/",
+      "rating": "4.9",
+      "reviews": "239",
+      "maps_url": "https://www.google.com/maps/place/NursePlus/data=!4m7!3m6!1s0x3bae15006af9f7bb:0xdde61922e66f14b5!8m2!3d12.9083035!4d77.6106902!16s%2Fg%2F11ydgf8s38!19sChIJu_f5agAVrjsRtRRv5iIZ5t0"
+    },
+    {
+      "business_name": "Nurses Home Health Care",
+      "category": "Home health care service",
+      "address": "2JMW+H2G Poojappa Layout, Chelekare, Hennur Gardens, Bengaluru, Karnataka 560113",
+      "phone": "07800782061",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "46",
+      "maps_url": "https://www.google.com/maps/place/Nurses+Home+Health+Care/data=!4m7!3m6!1s0x3bae172dcd181af5:0x4a5b7e61142fd354!8m2!3d13.0339159!4d77.6450008!16s%2Fg%2F11rn3t1rt8!19sChIJ9RoYzS0XrjsRVNMvFGF-W0o"
+    },
+    {
+      "business_name": "NurseNest Plus - Bangalore",
+      "category": "Home health care service",
+      "address": "ground floore, 100, 15th Main Rd, near tailor shop, 14C Cross, JC Nagar, Kurubarahalli, circle, Bengaluru, Karnataka 560086",
+      "phone": "07217872802",
+      "website": "https://nursenestplus.com/",
+      "rating": "4.9",
+      "reviews": "37",
+      "maps_url": "https://www.google.com/maps/place/NurseNest+Plus+-+Bangalore/data=!4m7!3m6!1s0xad6b43464f05fe3d:0x4a655a0b626528cf!8m2!3d13.0018559!4d77.5349959!16s%2Fg%2F11mlx6bw1s!19sChIJPf4FT0ZDa60RzyhlYgtaZUo"
+    },
+    {
+      "business_name": "WeCare Home Nursing Services",
+      "category": "Nursing agency",
+      "address": "Infantry Rd, Shivaji Nagar, Bengaluru, Karnataka 560001",
+      "phone": "09035036333",
+      "website": "https://wecare24.co/",
+      "rating": "4.8",
+      "reviews": "125",
+      "maps_url": "https://www.google.com/maps/place/WeCare+Home+Nursing+Services/data=!4m7!3m6!1s0x3bae17fc52e6399b:0x82b1e830052497e6!8m2!3d12.9815207!4d77.6002047!16s%2Fg%2F11wqw2lmc9!19sChIJmznmUvwXrjsR5pckBTDosYI"
+    },
+    {
+      "business_name": "Forever Frames",
+      "category": "Photography studio",
+      "address": "Hallmark First Floor, 4C-315, opp. St George College, OMBR Layout, Banaswadi, Bengaluru, Karnataka 560043",
+      "phone": "09900303808",
+      "website": "https://foreverframes1990.com/",
+      "rating": "4.9",
+      "reviews": "124",
+      "maps_url": "https://www.google.com/maps/place/Forever+Frames/data=!4m7!3m6!1s0x3bae1712110fd2e9:0xb71f04fcbc5a81ac!8m2!3d13.008813!4d77.651182!16s%2Fg%2F11z4sgblrk!19sChIJ6dIPERIXrjsRrIFavPwEH7c"
+    },
+    {
+      "business_name": "VISHU PROPS STUDIO- Vijaynagar baby Photoshoot maternity Photoshoot",
+      "category": "Photography studio",
+      "address": "1st Main Rd, Syndicate Bank Colony, Govindaraja Nagar Ward, Prashanth Nagar, Vijayanagar, Bengaluru, Karnataka 560079",
+      "phone": "08880999105",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "115",
+      "maps_url": "https://www.google.com/maps/place/VISHU+PROPS+STUDIO-+Vijaynagar+baby+Photoshoot+maternity+Photoshoot/data=!4m7!3m6!1s0x3bae3dfb315aaed3:0xd60862c3d10b604d!8m2!3d12.9819548!4d77.5313654!16s%2Fg%2F11msfyyr4n!19sChIJ065aMfs9rjsRTWAL0cNiCNY"
+    },
+    {
+      "business_name": "Kavitha Nagaraj Photography | Newborn Photography Bangalore",
+      "category": "Photographer",
+      "address": "OMBR Layout, Banaswadi, Bengaluru, Karnataka 560043",
+      "phone": "08105731231",
+      "website": "https://www.kavithanagaraj.com/",
+      "rating": "5.0",
+      "reviews": "209",
+      "maps_url": "https://www.google.com/maps/place/Kavitha+Nagaraj+Photography+%7C+Newborn+Photography+Bangalore/data=!4m7!3m6!1s0x3bae17ad11b0acfb:0x3da6dfd997677445!8m2!3d13.0083176!4d77.6552842!16s%2Fg%2F11g0zpc2zz!19sChIJ-6ywEa0XrjsRRXRnl9nfpj0"
+    },
+    {
+      "business_name": "BAAMBOO STUDIOS – Maternity, Baby & Wedding Photography",
+      "category": "Photography studio",
+      "address": "Baamboo Studios, 3rd Floor, CMR complex 12th Main, Malleshpalya Main Rd, Bengaluru, Karnataka 560075",
+      "phone": "09488584861",
+      "website": "http://www.baamboostudios.com/",
+      "rating": "4.8",
+      "reviews": "369",
+      "maps_url": "https://www.google.com/maps/place/BAAMBOO+STUDIOS+%E2%80%93+Maternity,+Baby+%26+Wedding+Photography/data=!4m7!3m6!1s0x3bae1163be6d50df:0xfea677ca0299c1a4!8m2!3d12.9729934!4d77.6768618!16s%2Fg%2F11gbl2vp1j!19sChIJ31BtvmMRrjsRpMGZAsp3pv4"
+    },
+    {
+      "business_name": "ADITHYA PHOTO STUDIO",
+      "category": "Photography studio",
+      "address": "Bus Stand, No-71,near 96D, Kamala Nagar, Bengaluru, Karnataka 560079",
+      "phone": "08971649947",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "136",
+      "maps_url": "https://www.google.com/maps/place/ADITHYA+PHOTO+STUDIO/data=!4m7!3m6!1s0x3bae3d4250127c49:0xc6e34f73b6a9daa3!8m2!3d12.9961062!4d77.5304774!16s%2Fg%2F11pq4lgc20!19sChIJSXwSUEI9rjsRo9qptnNP48Y"
+    },
+    {
+      "business_name": "Renuka Studio",
+      "category": "Photography studio",
+      "address": "3572/32, 1st Main Rd, Gayathri Nagar, Rajajinagar, Bengaluru, Karnataka 560021",
+      "phone": "09916675762",
+      "website": "http://www.renukastudio.in/",
+      "rating": "4.8",
+      "reviews": "52",
+      "maps_url": "https://www.google.com/maps/place/Renuka+Studio/data=!4m7!3m6!1s0x3bae3ddf937da1f7:0x9152f5f90db66b66!8m2!3d13.0006964!4d77.5607263!16s%2Fg%2F11y3d0m4c_!19sChIJ96F9k989rjsRZmu2Dfn1UpE"
+    },
+    {
+      "business_name": "Mommyshots by Amrita",
+      "category": "Photography studio",
+      "address": "3rd Floor, 11/8-1, Cambridge Rd, above Jockey showroom (Patel Garments, Halasuru, Lakshmamma Layout, Jogupalya, Bengaluru, Karnataka 560008",
+      "phone": "08928749547",
+      "website": "http://www.mommyshotsbyamrita.com/",
+      "rating": "5.0",
+      "reviews": "31",
+      "maps_url": "https://www.google.com/maps/place/Mommyshots+by+Amrita/data=!4m7!3m6!1s0x3bae170c7c7afee9:0x1e36eb74d40ce1d9!8m2!3d12.9724504!4d77.6271314!16s%2Fg%2F11gnsc5snk!19sChIJ6f56fAwXrjsR2eEM1HTrNh4"
+    },
+    {
+      "business_name": "Photography Studio",
+      "category": "Photographer",
+      "address": "73) 2nd cross, 17/3, Link Rd, Anjaneya block, DN Ramaiah Layout, Seshadripuram, Bengaluru, Karnataka 560003",
+      "phone": "09986301063",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "2",
+      "maps_url": "https://www.google.com/maps/place/Photography+Studio/data=!4m7!3m6!1s0x3bae170768508aa5:0x232097c4bf915fcf!8m2!3d12.9959294!4d77.5788921!16s%2Fg%2F11vqm_7pv3!19sChIJpYpQaAcXrjsRz1-Rv8SXICM"
+    },
+    {
+      "business_name": "Fast Foto Studios",
+      "category": "Photo lab",
+      "address": "1112, 8th A Main Rd, opposite Nethaji Park, Saneguruvanahalli, Basaveshwar Nagar, Bengaluru, Karnataka 560079",
+      "phone": "09611214261",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "592",
+      "maps_url": "https://www.google.com/maps/place/Fast+Foto+Studios/data=!4m7!3m6!1s0x3bae3d2875378503:0x94abdbedf909361c!8m2!3d12.9913752!4d77.5428944!16s%2Fg%2F11svk6p8m1!19sChIJA4U3dSg9rjsRHDYJ-e3bq5Q"
+    },
+    {
+      "business_name": "Wide Angle Picturez",
+      "category": "Photography studio",
+      "address": "ITPL Main Rd, B Block, AECS Layout, Brookefield, Bengaluru, Karnataka 560037",
+      "phone": "09632903355",
+      "website": "http://www.instagram.com/wide_angle_picturez",
+      "rating": "4.6",
+      "reviews": "149",
+      "maps_url": "https://www.google.com/maps/place/Wide+Angle+Picturez/data=!4m7!3m6!1s0x3bae13ccf1a2f7ab:0x338ff8511a37e2ed!8m2!3d12.9668671!4d77.7140866!16s%2Fg%2F11h230wbxj!19sChIJq_ei8cwTrjsR7eI3GlH4jzM"
+    },
+    {
+      "business_name": "WTFun Bro Studios",
+      "category": "Photography service",
+      "address": "166/2, 2nd fs, Chamrajpet, Bengaluru, Karnataka 560018",
+      "phone": "07483632396",
+      "website": "http://www.wtfunbrostudios.com/",
+      "rating": "5.0",
+      "reviews": "197",
+      "maps_url": "https://www.google.com/maps/place/WTFun+Bro+Studios/data=!4m7!3m6!1s0x3bae151814f8ceed:0x8b2ff0498c1ac9b8!8m2!3d12.95807!4d77.5620971!16s%2Fg%2F11j0xc_vr6!19sChIJ7c74FBgVrjsRuMkajEnwL4s"
+    },
+    {
+      "business_name": "disneyland kids studio bangalore",
+      "category": "Photography studio",
+      "address": "FLOT NO 104 FIRST FLOOR, Motati Meadows, Nagavarapalya, C V Raman Nagar, Bengaluru, Karnataka 560093",
+      "phone": "09035122479",
+      "website": "https://disneylandstudios.com/",
+      "rating": "4.7",
+      "reviews": "153",
+      "maps_url": "https://www.google.com/maps/place/disneyland+kids+studio+bangalore/data=!4m7!3m6!1s0x3bae1130a18c5c1f:0xc9f3e23901da8c5e!8m2!3d12.9939644!4d77.6638581!16s%2Fg%2F11sv6sp23l!19sChIJH1yMoTARrjsRXozaATni88k"
+    },
+    {
+      "business_name": "Photoland events",
+      "category": "Photography studio",
+      "address": "Ground Floor, 280, 6th B Main Rd, near Vv Nagar garden park, HMT Layout, Dinnur, RT Nagar, Bengaluru, Karnataka 560032",
+      "phone": "09916299143",
+      "website": "https://photolandevent.com/",
+      "rating": "4.6",
+      "reviews": "126",
+      "maps_url": "https://www.google.com/maps/place/Photoland+events/data=!4m7!3m6!1s0x3bae17b9f29fece9:0x74e18f650177c494!8m2!3d13.0280328!4d77.5952308!16s%2Fg%2F11rd_4d_f2!19sChIJ6eyf8rkXrjsRlMR3AWWP4XQ"
+    },
+    {
+      "business_name": "Vinu's Images",
+      "category": "Photography studio",
+      "address": "3rd Floor, Manjaly Edifice, 703, 3rd Cross Rd, HRBR Layout 1st Block, HRBR Layout, Kalyan Nagar, Bengaluru, Karnataka 560043",
+      "phone": "09994892580",
+      "website": "https://www.vinusimages.com/",
+      "rating": "4.9",
+      "reviews": "345",
+      "maps_url": "https://www.google.com/maps/place/Vinu%27s+Images/data=!4m7!3m6!1s0x3bae171504472b0d:0xe7b29d1e71bda083!8m2!3d13.0177229!4d77.6433868!16s%2Fg%2F11t4gy3rz8!19sChIJDStHBBUXrjsRg6C9cR6dsuc"
+    },
+    {
+      "business_name": "FOCUS STUDIO",
+      "category": "Photography studio",
+      "address": "XJW7+86W, Coles Rd, Cleveland Town, Fraser Town, Bengaluru, Karnataka 560005",
+      "phone": "09916355484",
+      "website": "",
+      "rating": "3.8",
+      "reviews": "22",
+      "maps_url": "https://www.google.com/maps/place/FOCUS+STUDIO/data=!4m7!3m6!1s0x3bae16f40658bd69:0x9781760c37d55088!8m2!3d12.995854!4d77.6130788!16s%2Fg%2F1ygvswpz5!19sChIJab1YBvQWrjsRiFDVNwx2gZc"
+    },
+    {
+      "business_name": "Crush Studios",
+      "category": "Photography studio",
+      "address": "1061, 2nd Floor, Gowdru Hotel, Landmark, Triveni Main Rd, opposite Balaji Kabab Corner, above Hap Daily Icecream Shop, Gokula 1st Stage, Nanjappa Reddy Colony, Yeswanthpur, Bengaluru, Karnataka 560054",
+      "phone": "07892079943",
+      "website": "http://www.instagram.com/crushstudios.lrk",
+      "rating": "4.9",
+      "reviews": "70",
+      "maps_url": "https://www.google.com/maps/place/Crush+Studios/data=!4m7!3m6!1s0x3bae3dc6c268dda1:0x781e788fc9fd35eb!8m2!3d13.0280857!4d77.561247!16s%2Fg%2F11kt_jqfgf!19sChIJod1owsY9rjsR6zX9yY94Hng"
+    },
+    {
+      "business_name": "Little Ones Studios",
+      "category": "Photography studio",
+      "address": "1st Floor, 4th Cross Road, B. Channasandra, Outer Ring Rd, Bennigana Halli, Bengaluru, Karnataka 560043",
+      "phone": "09902854970",
+      "website": "https://www.instagram.com/littleonesstudios/",
+      "rating": "5.0",
+      "reviews": "222",
+      "maps_url": "https://www.google.com/maps/place/Little+Ones+Studios/data=!4m7!3m6!1s0x6004e8dcef5e31f:0x6dd7d1903fc328b5!8m2!3d13.0094439!4d77.6620654!16s%2Fg%2F11y1yynd_r!19sChIJH-P1zo1OAAYRtSjDP5DR120"
+    },
+    {
+      "business_name": "Tejashwini Digital Photo Studio",
+      "category": "Photography studio",
+      "address": "Sir M Vishweshwaraiah Layout 6th Block, Ullal Uppanagar, Bengaluru, Karnataka 560110",
+      "phone": "09242455699",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "247",
+      "maps_url": "https://www.google.com/maps/place/Tejashwini+Digital+Photo+Studio/data=!4m7!3m6!1s0x3bae3c01939933f3:0x2003aed65b06b1f8!8m2!3d12.9630856!4d77.4749642!16s%2Fg%2F11c311lf3x!19sChIJ8zOZkwE8rjsR-LEGW9auAyA"
+    },
+    {
+      "business_name": "Reflect Studios Malleshwaram",
+      "category": "Wedding photographer",
+      "address": "343, Sampige Rd, near 11th Cross Road, Vyalikaval, Kodandarampura, Malleshwaram, Bengaluru, Karnataka 560003",
+      "phone": "07259900407",
+      "website": "http://www.reflectstudios.co.in/",
+      "rating": "4.9",
+      "reviews": "371",
+      "maps_url": "https://www.google.com/maps/place/Reflect+Studios+Malleshwaram/data=!4m7!3m6!1s0x3bae17fb617020cb:0xc8f9d1d8198d9ac1!8m2!3d13.0020278!4d77.5714726!16s%2Fg%2F11rdcvddvh!19sChIJyyBwYfsXrjsRwZqNGdjR-cg"
+    },
+    {
+      "business_name": "Photo Flaza Digital Studio and Colour Lab",
+      "category": "Photography studio",
+      "address": "39, Main Rd, Jnananjyothinagar, Balaji Layout, Mallathahalli, Bengaluru, Karnataka 560056",
+      "phone": "09740629568",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "93",
+      "maps_url": "https://www.google.com/maps/place/Photo+Flaza+Digital+Studio+and+Colour+Lab/data=!4m7!3m6!1s0x3bae3f688d5686d9:0xe9dce4be5b08a521!8m2!3d12.959236!4d77.4920568!16s%2Fg%2F11zbskrpjs!19sChIJ2YZWjWg_rjsRIaUIW77k3Ok"
+    },
+    {
+      "business_name": "Luxe Shutter Photography Studio",
+      "category": "Photography studio",
+      "address": "Shivana Halli, Shop No 4, Site No. 69, UAS Layout, 3rd B-Phase Yelahanka, Jakkur Main Rd, Nehru Nagar, Bengaluru, Karnataka 560064",
+      "phone": "09980670895",
+      "website": "https://luxeshutter.com/",
+      "rating": "4.8",
+      "reviews": "249",
+      "maps_url": "https://www.google.com/maps/place/Luxe+Shutter+Photography+Studio/data=!4m7!3m6!1s0x3bae13ccdff4ca6f:0xfbb77f3e7628e687!8m2!3d13.0889068!4d77.6031033!16s%2Fg%2F11rs2qn3h7!19sChIJb8r038wTrjsRh-Yodj5_t_s"
+    },
+    {
+      "business_name": "SP Photography Studio",
+      "category": "Photography studio",
+      "address": "828, Jawaharlal Nehru Rd, BEML Layout 3rd Stage, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098",
+      "phone": "07760958005",
+      "website": "https://www.spphotographystudio.in/",
+      "rating": "4.9",
+      "reviews": "424",
+      "maps_url": "https://www.google.com/maps/place/SP+Photography+Studio/data=!4m7!3m6!1s0x3bae3e7db5f00589:0xcd023eae0173165c!8m2!3d12.9188599!4d77.5205741!16s%2Fg%2F11ghx8jzh7!19sChIJiQXwtX0-rjsRXBZzAa4-As0"
+    },
+    {
+      "business_name": "Rithik Photo Studio",
+      "category": "Photography studio",
+      "address": "Shop No. 4, 3rd Main Rd, opp. ORACLE RESIDENCY, Hoysala Nagar, Horamavu, Bengaluru, Karnataka 560113",
+      "phone": "08970686166",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "161",
+      "maps_url": "https://www.google.com/maps/place/Rithik+Photo+Studio/data=!4m7!3m6!1s0x3bae116ac0583373:0xc16fa03f854dcdb8!8m2!3d13.0243759!4d77.6613818!16s%2Fg%2F11n_zmthpc!19sChIJczNYwGoRrjsRuM1NhT-gb8E"
+    },
+    {
+      "business_name": "Intime Studio",
+      "category": "Photography studio",
+      "address": "club road, 2084, 1st Main Rd, Hoshalli Extension, Stage 1, Vijayanagar, Bengaluru, Karnataka 560104",
+      "phone": "09980823003",
+      "website": "https://intimestudio.shop/",
+      "rating": "4.8",
+      "reviews": "2078",
+      "maps_url": "https://www.google.com/maps/place/Intime+Studio/data=!4m7!3m6!1s0x3bae3dc1a6b3a40f:0xcebd348a8e6cd803!8m2!3d12.9674645!4d77.5415705!16s%2Fg%2F1tdkf281!19sChIJD6SzpsE9rjsRA9hsjoo0vc4"
+    },
+    {
+      "business_name": "J J Captures",
+      "category": "Photography studio",
+      "address": "125, 2nd Main Rd, Jai Bheema Nagar, Sampangiram Nagar, Seshadripuram, Bengaluru, Karnataka 560020",
+      "phone": "09980356100",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "408",
+      "maps_url": "https://www.google.com/maps/place/J+J+Captures/data=!4m7!3m6!1s0x3bae173c94f28eeb:0xd7aa0e07bfa5cb1e!8m2!3d12.9902515!4d77.5738379!16s%2Fg%2F11qg0knkrm!19sChIJ647ylDwXrjsRHsulvwcOqtc"
+    },
+    {
+      "business_name": "Domlur Digital Studio",
+      "category": "Photography studio",
+      "address": "XJ6Q+35V, 1st Main Rd, Domlur I Stage, 1st Stage, Domlur, Bengaluru, Karnataka 560071",
+      "phone": "09686411043",
+      "website": "",
+      "rating": "4.3",
+      "reviews": "54",
+      "maps_url": "https://www.google.com/maps/place/Domlur+Digital+Studio/data=!4m7!3m6!1s0x3bae141a3625b4c3:0xc03ee71cf0a806a1!8m2!3d12.9602442!4d77.6379108!16s%2Fg%2F1w3w1hh2!19sChIJw7QlNhoUrjsRoQao8BznPsA"
+    },
+    {
+      "business_name": "Grands Studio & Productions",
+      "category": "Photography studio",
+      "address": "1085/3, 2nd G Cross Rd, HRBR Layout 1st Block, HRBR Layout, Kalyan Nagar, Bengaluru, Karnataka 560043",
+      "phone": "09380995600",
+      "website": "",
+      "rating": "4.7",
+      "reviews": "395",
+      "maps_url": "https://www.google.com/maps/place/Grands+Studio+%26+Productions/data=!4m7!3m6!1s0x3bae17ad97599eb3:0x8f494f684f24ca7e!8m2!3d13.0168245!4d77.647766!16s%2Fg%2F11g4j8f6sl!19sChIJs55Zl60XrjsRfsokT2hPSY8"
+    },
+    {
+      "business_name": "Prashant photo studio",
+      "category": "Photography studio",
+      "address": "56, 8th Main Rd, opp. to venkateshwara temple, Vasanth Nagar, Bengaluru, Karnataka 560001",
+      "phone": "08970082412",
+      "website": "",
+      "rating": "4.7",
+      "reviews": "47",
+      "maps_url": "https://www.google.com/maps/place/Prashant+photo+studio/data=!4m7!3m6!1s0x3bae171735113775:0xab16508de98fbd4e!8m2!3d12.9925423!4d77.5928843!16s%2Fg%2F11l35kbd5y!19sChIJdTcRNRcXrjsRTr2P6Y1QFqs"
+    },
+    {
+      "business_name": "Dilip photography Studio",
+      "category": "Photography studio",
+      "address": "3rd floor, 572/62, 63rd Cross Rd, near Bhashyam circle, opp. Sevabai hospital, 5th Block, Rajajinagar, Bengaluru, Karnataka 560010",
+      "phone": "",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "108",
+      "maps_url": "https://www.google.com/maps/place/Dilip+photography+Studio/data=!4m7!3m6!1s0x3bae3db1f32a3d99:0x33fa20c535463117!8m2!3d12.9835352!4d77.5540457!16s%2Fg%2F11z2rz412y!19sChIJmT0q87E9rjsRFzFGNcUg-jM"
+    },
+    {
+      "business_name": "DREAM PHOTOGRAPHY & EVENTS",
+      "category": "Photography studio",
+      "address": "2nd Floor,16 A cross, ENFLAME TATTOO Building, Ambedkar circle, near Shalem church, opposite Manjunath Medical, Devarabisanahalli, Bellandur, Bengaluru, Karnataka 560103",
+      "phone": "09538400954",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "48",
+      "maps_url": "https://www.google.com/maps/place/DREAM+PHOTOGRAPHY+%26+EVENTS/data=!4m7!3m6!1s0x3bae134440ad058d:0x5287ef553a41749f!8m2!3d12.931279!4d77.685588!16s%2Fg%2F11jy9lflnz!19sChIJjQWtQEQTrjsRn3RBOlXvh1I"
+    },
+    {
+      "business_name": "Eagle digital studio",
+      "category": "Photography studio",
+      "address": "115,28th cross, 1st Main Rd, Lakshman Rao Nagar, Bengaluru, Karnataka 560047",
+      "phone": "08217068814",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "2",
+      "maps_url": "https://www.google.com/maps/place/Eagle+digital+studio/data=!4m7!3m6!1s0x3bae153f037ecd19:0xe3fa46ff60e37f8f!8m2!3d12.9498687!4d77.6135967!16s%2Fg%2F11nr7wfq4n!19sChIJGc1-Az8VrjsRj3_jYP9G-uM"
+    },
+    {
+      "business_name": "Chandru Digital Photo Studio",
+      "category": "Photography studio",
+      "address": "2/1, Basavanna Temple Street, Hosur Rd, Adugodi, Bengaluru, Karnataka 560030",
+      "phone": "09980045700",
+      "website": "",
+      "rating": "4.4",
+      "reviews": "58",
+      "maps_url": "https://www.google.com/maps/place/Chandru+Digital+Photo+Studio/data=!4m7!3m6!1s0x3bae144ace68af7d:0x28e089f47914ebf6!8m2!3d12.9433614!4d77.6082095!16s%2Fg%2F1jkyr6rxy!19sChIJfa9ozkoUrjsR9usUefSJ4Cg"
+    },
+    {
+      "business_name": "Raika Photography",
+      "category": "Photography studio",
+      "address": "2925, 14th Cross Rd, off KR Road, Siddanna Layout, Banashankari 2nd Stage, Banashankari, Bengaluru, Karnataka 560070",
+      "phone": "09738438497",
+      "website": "https://www.raikaphotography.com/",
+      "rating": "4.5",
+      "reviews": "1326",
+      "maps_url": "https://www.google.com/maps/place/Raika+Photography/data=!4m7!3m6!1s0x3bae159bc28ca327:0xa11cc6c67c06e157!8m2!3d12.9295049!4d77.5724431!16s%2Fg%2F11gxs6sqk5!19sChIJJ6OMwpsVrjsRV-EGfMbGHKE"
+    },
+    {
+      "business_name": "RS Digital Studio",
+      "category": "Photography studio",
+      "address": "129, 18th Main Rd, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560008",
+      "phone": "09845727464",
+      "website": "",
+      "rating": "3.8",
+      "reviews": "194",
+      "maps_url": "https://www.google.com/maps/place/RS+Digital+Studio/data=!4m7!3m6!1s0x3bae1404b623a4cf:0x58dad05397654d59!8m2!3d12.9624737!4d77.6424394!16s%2Fg%2F1ptxlndd1!19sChIJz6QjtgQUrjsRWU1ll1PQ2lg"
+    },
+    {
+      "business_name": "4burner",
+      "category": "Photography studio",
+      "address": "625, 11th Main Rd, 7th Cross, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560038",
+      "phone": "09742731620",
+      "website": "http://www.4burner.studio/",
+      "rating": "4.7",
+      "reviews": "111",
+      "maps_url": "https://www.google.com/maps/place/4burner/data=!4m7!3m6!1s0x3bae16a77caac835:0x799e8043d0cc7f3b!8m2!3d12.9708172!4d77.6467425!16s%2Fg%2F11cs0xxrty!19sChIJNciqfKcWrjsRO3_M0EOAnnk"
+    },
+    {
+      "business_name": "'Whizzteam19' wedding professional photography studio",
+      "category": "Wedding photographer",
+      "address": "06, 10th Main Jeevanbeema Nagar, Nagar Main Road, HAL 3rd Stage, Kodihalli, Bengaluru, Karnataka 560075",
+      "phone": "09945690520",
+      "website": "",
+      "rating": "4.7",
+      "reviews": "1004",
+      "maps_url": "https://www.google.com/maps/place/%27%27Whizzteam19%27+wedding+professional+photography+studio%27/data=!4m7!3m6!1s0x3bae1401edf70ca3:0x2fbd2ef5237e79da!8m2!3d12.9686083!4d77.6489191!16s%2Fg%2F1hm63gyxv!19sChIJowz37QEUrjsR2nl-I_UuvS8"
+    },
+    {
+      "business_name": "Portrait studio ( A brand of Gifts Arch )",
+      "category": "Corporate gift supplier",
+      "address": "Portrait studio ( A brand of Gifts Arch, Seshadripuram, Bengaluru, Karnataka 560003",
+      "phone": "09845951114",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "522",
+      "maps_url": "https://www.google.com/maps/place/Portrait+studio+%28+A+brand+of+Gifts+Arch+%29/data=!4m7!3m6!1s0x3bae17e201e239ed:0x4faf7702c6a457e6!8m2!3d12.9915925!4d77.571307!16s%2Fg%2F11kx3cyxld!19sChIJ7TniAeIXrjsR5lekxgJ3r08"
+    },
+    {
+      "business_name": "Jaasiel Studio",
+      "category": "Photography studio",
+      "address": "No. 9, Shop no, 01, Devarachikkanahalli Main Rd, near Ayyappa bakery close to Golden park apartment, Maruthi Layout, Seenappa Layout, Hongasandra, Bengaluru, Karnataka 560114",
+      "phone": "09886875231",
+      "website": "",
+      "rating": "4.7",
+      "reviews": "338",
+      "maps_url": "https://www.google.com/maps/place/Jaasiel+Studio/data=!4m7!3m6!1s0x3bae15a9d75aa82f:0xa0aa9e9fd6376f71!8m2!3d12.8939928!4d77.6199573!16s%2Fg%2F11f5vgz5l0!19sChIJL6ha16kVrjsRcW831p-eqqA"
+    },
+    {
+      "business_name": "Studio Bangalore Shades",
+      "category": "Wedding photographer",
+      "address": "136, 6th Cross Rd, KEB Layout, Sanjayanagara, Bengaluru, Karnataka 560094",
+      "phone": "08883338626",
+      "website": "https://bangaloreshades.github.io/insta-redirect/",
+      "rating": "4.8",
+      "reviews": "78",
+      "maps_url": "https://www.google.com/maps/place/Studio+Bangalore+Shades/data=!4m7!3m6!1s0x3bae13e4e89c3d57:0xc31ec4f18f6f9d00!8m2!3d13.031186!4d77.5795889!16s%2Fg%2F11h889ptv4!19sChIJVz2c6OQTrjsRAJ1vj_HEHsM"
+    },
+    {
+      "business_name": "FOCUS DIGITAL STUDIO N GIFTS",
+      "category": "Photography studio",
+      "address": "Abhaya Complex, 6, Siddaiah Rd, Vinayaka Nagar, NGO Colony, Wilson Garden, Bengaluru, Karnataka 560027",
+      "phone": "09513278343",
+      "website": "https://www.instagram.com/focusdigitalstudio/",
+      "rating": "4.9",
+      "reviews": "342",
+      "maps_url": "https://www.google.com/maps/place/FOCUS+DIGITAL+STUDIO+N+GIFTS/data=!4m7!3m6!1s0x3bae15c5f01f0cdd:0x2e8211227b2df599!8m2!3d12.9512011!4d77.5955005!16s%2Fg%2F11c58gw468!19sChIJ3Qwf8MUVrjsRmfUteyIRgi4"
+    },
+    {
+      "business_name": "Reflex Studio",
+      "category": "Photography studio",
+      "address": "Austin Plaza, F Kittel Nagar, Austin Town, Neelasandra, Bengaluru, Karnataka 560047",
+      "phone": "09743656959",
+      "website": "",
+      "rating": "3.3",
+      "reviews": "69",
+      "maps_url": "https://www.google.com/maps/place/Reflex+Studio/data=!4m7!3m6!1s0x3bae142ebb358ce9:0x7269d04cf3d3c7f8!8m2!3d12.9616173!4d77.6144316!16s%2Fg%2F1v3dqkjd!19sChIJ6Yw1uy4UrjsR-MfT80zQaXI"
+    },
+    {
+      "business_name": "PHOTO PICK STUDIO",
+      "category": "Photography studio",
+      "address": "CMC, 169, 13th Main Rd, Coffee Board Layout, Hebbal Kempapura, Bengaluru, Karnataka 560024",
+      "phone": "08970634583",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "443",
+      "maps_url": "https://www.google.com/maps/place/PHOTO+PICK+STUDIO/data=!4m7!3m6!1s0x3bae170ee1d4a8ab:0x8f00b0cc446319e2!8m2!3d13.0525254!4d77.6044793!16s%2Fg%2F11s58bcxpk!19sChIJq6jU4Q4XrjsR4hljRMywAI8"
+    },
+    {
+      "business_name": "Jk photography",
+      "category": "Photography studio",
+      "address": "Ground floor, 22nd Cross, 532, 23rd Main Rd, opp. Airtel Office, 2nd Sector, Parangi Palaya, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
+      "phone": "09035733637",
+      "website": "https://www.jkphotography.co.in/",
+      "rating": "4.7",
+      "reviews": "397",
+      "maps_url": "https://www.google.com/maps/place/Jk+photography/data=!4m7!3m6!1s0x3bae155827cb658d:0xffd770dc76710b19!8m2!3d12.908766!4d77.6489318!16s%2Fg%2F11ffk2djx0!19sChIJjWXLJ1gVrjsRGQtxdtxw1_8"
+    },
+    {
+      "business_name": "DREAM PHOTOGRAPHY",
+      "category": "Photography service",
+      "address": "2nd floor building, 4, St. Thomas Forane Church, 2nd, N Cross Rd, Bhavani Nagar, S.G. Palya, Bengaluru, Karnataka 560029",
+      "phone": "09886373315",
+      "website": "http://www.dreamphotography.in/",
+      "rating": "4.8",
+      "reviews": "263",
+      "maps_url": "https://www.google.com/maps/place/DREAM+PHOTOGRAPHY/data=!4m7!3m6!1s0x3bae159a5629a73d:0xc22b3d12f48a8fcf!8m2!3d12.9309219!4d77.6036292!16s%2Fg%2F11p64ms29c!19sChIJPacpVpoVrjsRz4-K9BI9K8I"
+    },
+    {
+      "business_name": "MM Digital Studio",
+      "category": "Photography studio",
+      "address": "1st Floor, 41/1, Palmgrove Rd, above Sri Durga Motors, Officers Colony, Victoria Layout, Bengaluru, Karnataka 560047",
+      "phone": "08025511010",
+      "website": "",
+      "rating": "3.6",
+      "reviews": "43",
+      "maps_url": "https://www.google.com/maps/place/MM+Digital+Studio/data=!4m7!3m6!1s0x3bae143ac180fa49:0x8c33448da19b323e!8m2!3d12.9617362!4d77.6148088!16s%2Fg%2F1td75063!19sChIJSfqAwToUrjsRPjKboY1EM4w"
+    },
+    {
+      "business_name": "Royale Camera",
+      "category": "Photographer",
+      "address": "No 929/A, VTN Arcade, 2nd floor, Above Union Bank, BTM 4th Stage, near Bangalore Box, Vijaya Bank Layout, Bengaluru, Karnataka 560076",
+      "phone": "09036361020",
+      "website": "http://www.royalecamera.com/",
+      "rating": "4.8",
+      "reviews": "1432",
+      "maps_url": "https://www.google.com/maps/place/Royale+Camera/data=!4m7!3m6!1s0x3bae14dd16f4fd53:0x5a54d1f91c5f9dfc!8m2!3d12.8926057!4d77.611724!16s%2Fg%2F11f3br9d_t!19sChIJU_30Ft0UrjsR_J1fHPnRVFo"
+    },
+    {
+      "business_name": "DreamTales Studio",
+      "category": "Wedding photographer",
+      "address": "XJ6W+W63 ARR Nest, 2nd Floor, ARR Nest 2282/A 6th Cross, Kodihalli, 16th E Main Rd, 5th Phase, HAL 2nd Stage, Kodihalli, Bengaluru, Karnataka 560008",
+      "phone": "07899897733",
+      "website": "https://dreamtales.studio/",
+      "rating": "4.6",
+      "reviews": "98",
+      "maps_url": "https://www.google.com/maps/place/DreamTales+Studio/data=!4m7!3m6!1s0x3bae14045b774e5b:0xa8e8dcb0bc90917b!8m2!3d12.9621952!4d77.6456914!16s%2Fg%2F11by_h5fd4!19sChIJW053WwQUrjsRe5GQvLDc6Kg"
+    },
+    {
+      "business_name": "P3A Studio Bangalore",
+      "category": "Photography studio",
+      "address": "1st Floor, BDA, 1st Main, 4th Block, S.T. Bed, Srinivagilu Tank bed. Extension, Koramangala, Bengaluru, Karnataka 560047",
+      "phone": "07795040626",
+      "website": "",
+      "rating": "4.2",
+      "reviews": "32",
+      "maps_url": "https://www.google.com/maps/place/P3A+Studio+Bangalore/data=!4m7!3m6!1s0x3bae15385b0973a5:0x4b4548851dfcc82c!8m2!3d12.9341682!4d77.6307235!16s%2Fg%2F11g49zvcqz!19sChIJpXMJWzgVrjsRLMj8HYVIRUs"
+    },
+    {
+      "business_name": "Focus Point Studio",
+      "category": "Photo shop",
+      "address": "22, 20th Main road, Maruthi Nagar Main Rd, BTM 1st Stage, Bengaluru, Karnataka 560029",
+      "phone": "09900556896",
+      "website": "https://site.dgtechsoln.com/focus-point-studio/",
+      "rating": "4.3",
+      "reviews": "69",
+      "maps_url": "https://www.google.com/maps/place/Focus+Point+Studio/data=!4m7!3m6!1s0x3bae151ecdc5eb11:0xa3349b233e1f0f5e!8m2!3d12.9221425!4d77.6139669!16s%2Fg%2F1yg4dgz9f!19sChIJEevFzR4VrjsRXg8fPiObNKM"
+    },
+    {
+      "business_name": "World Photography Studio",
+      "category": "Photographer",
+      "address": "Thigalarapalya, Krishnarajapuram, Bengaluru, Karnataka 560048",
+      "phone": "08197893494",
+      "website": "http://worldphotographystudio.co.in/",
+      "rating": "4.8",
+      "reviews": "250",
+      "maps_url": "https://www.google.com/maps/place/World+Photography+Studio/data=!4m7!3m6!1s0x3bae11a30c5c6285:0x96d70f47826a96c6!8m2!3d12.9932902!4d77.7292469!16s%2Fg%2F11h1_16lp5!19sChIJhWJcDKMRrjsRxpZqgkcP15Y"
+    },
+    {
+      "business_name": "Stories of Pixel",
+      "category": "Wedding photographer",
+      "address": "31, 32 ,2nd floor 2nd Cross, Air view Colony, Konena Agrahara, Bengaluru, Karnataka 560017",
+      "phone": "08147777462",
+      "website": "http://www.storiesofpixel.in/",
+      "rating": "4.5",
+      "reviews": "82",
+      "maps_url": "https://www.google.com/maps/place/Stories+of+Pixel/data=!4m7!3m6!1s0x3bae13fbb59e7231:0xa83362f67d6be035!8m2!3d12.9545808!4d77.6623302!16s%2Fg%2F11bwpz4m5q!19sChIJMXKetfsTrjsRNeBrffZiM6g"
+    },
+    {
+      "business_name": "SHUTTER BUG STUDIO [SHUTTER BUG STUDIOZ]",
+      "category": "Photography studio",
+      "address": "Sri Sai Ram Nilaya, 263/1, Post, beside Apple multi-speciality clinic, Maruthi Nagar, Malleshpalya, New Thippasandra, Bengaluru, Karnataka 560075",
+      "phone": "09900911929",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "224",
+      "maps_url": "https://www.google.com/maps/place/SHUTTER+BUG+STUDIO+%5BSHUTTER+BUG+STUDIOZ%5D/data=!4m7!3m6!1s0x3bae115fd80dc603:0xb97486e871166ee7!8m2!3d12.9731201!4d77.6764525!16s%2Fg%2F11g6j7fymm!19sChIJA8YN2F8RrjsR524WceiGdLk"
+    },
+    {
+      "business_name": "Picture Perfect Portrait Studio",
+      "category": "Photography studio",
+      "address": "1st Floor, 32, Bull Temple Rd, next to HARLEY'S FINE BAKING ON TOP OF R K STUDIO, Gandhi Bazaar, Basavanagudi, Bengaluru, Karnataka 560004",
+      "phone": "09632228884",
+      "website": "http://www.picture-perfect.co.in/",
+      "rating": "4.1",
+      "reviews": "151",
+      "maps_url": "https://www.google.com/maps/place/Picture+Perfect+Portrait+Studio/data=!4m7!3m6!1s0x3bae15f37cdfa777:0x42421f4e1e996fa6!8m2!3d12.945556!4d77.5679853!16s%2Fg%2F11bwg4jlpd!19sChIJd6fffPMVrjsRpm-ZHk4fQkI"
+    },
+    {
+      "business_name": "Manik digital photo studio - in marathahalli",
+      "category": "Photography service",
+      "address": "Next to sri lakshmi narayana temple, Munnekolala, Marthahalli, Bengaluru, Karnataka 560037",
+      "phone": "09611501149",
+      "website": "https://manikphoto.com/",
+      "rating": "4.6",
+      "reviews": "869",
+      "maps_url": "https://www.google.com/maps/place/Manik+digital+photo+studio+-+in+marathahalli/data=!4m7!3m6!1s0x3bae1233e69693e9:0x20697b803d53138c!8m2!3d12.9483019!4d77.7089989!16s%2Fg%2F11fylybd_k!19sChIJ6ZOW5jMSrjsRjBNTPYB7aSA"
+    },
+    {
+      "business_name": "Kalaivani Digital Studio",
+      "category": "Photography studio",
+      "address": "Rose Garden, Rajendra Nagar, Koramangala, Bengaluru, Karnataka 560047",
+      "phone": "09110625763",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/Kalaivani+Digital+Studio/data=!4m7!3m6!1s0x3bae15b002472bad:0x30b42e30af503341!8m2!3d12.9500871!4d77.618101!16s%2Fg%2F11t3gtst_h!19sChIJrStHArAVrjsRQTNQrzAutDA"
+    },
+    {
+      "business_name": "R.R. Digital Studio",
+      "category": "Photography studio",
+      "address": "Jayaram Complex, 5/3, Anepalya Main Rd, Adugodi Post, Anepalya, Neelasandra, Bengaluru, Karnataka 560030",
+      "phone": "09738565656",
+      "website": "",
+      "rating": "4.3",
+      "reviews": "8",
+      "maps_url": "https://www.google.com/maps/place/R.R.+Digital+Studio/data=!4m7!3m6!1s0x3bae1433658a70d1:0xab37e29b001c03b2!8m2!3d12.951647!4d77.609672!16s%2Fg%2F1jglt_gmz!19sChIJ0XCKZTMUrjsRsgMcAJviN6s"
+    },
+    {
+      "business_name": "Roopakala Studio",
+      "category": "Photography studio",
+      "address": "182/2, 1st main, opposite Netharavathi bar, VP Rd, near Nehtravathi bar, Old Madiwala, Bengaluru, Karnataka 560068",
+      "phone": "09743750017",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "112",
+      "maps_url": "https://www.google.com/maps/place/Roopakala+Studio/data=!4m7!3m6!1s0x3bae15da1499ec87:0x2e485e33c20036dc!8m2!3d12.9196826!4d77.6175932!16s%2Fg%2F11s2hz17gm!19sChIJh-yZFNoVrjsR3DYAwjNeSC4"
+    },
+    {
+      "business_name": "Say Cheese Photo Studio",
+      "category": "Photographer",
+      "address": "28, Viviani Rd, Richards Town, Bengaluru, Karnataka 560005",
+      "phone": "09900426083",
+      "website": "https://www.saycheese.net.in/",
+      "rating": "4.9",
+      "reviews": "791",
+      "maps_url": "https://www.google.com/maps/place/Say+Cheese+Photo+Studio/data=!4m7!3m6!1s0x3bae16f0b6bfa4f3:0x61941c7796835c50!8m2!3d13.0034476!4d77.6164991!16s%2Fg%2F11g69ypfr7!19sChIJ86S_tvAWrjsRUFyDlncclGE"
+    },
+    {
+      "business_name": "Highline Studios",
+      "category": "Photography studio",
+      "address": "Indus Ind bank, 158, 4th Cross Rd, near Coffe Day, Airports Authority of India Colony, Cambridge Layout, Jogupalya, Kodihalli, Bengaluru, Karnataka 560008",
+      "phone": "",
+      "website": "",
+      "rating": "3.9",
+      "reviews": "140",
+      "maps_url": "https://www.google.com/maps/place/Highline+Studios/data=!4m7!3m6!1s0x3bae17fab72f2d13:0xe649fb01e36deae5!8m2!3d12.9701564!4d77.6312867!16s%2Fg%2F11qszd8hxd!19sChIJEy0vt_oXrjsR5ept4wH7SeY"
+    },
+    {
+      "business_name": "Kodak Express Photo Studio",
+      "category": "Photography studio",
+      "address": "1538, 26th Cross, behind IDC Kitchen, near New Baldwin International School, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
+      "phone": "07406060912",
+      "website": "",
+      "rating": "4.5",
+      "reviews": "533",
+      "maps_url": "https://www.google.com/maps/place/Kodak+Express+Photo+Studio/data=!4m7!3m6!1s0x3bae149e77777c03:0x8f879ad33acb1d85!8m2!3d12.9052561!4d77.6507671!16s%2Fg%2F11g00f5mfb!19sChIJA3x3d54UrjsRhR3LOtOah48"
+    },
+    {
+      "business_name": "Studio De Fashion",
+      "category": "Photography studio",
+      "address": "7, 24th Main Rd, Jeewan Sathi Colony, 1st Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
+      "phone": "08867500973",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "165",
+      "maps_url": "https://www.google.com/maps/place/Studio+De+Fashion/data=!4m7!3m6!1s0x3bae1512c7ec4783:0x4e1cfa2422c1a47a!8m2!3d12.9087246!4d77.5854535!16s%2Fg%2F11c1v00847!19sChIJg0fsxxIVrjsReqTBIiT6HE4"
+    },
+    {
+      "business_name": "Capture Moments Digital Studio",
+      "category": "Photography studio",
+      "address": "158, 34, Wind Tunnel Rd, Old Airport Road, Muniyappa Layout, Vimanapura, Bengaluru, Karnataka 560017",
+      "phone": "09880574553",
+      "website": "",
+      "rating": "4.3",
+      "reviews": "162",
+      "maps_url": "https://www.google.com/maps/place/Capture+Moments+Digital+Studio/data=!4m7!3m6!1s0x3bae152f92a91dc3:0x817e5ebc42b1f568!8m2!3d12.9554778!4d77.6533167!16s%2Fg%2F11hdj9h2nl!19sChIJwx2pki8VrjsRaPWxQrxefoE"
+    },
+    {
+      "business_name": "Tiny Charming Photo Spot.",
+      "category": "Photography service",
+      "address": "45 G F 2nd main, south, Lakkasandra, Bengaluru, Karnataka 560030",
+      "phone": "07406434714",
+      "website": "https://www.instagram.com/tinycharming_photography?igsh=MTR6MTl4Y2c1Z2Nodw==",
+      "rating": "4.8",
+      "reviews": "37",
+      "maps_url": "https://www.google.com/maps/place/Tiny+Charming+Photo+Spot./data=!4m7!3m6!1s0x3bae15bf7218d81d:0xbf9e8d32598bde58!8m2!3d12.943569!4d77.5997268!16s%2Fg%2F11y4yf46tl!19sChIJHdgYcr8VrjsRWN6LWTKNnr8"
+    },
+    {
+      "business_name": "Vivid Candid l Sidphoto.in",
+      "category": "Wedding photographer",
+      "address": "3rd Cross, 1st Block, Ashoka Pillar, 3rd Cross Rd, 1st Block, Jaya Nagar East, Jayanagar, Bengaluru, Karnataka 560011",
+      "phone": "09731828282",
+      "website": "https://www.sidphoto.in/jayanagar-bangalore/",
+      "rating": "4.8",
+      "reviews": "136",
+      "maps_url": "https://www.google.com/maps/place/Vivid+Candid+l+Sidphoto.in/data=!4m7!3m6!1s0x3bae15e143ee4e57:0xf6089fe1893f6c82!8m2!3d12.9436054!4d77.586606!16s%2Fg%2F11vygm507y!19sChIJV07uQ-EVrjsRgmw_ieGfCPY"
+    },
+    {
+      "business_name": "Vivid Candid l Sidphoto.in",
+      "category": "Wedding photographer",
+      "address": "B17, Dairy Colony, Adugodi, Bengaluru, Karnataka 560029",
+      "phone": "09731828282",
+      "website": "http://sidphoto.in/",
+      "rating": "4.8",
+      "reviews": "217",
+      "maps_url": "https://www.google.com/maps/place/Vivid+Candid+l+Sidphoto.in/data=!4m7!3m6!1s0x3bae15b3655e92ef:0xd670c13b4095ba31!8m2!3d12.9369721!4d77.6050897!16s%2Fg%2F11byck34dv!19sChIJ75JeZbMVrjsRMbqVQDvBcNY"
+    },
+    {
+      "business_name": "Camories Photography – HSR Layout Studio | Bangalore",
+      "category": "Photographer",
+      "address": "5/A, 19th Main Rd, Sector 3, HSR Layout, Bengaluru, Karnataka 560102",
+      "phone": "08296264062",
+      "website": "https://www.camories.in/",
+      "rating": "4.3",
+      "reviews": "259",
+      "maps_url": "https://www.google.com/maps/place/Camories+Photography+%E2%80%93+HSR+Layout+Studio+%7C+Bangalore/data=!4m7!3m6!1s0x3bae17fbdb45cc27:0x9583c7bab2604297!8m2!3d12.908238!4d77.6441012!16s%2Fg%2F11b_2rb7bc!19sChIJJ8xF2_sXrjsRl0JgsrrHg5U"
+    },
+    {
+      "business_name": "Artriva Studios",
+      "category": "Photography studio",
+      "address": "355, (2nd Floor, 9th Main Rd, Vidyapeeta Layout, Banashankari 3rd Stage, Banashankari, Bengaluru, Karnataka 560085",
+      "phone": "09886156696",
+      "website": "https://artriva.com/",
+      "rating": "4.7",
+      "reviews": "135",
+      "maps_url": "https://www.google.com/maps/place/Artriva+Studios/data=!4m7!3m6!1s0x3bae3e286315299f:0xf30f92ce01bc84b7!8m2!3d12.930795!4d77.559343!16s%2Fg%2F11fxxtqyw4!19sChIJnykVYyg-rjsRt4S8Ac6SD_M"
+    },
+    {
+      "business_name": "vishnu photography & videography",
+      "category": "Photography studio",
+      "address": "75, 5th Main Rd, Viveknagar Further Extension, Vivek Nagar, Bengaluru, Karnataka 560007",
+      "phone": "07780405425",
+      "website": "https://www.instagram.com/vishnucinematography1/",
+      "rating": "3.3",
+      "reviews": "7",
+      "maps_url": "https://www.google.com/maps/place/vishnu+photography+%26+videography/data=!4m7!3m6!1s0x2558af501e813a25:0x91b780455db63ef0!8m2!3d12.9522574!4d77.6257311!16s%2Fg%2F11wjdf653k!19sChIJJTqBHlCvWCUR8D62XUWAt5E"
+    },
+    {
+      "business_name": "Taperfox Photography Studio Rental",
+      "category": "Photography studio",
+      "address": "Veeme, Sadhana Building, Taperfox Photography Studio 1st Floor, 18th Cross Rd, Eshwara Layout, Bengaluru, Karnataka 560008",
+      "phone": "09187100322",
+      "website": "https://www.taperfox.com/photography-studio-for-rent",
+      "rating": "5.0",
+      "reviews": "2",
+      "maps_url": "https://www.google.com/maps/place/Taperfox+Photography+Studio+Rental/data=!4m7!3m6!1s0x3bae1787cfdd0337:0xe0c54efe33690892!8m2!3d12.9768766!4d77.6321837!16s%2Fg%2F11ynqyrh3s!19sChIJNwPdz4cXrjsRkghpM_5OxeA"
+    },
+    {
+      "business_name": "Bangalore Photographers",
+      "category": "Photography service",
+      "address": "No 65,949 2nd Floor, 3rd Main, 3rd Cross Rd, Hoshalli Extension, Stage 1, Vijayanagar, Bengaluru, Karnataka 560040",
+      "phone": "08073739948",
+      "website": "https://bangalorephotographers.in/",
+      "rating": "4.7",
+      "reviews": "273",
+      "maps_url": "https://www.google.com/maps/place/Bangalore+Photographers/data=!4m7!3m6!1s0x3bae3d727b7b1d63:0x88f580fbed96840e!8m2!3d12.9724527!4d77.543956!16s%2Fg%2F11tcv201w6!19sChIJYx17e3I9rjsRDoSW7fuA9Yg"
+    },
+    {
+      "business_name": "Photo Snap Studio",
+      "category": "Photography studio",
+      "address": "No. 737/1, Kohinoor Square, Malleshpalya Main Rd, Malleshpalya, New Thippasandra, Bengaluru, Karnataka 560075",
+      "phone": "07259888955",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "64",
+      "maps_url": "https://www.google.com/maps/place/Photo+Snap+Studio/data=!4m7!3m6!1s0x3bae11dc8d2492b7:0x75b69697d6bff2ef!8m2!3d12.9734029!4d77.6753848!16s%2Fg%2F11y_psjc6b!19sChIJt5IkjdwRrjsR7_K_1peWtnU"
+    },
+    {
+      "business_name": "Rare Moments Photography studio bangalore",
+      "category": "Photography service",
+      "address": "Thippaiah Complex, Sai Nilayam, 111, Hale Devasandra, Krishnarajapuram, Bengaluru, Karnataka 560036",
+      "phone": "08553789011",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "986",
+      "maps_url": "https://www.google.com/maps/place/Rare+Moments+Photography+studio+bangalore/data=!4m7!3m6!1s0x3bae11070b7c78b7:0x11b65351f551a81a!8m2!3d13.005303!4d77.7028779!16s%2Fg%2F11ptq5m63d!19sChIJt3h8CwcRrjsRGqhR9VFTthE"
+    },
+    {
+      "business_name": "Photo Bangalore",
+      "category": "Photography service",
+      "address": "53/A, 16th C Main Rd, 4th Block, Koramangala, Bengaluru, Karnataka 560034",
+      "phone": "08123884443",
+      "website": "https://photobangalore.com/",
+      "rating": "5.0",
+      "reviews": "15",
+      "maps_url": "https://www.google.com/maps/place/Photo+Bangalore/data=!4m7!3m6!1s0x3bae155c58b53c95:0x5f313bd1fb9e468b!8m2!3d12.9364154!4d77.6265853!16s%2Fg%2F11fj1759md!19sChIJlTy1WFwVrjsRi0ae-9E7MV8"
+    },
+    {
+      "business_name": "PHOTOPOINT STUDIO",
+      "category": "Photography studio",
+      "address": "Photopoint Studio , SR Tower, LG Floor.167/3, Chikkabegur, Manipal County Rd, Bengaluru, Karnataka 560114",
+      "phone": "09187578421",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "157",
+      "maps_url": "https://www.google.com/maps/place/PHOTOPOINT+STUDIO/data=!4m7!3m6!1s0x3bae15423f575f83:0xb50b4d4edcad941!8m2!3d12.879263!4d77.6366955!16s%2Fg%2F11z26bg_h1!19sChIJg19XP0IVrjsRQdnK7dS0UAs"
+    },
+    {
+      "business_name": "Hemanth photo studio",
+      "category": "Photo lab",
+      "address": "No 715, 22nd Cross Rd, near new aaradhya food line, K.R.Road, Banashankari 2nd Stage, Banashankari, Bengaluru, Karnataka 560070",
+      "phone": "09036844500",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "327",
+      "maps_url": "https://www.google.com/maps/place/Hemanth+photo+studio/data=!4m7!3m6!1s0x3bae3f057022febb:0xe75f04ecab81f532!8m2!3d12.9240714!4d77.5735536!16s%2Fg%2F11v0087z_7!19sChIJu_4icAU_rjsRMvWBq-wEX-c"
+    },
+    {
+      "business_name": "Royal Studio Photography & Videography",
+      "category": "Photography studio",
+      "address": "Acharya college, 10,5th Cross, Main Road, Bhuvaneshwari Nagar, RT Nagar, Bengaluru, Karnataka 560032",
+      "phone": "07848008898",
+      "website": "https://royal-photo.vercel.app/",
+      "rating": "4.9",
+      "reviews": "767",
+      "maps_url": "https://www.google.com/maps/place/Royal+Studio+Photography+%26+Videography/data=!4m7!3m6!1s0x3bae17f8b32a5aaf:0xfb7222fd3c31b9bc!8m2!3d13.0348788!4d77.6033278!16s%2Fg%2F11vr55s1td!19sChIJr1oqs_gXrjsRvLkxPP0icvs"
+    },
+    {
+      "business_name": "Right Focus Photo studio",
+      "category": "Photography studio",
+      "address": "New, 3rd Cross Rd, near Thanya Medical, New Baiyyappanahalli Extension, Maruthi Sevanagar, Bengaluru, Karnataka 560038",
+      "phone": "09148555632",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "134",
+      "maps_url": "https://www.google.com/maps/place/Right+Focus+Photo+studio/data=!4m7!3m6!1s0x3bae174736445071:0xdcf890edaf6106ec!8m2!3d12.987576!4d77.6457614!16s%2Fg%2F11vpyx072y!19sChIJcVBENkcXrjsR7AZhr-2Q-Nw"
+    },
+    {
+      "business_name": "Epic photography",
+      "category": "Wedding photographer",
+      "address": "515 1st main, 5th Cross Rd, Mahalingeshwara Layout, Adugodi, Bengaluru, Karnataka 560030",
+      "phone": "09071507474",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "113",
+      "maps_url": "https://www.google.com/maps/place/Epic+photography/data=!4m7!3m6!1s0x3bae155cfe83bd73:0x5ac54e74c522d183!8m2!3d12.9372162!4d77.609235!16s%2Fg%2F11sb94k58j!19sChIJc72D_lwVrjsRg9EixXROxVo"
+    },
+    {
+      "business_name": "Bimba Studio",
+      "category": "Photographer",
+      "address": "14th Main Rd, Lakkasandra, Lakkasandra Extension, Wilson Garden, Bengaluru, Karnataka 560030",
+      "phone": "09986829306",
+      "website": "",
+      "rating": "4.6",
+      "reviews": "123",
+      "maps_url": "https://www.google.com/maps/place/Bimba+Studio/data=!4m7!3m6!1s0x3bae15b7cf6063c5:0xe698ce9b3ee2de6!8m2!3d12.943805!4d77.5985116!16s%2Fg%2F11bbt8bvdt!19sChIJxWNgz7cVrjsR5i3us-mMaQ4"
+    },
+    {
+      "business_name": "Infant Digital Studio",
+      "category": "Photo shop",
+      "address": "1st floor, 38/51, Bazaar St, Rose Garden, Richard Xavier's colony, Neelasandra, Bengaluru, Karnataka 560047",
+      "phone": "09738345554",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "12",
+      "maps_url": "https://www.google.com/maps/place/Infant+Digital+Studio/data=!4m7!3m6!1s0x3bae1431a93a4181:0x7f8c6df8759b7c0!8m2!3d12.9543645!4d77.6158353!16s%2Fg%2F1ptzn4119!19sChIJgUE6qTEUrjsRwLdZh9_G-Ac"
+    },
+    {
+      "business_name": "Karthik Photo Studio, Cyber cafe",
+      "category": "Photography studio",
+      "address": "800, 9th A Main Rd, Stage 2, Hoysala Nagar, Indiranagar, Bengaluru, Karnataka 560038",
+      "phone": "09742859741",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "226",
+      "maps_url": "https://www.google.com/maps/place/Karthik+Photo+Studio,+Cyber+cafe/data=!4m7!3m6!1s0x3bae173514ce6f2f:0x3c3e9b23b37fb715!8m2!3d12.9774505!4d77.6375065!16s%2Fg%2F11v3fzrlq8!19sChIJL2_OFDUXrjsRFbd_syObPjw"
+    },
+    {
+      "business_name": "V2 Focus Studio",
+      "category": "Photography studio",
+      "address": "5/1, 20th Cross Rd, near Sri Rama Temple, Ejipura, Bengaluru, Karnataka 560047",
+      "phone": "09035588140",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "131",
+      "maps_url": "https://www.google.com/maps/place/V2+Focus+Studio/data=!4m7!3m6!1s0x3bae156e2205a81f:0xe17d065087ed91af!8m2!3d12.9445194!4d77.6288722!16s%2Fg%2F11tnyw4dln!19sChIJH6gFIm4VrjsRr5Hth1AGfeE"
+    },
+    {
+      "business_name": "Studio I Clicks",
+      "category": "Photography studio",
+      "address": "22nd Cross Rd, Ejipura Main Rd, Bengaluru, Karnataka 560047",
+      "phone": "09845139313",
+      "website": "",
+      "rating": "4.4",
+      "reviews": "97",
+      "maps_url": "https://www.google.com/maps/place/Studio+I+Clicks/data=!4m7!3m6!1s0x3bae143f7b9383bb:0x6d6a6cd3262fe4e8!8m2!3d12.9433714!4d77.6303756!16s%2Fg%2F11g6x7rscj!19sChIJu4OTez8UrjsR6OQvJtNsam0"
+    },
+    {
+      "business_name": "Soundarya Photo studio",
+      "category": "Photography studio",
+      "address": "1stB crosd, 335, Someshwara Temple Rd, KHB Colony, 7th Block, Koramangala, Bengaluru, Karnataka 560095",
+      "phone": "09449190333",
+      "website": "",
+      "rating": "4.1",
+      "reviews": "183",
+      "maps_url": "https://www.google.com/maps/place/Soundarya+Photo+studio/data=!4m7!3m6!1s0x3bae144e67bfffff:0x29a32da1d2c25f3a!8m2!3d12.9364212!4d77.6145351!16s%2Fg%2F11c0rgfw7r!19sChIJ__-_Z04UrjsROl_C0qEtoyk"
+    },
+    {
+      "business_name": "NEW FOTO INDIA STUDIO AND COLOR LAB",
+      "category": "Photography studio",
+      "address": "AFTER NANDINI MILK PARLOUR, 135,varthur main road, Marathalli Brg, near JOS ALUKAS JEWELLARY, opp. MAHA BAZAR, Bengaluru, Karnataka 560037",
+      "phone": "07829492262",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "2091",
+      "maps_url": "https://www.google.com/maps/place/NEW+FOTO+INDIA+STUDIO+AND+COLOR+LAB/data=!4m7!3m6!1s0x3bae13e7d982f5e3:0xda907b4ee8c39b7f!8m2!3d12.9565252!4d77.7026349!16s%2Fg%2F11gxrvwn3y!19sChIJ4_WC2ecTrjsRf5vD6E57kNo"
+    },
+    {
+      "business_name": "Studio C9",
+      "category": "Photography studio",
+      "address": "1st a, 9c, main 6th sector, Block-6, Sector 6, HSR Layout, Bengaluru, Karnataka 560102",
+      "phone": "09986733641",
+      "website": "https://www.instagram.com/studioc9/",
+      "rating": "4.5",
+      "reviews": "144",
+      "maps_url": "https://www.google.com/maps/place/Studio+C9/data=!4m7!3m6!1s0x3bae14f3b58c9b1d:0x5d3b6f182f7068cc!8m2!3d12.915304!4d77.62643!16s%2Fg%2F11g7zb1h29!19sChIJHZuMtfMUrjsRzGhwLxhvO10"
+    },
+    {
+      "business_name": "A3 Photo Studio",
+      "category": "Photography studio",
+      "address": "Bazaar St, Rose Garden, Vannarpet, Vannarpet Layout, Vivek Nagar, Bengaluru, Karnataka 560047",
+      "phone": "09738060209",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/A3+Photo+Studio/data=!4m7!3m6!1s0x3bae15af789d7ae7:0xf25677dd4539dbb4!8m2!3d12.9542878!4d77.6180489!16s%2Fg%2F11y8l_c9_v!19sChIJ53qdeK8VrjsRtNs5Rd13VvI"
+    },
+    {
+      "business_name": "R P Studios",
+      "category": "Photography service",
+      "address": "109, 60 feet Road, Amco Layout, near kote muthuraya swamy temple, Rajiv Gandhi Nagar, Kodigehalli, Bengaluru, Karnataka 560092",
+      "phone": "06360483781",
+      "website": "https://rpstudios.in/",
+      "rating": "4.8",
+      "reviews": "618",
+      "maps_url": "https://www.google.com/maps/place/R+P+Studios/data=!4m7!3m6!1s0x3bae193ab4d3f325:0xa984515e57324b4d!8m2!3d13.0571675!4d77.5775182!16s%2Fg%2F11fkqyrpnz!19sChIJJfPTtDoZrjsRTUsyV15RhKk"
+    },
+    {
+      "business_name": "VK Photo Click Studio",
+      "category": "Photography studio",
+      "address": "35, Basement, Annapoorna Complex, S End Rd, Vijayarangam Layout, Basavanagudi, Bengaluru, Karnataka 560004",
+      "phone": "08880002425",
+      "website": "",
+      "rating": "4.5",
+      "reviews": "162",
+      "maps_url": "https://www.google.com/maps/place/VK+Photo+Click+Studio/data=!4m7!3m6!1s0x3bae159379765e83:0x59a0c9c950930e97!8m2!3d12.9367564!4d77.5756749!16s%2Fg%2F11b6vc_jwl!19sChIJg152eZMVrjsRlw6TUMnJoFk"
+    },
+    {
+      "business_name": "Flash Digital Photo Studio",
+      "category": "Photo shop",
+      "address": "Vinayak Complex, 198, HAL Old Airport Rd, near Rama Temple Road, opposite Mahalakshmi Temple, BDA Colony, Domlur Village, Domlur, Bengaluru, Karnataka 560071",
+      "phone": "09880424282",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "384",
+      "maps_url": "https://www.google.com/maps/place/Flash+Digital+Photo+Studio/data=!4m7!3m6!1s0x3bae141bdf2642a9:0xb75c04c6f21e5d6b!8m2!3d12.9616594!4d77.6365858!16s%2Fg%2F1tkl1rzb!19sChIJqUIm3xsUrjsRa10e8sYEXLc"
+    },
+    {
+      "business_name": "Grooveab Photography - HQ",
+      "category": "Photographer",
+      "address": "KHB Games Village, Koramangala, Bengaluru, Karnataka 560047",
+      "phone": "09886512503",
+      "website": "http://www.grooveabphotography.in/",
+      "rating": "4.8",
+      "reviews": "201",
+      "maps_url": "https://www.google.com/maps/place/Grooveab+Photography+-+HQ/data=!4m7!3m6!1s0x3bae14387c20cccb:0xc09d762099206f82!8m2!3d12.9462606!4d77.6218629!16s%2Fg%2F11fy4tmz0m!19sChIJy8wgfDgUrjsRgm8gmSB2ncA"
+    },
+    {
+      "business_name": "Vijaya Lakshmi Studio",
+      "category": "Portrait studio",
+      "address": "29, 1st Floor, 20th Main, Maruthi Nagar,Opp Super Gas Station, Madiwala, Bengaluru, Karnataka 560068",
+      "phone": "09448755604",
+      "website": "",
+      "rating": "4.6",
+      "reviews": "758",
+      "maps_url": "https://www.google.com/maps/place/Vijaya+Lakshmi+Studio/data=!4m7!3m6!1s0x3bae14f8a612a147:0x1298626e0fe8ea4e!8m2!3d12.9241003!4d77.6149285!16s%2Fg%2F1vtzfnm8!19sChIJR6ESpvgUrjsRTuroD25imBI"
+    },
+    {
+      "business_name": "Jyothidigital studio",
+      "category": "Photography studio",
+      "address": "shop no 2, 14/1, 22nd Main Rd, near royal super market, 5th Phase, Ayodya Nagar, J P Nagar Phase 5, J. P. Nagar, Bengaluru, Karnataka 560078",
+      "phone": "08088809489",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "680",
+      "maps_url": "https://www.google.com/maps/place/Jyothidigital+studio/data=!4m7!3m6!1s0x3bae159fe376e53b:0xed38840b531b9c80!8m2!3d12.9006889!4d77.5867022!16s%2Fg%2F11mr2r7ptn!19sChIJO-V2458VrjsRgJwbUwuEOO0"
+    },
+    {
+      "business_name": "JK photo studio",
+      "category": "Photography studio",
+      "address": "XJ49+FHV, Bazaar St, Rose Garden, Vannarpet, Yerappa Garden, Neelasandra, Bengaluru, Karnataka 560047",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "5",
+      "maps_url": "https://www.google.com/maps/place/JK+photo+studio/data=!4m7!3m6!1s0x3bae15005588bc51:0x18f985c71c9e3313!8m2!3d12.9562291!4d77.6189172!16s%2Fg%2F11vz7_vhr7!19sChIJUbyIVQAVrjsREzOeHMeF-Rg"
+    },
+    {
+      "business_name": "Rajeshwari Photo Studio",
+      "category": "Photography studio",
+      "address": "16th Main Rd, opp. Mico Layout, Lakshmi Layout, Mahadeshwara Nagar, BTM Layout 2nd Stage, BTM Layout, Bengaluru, Karnataka 560076",
+      "phone": "09886593795",
+      "website": "https://rajeshwariphotos.com/",
+      "rating": "4.8",
+      "reviews": "842",
+      "maps_url": "https://www.google.com/maps/place/Rajeshwari+Photo+Studio/data=!4m7!3m6!1s0x3bae14e2550ec1e7:0x39cc50e0e8543bfc!8m2!3d12.9085541!4d77.61049!16s%2Fg%2F1tlbmlff!19sChIJ58EOVeIUrjsR_DtU6OBQzDk"
+    },
+    {
+      "business_name": "Metro studio photography Bangalore",
+      "category": "Wedding photographer",
+      "address": "Adarash Theater 10, Chinmaya Mission Hospital Rd, behind Gate, laksmipuram, Indiranagar, Bengaluru, Karnataka 560008",
+      "phone": "09980289727",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "1127",
+      "maps_url": "https://www.google.com/maps/place/Metro+studio+photography+Bangalore/data=!4m7!3m6!1s0x3bae16986db774d5:0x983397079bef8358!8m2!3d12.9785557!4d77.6298562!16s%2Fg%2F11ckfl_7wy!19sChIJ1XS3bZgWrjsRWIPvmweXM5g"
+    },
+    {
+      "business_name": "Hi-Tech Videos",
+      "category": "Photography studio",
+      "address": "52, Car St, opp. to Moti mahal apartments, Halasuru, Someshwarpura, Bengaluru, Karnataka 560008",
+      "phone": "09916098875",
+      "website": "http://hitechvideos.in/",
+      "rating": "5.0",
+      "reviews": "3414",
+      "maps_url": "https://www.google.com/maps/place/Hi-Tech+Videos/data=!4m7!3m6!1s0x3bae169b978bb90f:0x5056449464cfc0e3!8m2!3d12.9762391!4d77.6239612!16s%2Fg%2F1tdc873y!19sChIJD7mLl5sWrjsR48DPZJREVlA"
+    },
+    {
+      "business_name": "S S Digital Studio",
+      "category": "Photography studio",
+      "address": "77, G Street, Jogupalyam Main Road, Near-Corporation Boys High School, Ulsoor, Bengaluru, Karnataka 560008",
+      "phone": "08618167376",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "407",
+      "maps_url": "https://www.google.com/maps/place/S+S+Digital+Studio/data=!4m7!3m6!1s0x3bae169f64fb54d1:0xcdc444814ebfda5f!8m2!3d12.9728699!4d77.629879!16s%2Fg%2F1td03h7c!19sChIJ0VT7ZJ8WrjsRX9q_ToFExM0"
+    },
+    {
+      "business_name": "Foto Factory Studio |Bangalore| Wedding|Maternity |Pre wedding|New born",
+      "category": "Wedding photographer",
+      "address": "321 , 4th cross, 7th main, police station road, opposite to bandhan Bank, Vivek Nagar, Bengaluru, Karnataka 560047",
+      "phone": "07975316313",
+      "website": "https://fotofactorystudio.myportfolio.com/",
+      "rating": "4.6",
+      "reviews": "50",
+      "maps_url": "https://www.google.com/maps/place/Foto+Factory+Studio+%7CBangalore%7C+Wedding%7CMaternity+%7CPre+wedding%7CNew+born/data=!4m7!3m6!1s0x3bae1575f2c7717b:0xaa34225cd4452faa!8m2!3d12.9532414!4d77.6227787!16s%2Fg%2F11m5vvktyk!19sChIJe3HH8nUVrjsRqi9F1FwiNKo"
+    },
+    {
+      "business_name": "Swapna Photo Studio",
+      "category": "Photography studio",
+      "address": "6th Cross, 5th Main Rd, S. R. Nagar, Bengaluru, Karnataka 560027",
+      "phone": "09844596107",
+      "website": "http://www.swapnaphotostudio.com/",
+      "rating": "4.9",
+      "reviews": "830",
+      "maps_url": "https://www.google.com/maps/place/Swapna+Photo+Studio/data=!4m7!3m6!1s0x3bae15d8a5c7b477:0x8893a64b5129a7f4!8m2!3d12.9666463!4d77.5916097!16s%2Fg%2F1ptxtcv_6!19sChIJd7THpdgVrjsR9KcpUUumk4g"
+    },
+    {
+      "business_name": "RETRO FOTOGRAPHI",
+      "category": "Photography service",
+      "address": "56, 1st Main Rd, Janatha Colony, Jakkasandra, 1st Block Koramangala, Koramangala, Bengaluru, Karnataka 560034",
+      "phone": "07090102675",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "59",
+      "maps_url": "https://www.google.com/maps/place/RETRO+FOTOGRAPHI/data=!4m7!3m6!1s0x3bae1398c74683a3:0xc795b628bbc50684!8m2!3d12.9238106!4d77.6363341!16s%2Fg%2F11j8c4b4t5!19sChIJo4NGx5gTrjsRhAbFuyi2lcc"
+    },
+    {
+      "business_name": "Heavenly Captured / Photo Studio",
+      "category": "Photography studio",
+      "address": "No. 9A, 24, Old, 39/2, Revenue Layout, Padmanabhanagar, Bengaluru, Karnataka 560070",
+      "phone": "06366304151",
+      "website": "",
+      "rating": "4.8",
+      "reviews": "162",
+      "maps_url": "https://www.google.com/maps/place/Heavenly+Captured+%2F+Photo+Studio/data=!4m7!3m6!1s0x3bae3fb25dd3b273:0x5f9efb4597436141!8m2!3d12.9167239!4d77.5547949!16s%2Fg%2F11w26bjvpd!19sChIJc7LTXbI_rjsRQWFDl0X7nl8"
+    },
+    {
+      "business_name": "Preeti Lab & Studio",
+      "category": "Photography studio",
+      "address": "23/1, Kengal Hanumanthaiah Rd, beside Prasiddhi Silks, Shanti Nagar, Bengaluru, Karnataka 560027",
+      "phone": "",
+      "website": "",
+      "rating": "3.7",
+      "reviews": "98",
+      "maps_url": "https://www.google.com/maps/place/Preeti+Lab+%26+Studio/data=!4m7!3m6!1s0x3bae15d8431a19ff:0x221a991c0f8b148d!8m2!3d12.9589224!4d77.5934945!16s%2Fg%2F1tnbjl33!19sChIJ_xkaQ9gVrjsRjRSLDxyZGiI"
+    },
+    {
+      "business_name": "GK Vale Koramangala",
+      "category": "Photo shop",
+      "address": "Shop No.143\\B, 60 Feet Rd, next to Anand Sweet, KHB Colony, 5th Block, Koramangala, Bengaluru, Karnataka 560095",
+      "phone": "09019730473",
+      "website": "https://www.gkvale.com/",
+      "rating": "4.2",
+      "reviews": "1305",
+      "maps_url": "https://www.google.com/maps/place/GK+Vale+Koramangala/data=!4m7!3m6!1s0x3bae14457ef83777:0xbdf9af5f65930895!8m2!3d12.9371922!4d77.6193845!16s%2Fg%2F1ptw8s1vd!19sChIJdzf4fkUUrjsRlQiTZV-v-b0"
+    },
+    {
+      "business_name": "Twinkle Start Photo Studio",
+      "category": "Photography studio",
+      "address": "43, Adugodi Main Rd, A.N.Gupta Layout, Ayappa Garden, Wilson Garden, Bengaluru, Karnataka 560030",
+      "phone": "",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "3",
+      "maps_url": "https://www.google.com/maps/place/Twinkle+Start+Photo+Studio/data=!4m7!3m6!1s0x3bae150cb2c00a13:0xa3da36d79cdccd3d!8m2!3d12.9497451!4d77.6054246!16s%2Fg%2F11qnt3m29r!19sChIJEwrAsgwVrjsRPc3cnNc22qM"
+    },
+    {
+      "business_name": "GK Vale Jayanagar",
+      "category": "Photography studio",
+      "address": "61/63, 8Th (B) Main Road, 27th Cross, 4th Block, Jayanagar, Bengaluru, Karnataka 560011",
+      "phone": "09364097248",
+      "website": "https://gkvale.com/",
+      "rating": "4.1",
+      "reviews": "2164",
+      "maps_url": "https://www.google.com/maps/place/GK+Vale+Jayanagar/data=!4m7!3m6!1s0x3bae1548411e3863:0xcfdff5b531330bf9!8m2!3d12.9306261!4d77.5828606!16s%2Fg%2F11lj_p4s2y!19sChIJYzgeQUgVrjsR-QszMbX1388"
+    },
+    {
+      "business_name": "theoffbeatdehaati - Rohit Agrawal photography",
+      "category": "Photographer",
+      "address": "1190, 22nd A Cross Rd, Sector 3, HSR Layout, Bengaluru, Karnataka 560102",
+      "phone": "07975674427",
+      "website": "http://theoffbeatdehaati.com/",
+      "rating": "4.9",
+      "reviews": "174",
+      "maps_url": "https://www.google.com/maps/place/theoffbeatdehaati+-+Rohit+Agrawal+photography/data=!4m7!3m6!1s0x3bae151f7beb8be5:0xd64bd2a2c4190c56!8m2!3d12.9093349!4d77.6412758!16s%2Fg%2F11j2xfkcfh!19sChIJ5Yvrex8VrjsRVgwZxKLSS9Y"
+    },
+    {
+      "business_name": "Kodak Digital Photo Studio",
+      "category": "Photo lab",
+      "address": "93/1, 27th Cross Rd, 7th Sector, HSR Layout, Bengaluru, Karnataka 560068",
+      "phone": "09686371573",
+      "website": "",
+      "rating": "4.5",
+      "reviews": "377",
+      "maps_url": "https://www.google.com/maps/place/Kodak+Digital+Photo+Studio/data=!4m7!3m6!1s0x3bae1493f594f7f3:0x5c711a3fbd6727ba!8m2!3d12.9071324!4d77.6351143!16s%2Fg%2F11c0rnpxp9!19sChIJ8_eU9ZMUrjsRuidnvT8acVw"
+    },
+    {
+      "business_name": "Thapasvi Photography",
+      "category": "Photography studio",
+      "address": "248, 3rd Floor, 24th Main Rd, 5th Phase, KR Layout, JP Nagar Phase 6, J. P. Nagar, Bengaluru, Karnataka 560078",
+      "phone": "09108922465",
+      "website": "http://www.thapasviphotography.com/",
+      "rating": "4.9",
+      "reviews": "443",
+      "maps_url": "https://www.google.com/maps/place/Thapasvi+Photography/data=!4m7!3m6!1s0x3bae15cb9d7a7b15:0x55bc50d8f57df92!8m2!3d12.9052277!4d77.5858728!16s%2Fg%2F11k9fmz4p_!19sChIJFXt6ncsVrjsRkt9Xjw3FWwU"
+    },
+    {
+      "business_name": "SS STUDIO SHOP",
+      "category": "Photography studio",
+      "address": "79/3, 7th cross 1st Main Road Bharathi Layout, DRC Post, S.G. Palya, Bengaluru, Karnataka 560029",
+      "phone": "09845217716",
+      "website": "",
+      "rating": "4.4",
+      "reviews": "107",
+      "maps_url": "https://www.google.com/maps/place/SS+STUDIO+SHOP/data=!4m7!3m6!1s0x3bae15acc4face43:0xcb461738df2898e8!8m2!3d12.9289468!4d77.6064851!16s%2Fg%2F11gdknj_5y!19sChIJQ876xKwVrjsR6Jgo3zgXRss"
+    },
+    {
+      "business_name": "Pretty Pictures Photography",
+      "category": "Photography studio",
+      "address": "Siddapura Rd, 1st Block, Jaya Nagar East, Jayanagar, Bengaluru, Karnataka 560011",
+      "phone": "09845277631",
+      "website": "https://www.prettypictures.in/",
+      "rating": "4.8",
+      "reviews": "44",
+      "maps_url": "https://www.google.com/maps/place/Pretty+Pictures+Photography/data=!4m7!3m6!1s0x3bae151f5b228fe9:0x9fcb8224933852a6!8m2!3d12.9448496!4d77.5856303!16s%2Fg%2F11g1rp_z1b!19sChIJ6Y8iWx8VrjsRplI4kySCy58"
+    },
+    {
+      "business_name": "Technozappy Studio",
+      "category": "Photography service",
+      "address": "1st & 2nd Floor, 534, 50 Feet Main Rd, Kumaraswamy Layout 2nd Stage, Kumaraswamy Layout, Bengaluru, Karnataka 560111",
+      "phone": "09019263067",
+      "website": "https://www.technozappy.com/",
+      "rating": "4.9",
+      "reviews": "278",
+      "maps_url": "https://www.google.com/maps/place/Technozappy+Studio/data=!4m7!3m6!1s0x3bae3fd968010d0b:0x957e453f808512c7!8m2!3d12.9057787!4d77.5585398!16s%2Fg%2F11ckrfx34n!19sChIJCw0BaNk_rjsRxxKFgD9FfpU"
+    },
+    {
+      "business_name": "Nakshatra Moments studio",
+      "category": "Photography studio",
+      "address": "208, 6th B cross, Bannerghatta Main Rd, SRS Nagar, Vijaya Bank Layout, Bilekahalli, Bengaluru, Karnataka 560076",
+      "phone": "09663167591",
+      "website": "https://www.facebook.com/nmstudio07/",
+      "rating": "4.8",
+      "reviews": "131",
+      "maps_url": "https://www.google.com/maps/place/Nakshatra+Moments+studio/data=!4m7!3m6!1s0x3bae151a8ba9aa55:0xa9059b0efaf23bd9!8m2!3d12.8928199!4d77.60578!16s%2Fg%2F11gfdchcbl!19sChIJVaqpixoVrjsR2Tvy-g6bBak"
+    },
+    {
+      "business_name": "Mangotree Photography",
+      "category": "Wedding photographer",
+      "address": "152, 1st Cross, 18th Main Rd, near Domlur Flyover, behind Mainland china, Hal II, A' Stage, Indiranagar, Bengaluru, Karnataka 560008",
+      "phone": "09037676061",
+      "website": "https://mangotreewedding.com/",
+      "rating": "4.7",
+      "reviews": "112",
+      "maps_url": "https://www.google.com/maps/place/Mangotree+Photography/data=!4m7!3m6!1s0x3bae1404afa1697d:0x7dbb7b8430eb5ab1!8m2!3d12.9624966!4d77.6421591!16s%2Fg%2F11sgzw9_0c!19sChIJfWmhrwQUrjsRsVrrMIR7u30"
+    },
+    {
+      "business_name": "Pixogrey Studios",
+      "category": "Photography studio",
+      "address": "210/2, 1st Floor, Samad Compound, HBR 1st Main Road, 3rd A Cross Rd, next to HP Petrol Bunk, 3rd Block, Bengaluru, Karnataka 560043",
+      "phone": "07349045857",
+      "website": "http://pixogrey.com/",
+      "rating": "4.9",
+      "reviews": "187",
+      "maps_url": "https://www.google.com/maps/place/Pixogrey+Studios/data=!4m7!3m6!1s0x3bae148538b2905d:0x82dea628b125b681!8m2!3d13.0259835!4d77.6298746!16s%2Fg%2F11gdkwwtp7!19sChIJXZCyOIUUrjsRgbYlsSim3oI"
+    },
+    {
+      "business_name": "Pixcom Studios",
+      "category": "Photography studio",
+      "address": "Shankara Krupa, 43/1, Margosa Rd, opp. to DBS bank, Malleshwaram, Bengaluru, Karnataka 560003",
+      "phone": "09449485601",
+      "website": "https://pixcomstudios.com/",
+      "rating": "4.7",
+      "reviews": "67",
+      "maps_url": "https://www.google.com/maps/place/Pixcom+Studios/data=!4m7!3m6!1s0x4d3f86cb6197c9ab:0xbd5f5c5b290587b6!8m2!3d13.0049865!4d77.5688761!16s%2Fg%2F11lnw1sxmn!19sChIJq8mXYcuGP00RtocFKVtcX70"
+    },
+    {
+      "business_name": "Photo Studio & Xerox",
+      "category": "Photography studio",
+      "address": "Leeman's Complex, Cunningham Rd, Vasanth Nagar, Bengaluru, Karnataka 560001",
+      "phone": "",
+      "website": "",
+      "rating": "4.3",
+      "reviews": "50",
+      "maps_url": "https://www.google.com/maps/place/Photo+Studio+%26+Xerox/data=!4m7!3m6!1s0x3bae17a7e453a3f1:0x7bc150736ee653ce!8m2!3d12.985057!4d77.5963423!16s%2Fg%2F11t1d33x0m!19sChIJ8aNT5KcXrjsRzlPmbnNQwXs"
+    },
+    {
+      "business_name": "vBookmark Photography",
+      "category": "Photography service",
+      "address": "31/5, Shop No.3, 1st Floor Anjaneya Swamy Temple Main Road, Post, near by Shine Bakery, Marappa Garden, Benson Town, Bengaluru, Karnataka 560046",
+      "phone": "09902932009",
+      "website": "",
+      "rating": "4.7",
+      "reviews": "66",
+      "maps_url": "https://www.google.com/maps/place/vBookmark+Photography/data=!4m7!3m6!1s0x3bae165690ef17a5:0x2de59ad8a9bdf984!8m2!3d13.005612!4d77.5986992!16s%2Fg%2F11dz2fjd73!19sChIJpRfvkFYWrjsRhPm9qdia5S0"
+    },
+    {
+      "business_name": "E. G. K. and Son",
+      "category": "Photography studio",
+      "address": "47, Church St, Opposite Hotel Empire, Haridevpur, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001",
+      "phone": "09845593936",
+      "website": "http://egkandson.com/",
+      "rating": "4.4",
+      "reviews": "51",
+      "maps_url": "https://www.google.com/maps/place/E.+G.+K.+and+Son/data=!4m7!3m6!1s0x3bae167c65b0ddaf:0xf5e25ca7ce570117!8m2!3d12.9755658!4d77.6030868!16s%2Fg%2F11c4csmzvq!19sChIJr92wZXwWrjsRFwFXzqdc4vU"
+    },
+    {
+      "business_name": "1Plus1 Studio",
+      "category": "Wedding photographer",
+      "address": "IndiQube Coral, DOS Colony, Jeevan Bima Nagar, Bengaluru, Karnataka 560075",
+      "phone": "07259036962",
+      "website": "http://1plus1studio.com/",
+      "rating": "5.0",
+      "reviews": "89",
+      "maps_url": "https://www.google.com/maps/place/1Plus1+Studio/data=!4m7!3m6!1s0x3bae13755aa3b68f:0xfe5ea533f702823d!8m2!3d12.9675486!4d77.6546198!16s%2Fg%2F11h8m6kc9k!19sChIJj7ajWnUTrjsRPYIC9zOlXv4"
+    },
+    {
+      "business_name": "The Neon Studio",
+      "category": "Photography service",
+      "address": "XJR7+5GM, Kamaraj Rd, Bharati Nagar, Shivaji Nagar, Bengaluru, Karnataka 560042",
+      "phone": "",
+      "website": "",
+      "rating": "",
+      "reviews": "",
+      "maps_url": "https://www.google.com/maps/place/The+Neon+Studio/data=!4m7!3m6!1s0x3bae168cab94c83d:0xadff40202c41857f!8m2!3d12.9904648!4d77.6137915!16s%2Fg%2F11nhj5j_3r!19sChIJPciUq4wWrjsRf4VBLCBA_60"
+    },
+    {
+      "business_name": "Anithalovesphotography",
+      "category": "Photography studio",
+      "address": "1st floor no 2, central avenue, no 84/8, 2nd Main Rd, Guttahalli, Bengaluru, Karnataka 560003",
+      "phone": "09480471561",
+      "website": "",
+      "rating": "4.9",
+      "reviews": "90",
+      "maps_url": "https://www.google.com/maps/place/Anithalovesphotography/data=!4m7!3m6!1s0x3bae1754c865d0bd:0x3ed72d09e9f3f662!8m2!3d12.9992133!4d77.57861!16s%2Fg%2F11lfc_nwcb!19sChIJvdBlyFQXrjsRYvbz6Qkt1z4"
+    },
+    {
+      "business_name": "PRABHAZ PHOTOGRAPHY",
+      "category": "Photography studio",
+      "address": "PRABHAZ PHOTOGRAPHY, 606/77, Dr Rajkumar Rd, 2nd Block, Rajajinagar, Bengaluru, Karnataka 560010",
+      "phone": "09844054037",
+      "website": "",
+      "rating": "4.6",
+      "reviews": "249",
+      "maps_url": "https://www.google.com/maps/place/PRABHAZ+PHOTOGRAPHY/data=!4m7!3m6!1s0x3bae3df330397e03:0xf1e4e35e5b6ea93e!8m2!3d12.993027!4d77.5562594!16s%2Fg%2F11hbhfd8tx!19sChIJA345MPM9rjsRPqluW17j5PE"
+    },
+    {
+      "business_name": "Baby’s Backyard",
+      "category": "Photography service",
+      "address": "645, 12th Cross Rd, PWD Quarters, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",
+      "phone": "08884411511",
+      "website": "https://babysbackyard.in/",
+      "rating": "4.7",
+      "reviews": "480",
+      "maps_url": "https://www.google.com/maps/place/Baby%E2%80%99s+Backyard/data=!4m7!3m6!1s0x3bae150a786ad99d:0x8bb613d7f5b6281d!8m2!3d12.9162506!4d77.6521881!16s%2Fg%2F11kj3wv21b!19sChIJndlqeAoVrjsRHSi29dcTtos"
+    },
+    {
+      "business_name": "Lightdots Photography",
+      "category": "Photography service",
+      "address": "29/1, Viviani Rd, Richards Town, Bengaluru, Karnataka 560005",
+      "phone": "08747898419",
+      "website": "https://www.lightdots.in/",
+      "rating": "5.0",
+      "reviews": "631",
+      "maps_url": "https://www.google.com/maps/place/Lightdots+Photography/data=!4m7!3m6!1s0x3bae16fab68830bd:0xac5523d18309c89c!8m2!3d13.0031697!4d77.617395!16s%2Fg%2F11bwgr0_j8!19sChIJvTCItvoWrjsRnMgJg9EjVaw"
+    },
+    {
+      "business_name": "The Candid Pictures",
+      "category": "Photography studio",
+      "address": "454, 21st Cross Rd, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560011",
+      "phone": "06362621993",
+      "website": "http://www.thecandidpictures.in/",
+      "rating": "4.8",
+      "reviews": "213",
+      "maps_url": "https://www.google.com/maps/place/The+Candid+Pictures/data=!4m7!3m6!1s0x3bae15977a1a65bf:0xbaf8c9d7a24924a5!8m2!3d12.9333296!4d77.5814534!16s%2Fg%2F11bx9py93z!19sChIJv2UaepcVrjsRpSRJotfJ-Lo"
+    },
+    {
+      "business_name": "Piccasu Studio",
+      "category": "Photography studio",
+      "address": "Shop no 6, 1st floor, shopping complex of, NATIONAL GAMES VILLAGE, KHB Games Village, Koramangala, Bengaluru, Karnataka 560047",
+      "phone": "07022288408",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "23",
+      "maps_url": "https://www.google.com/maps/place/Piccasu+Studio/data=!4m7!3m6!1s0x3bae15f10cc60803:0x9e17988187eaeb80!8m2!3d12.9442324!4d77.6234317!16s%2Fg%2F11x07768g2!19sChIJAwjGDPEVrjsRgOvqh4GYF54"
+    },
+    {
+      "business_name": "MangoBox Studio",
+      "category": "Advertising Photographer",
+      "address": "XJ6W+W63 ARR Nest, 2nd Floor, ARR Nest, 2282/A, 6th Cross Kodihalli, 18th A Main Rd, 5th Phase, HAL 2nd Stage, Kodihalli, Bengaluru, Karnataka 560008",
+      "phone": "07899897733",
+      "website": "http://mangobox.studio/",
+      "rating": "4.7",
+      "reviews": "22",
+      "maps_url": "https://www.google.com/maps/place/MangoBox+Studio/data=!4m7!3m6!1s0x3bae140444d12b7b:0x2d2a2fbfa5d2b2e6!8m2!3d12.9621952!4d77.6456914!16s%2Fg%2F11k4b76p1_!19sChIJeyvRRAQUrjsR5rLSpb8vKi0"
+    },
+    {
+      "business_name": "Studio Gaffy",
+      "category": "Photography studio",
+      "address": "68, Surveyor St, Kanakapura, Basavanagudi, Bengaluru, Karnataka 560004",
+      "phone": "09980582298",
+      "website": "http://www.studiogaffy.com/",
+      "rating": "5.0",
+      "reviews": "121",
+      "maps_url": "https://www.google.com/maps/place/Studio+Gaffy/data=!4m7!3m6!1s0x3bae15a8662f2845:0x481ad8b99ccbd617!8m2!3d12.947497!4d77.5774216!16s%2Fg%2F11jzcz1cyt!19sChIJRSgvZqgVrjsRF9bLnLnYGkg"
+    },
+    {
+      "business_name": "Studio6 - Advertising Photography & Video Shoot Studio",
+      "category": "Video production service",
+      "address": "12, 1st C Main Rd, Jakkasandra, 1st Block Koramangala, Koramangala, Bengaluru, Karnataka 560034",
+      "phone": "09986178846",
+      "website": "https://studio6.biz/",
+      "rating": "4.7",
+      "reviews": "166",
+      "maps_url": "https://www.google.com/maps/place/Studio6+-+Advertising+Photography+%26+Video+Shoot+Studio/data=!4m7!3m6!1s0x3bae16a510390c3b:0x881fd7956b6a2427!8m2!3d12.9265364!4d77.6386004!16s%2Fg%2F12jsl5jsp!19sChIJOww5EKUWrjsRJyRqa5XXH4g"
+    },
+    {
+      "business_name": "Zero Gravity Photography - Wedding Photography in Bangalore",
+      "category": "Wedding photographer",
+      "address": "Second floor, Smart Avenue, No 28, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025",
+      "phone": "09840767566",
+      "website": "https://zerogravity.photography/locations/wedding-photographers-in-bangalore/",
+      "rating": "4.5",
+      "reviews": "188",
+      "maps_url": "https://www.google.com/maps/place/Zero+Gravity+Photography+-+Wedding+Photography+in+Bangalore/data=!4m7!3m6!1s0x3bae1795465f3fdd:0xdbaf4480ebc5b885!8m2!3d12.9716327!4d77.6062836!16s%2Fg%2F11n0g98djl!19sChIJ3T9fRpUXrjsRhbjF64BEr9s"
+    },
+    {
+      "business_name": "Pixel Stream Studios",
+      "category": "Photography studio",
+      "address": "Ground Floor, 2959, Krishna Rajendra Rd, near Umamaeshwara Temple, Siddanna Layout, Banashankari 2nd Stage, Banashankari, Bengaluru, Karnataka 560070",
+      "phone": "09886894302",
+      "website": "http://www.pixelstream.in/",
+      "rating": "4.4",
+      "reviews": "223",
+      "maps_url": "https://www.google.com/maps/place/Pixel+Stream+Studios/data=!4m7!3m6!1s0x3bae150bd1c8174d:0x1666cc90176563bb!8m2!3d12.9292761!4d77.5735354!16s%2Fg%2F11s42qk4ry!19sChIJTRfI0QsVrjsRu2NlF5DMZhY"
+    },
+    {
+      "business_name": "GK Vale Church Street",
+      "category": "Photography studio",
+      "address": "#28, Church St, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001",
+      "phone": "09019730471",
+      "website": "http://www.gkvale.com/",
+      "rating": "4.4",
+      "reviews": "1014",
+      "maps_url": "https://www.google.com/maps/place/GK+Vale+Church+Street/data=!4m7!3m6!1s0x3bae167c4f280a6b:0x7910a732263145db!8m2!3d12.9751114!4d77.6039825!16s%2Fg%2F1tph059j!19sChIJawooT3wWrjsR20UxJjKnEHk"
+    },
+    {
+      "business_name": "Sk Photography Bangalore",
+      "category": "Photography studio",
+      "address": "Mallappa Reddy Layout, Koramangala 8th Block, Koramangala, Bengaluru, Karnataka 560095",
+      "phone": "07099214502",
+      "website": "https://www.instagram.com/sk_paparazzo_photography/",
+      "rating": "1.0",
+      "reviews": "1",
+      "maps_url": "https://www.google.com/maps/place/Sk+Photography+Bangalore/data=!4m7!3m6!1s0x3bae155a91ea8389:0x8551758b3e9d5111!8m2!3d12.944167!4d77.6186542!16s%2Fg%2F11wxw6hvcl!19sChIJiYPqkVoVrjsREVGdPot1UYU"
+    },
+    {
+      "business_name": "J P STUDIO",
+      "category": "Photography service",
+      "address": "Victoria Laws, 10/1, near HDFC Bank, Corporation Quarters, Victoria Layout, Bengaluru, Karnataka 560047",
+      "phone": "09901296387",
+      "website": "",
+      "rating": "4.3",
+      "reviews": "15",
+      "maps_url": "https://www.google.com/maps/place/J+P+STUDIO/data=!4m7!3m6!1s0x3bae16773e7dc413:0xa26dea227aab9821!8m2!3d12.9664759!4d77.6144739!16s%2Fg%2F1tp1x7z8!19sChIJE8R9PncWrjsRIZireiLqbaI"
+    },
+    {
+      "business_name": "Dads Moneyy Studio | Green Screen Studio | Photography Studio for Rent | Pod Cast Studio | Recording and Dubbing Studio",
+      "category": "Photography studio",
+      "address": "112/1, 2nd floor, Mangammanapalya Main Rd, above Jolly Auto Parts, Rajiv Gandhi Nagar, 7th Sector, Bommanahalli, Bengaluru, Karnataka 560068",
+      "phone": "09036797773",
+      "website": "http://www.dadsmoneystudio.com/",
+      "rating": "4.8",
+      "reviews": "177",
+      "maps_url": "https://www.google.com/maps/place/Dads+Moneyy+Studio+%7C+Green+Screen+Studio+%7C+Photography+Studio+for+Rent+%7C+Pod+Cast+Studio+%7C+Recording+and+Dubbing+Studio/data=!4m7!3m6!1s0x3bae6bf675b1bac1:0x692bb050d31c784!8m2!3d12.9064811!4d77.6299086!16s%2Fg%2F11h07py9mp!19sChIJwbqxdfZrrjsRhMcxDQW7kgY"
+    },
+    {
+      "business_name": "Salt & Pepper by Studio Ank",
+      "category": "Wedding photographer",
+      "address": "NATASHA GOLF VIEW, 332, 2, 100 Feet Rd, Bengaluru, Karnataka 560071",
+      "phone": "09901116215",
+      "website": "http://www.saltandpepper.pictures/",
+      "rating": "4.8",
+      "reviews": "106",
+      "maps_url": "https://www.google.com/maps/place/Salt+%26+Pepper+by+Studio+Ank/data=!4m7!3m6!1s0x3bae140551e354f1:0x8787006076b4b923!8m2!3d12.958777!4d77.6426471!16s%2Fg%2F1wf208l7!19sChIJ8VTjUQUUrjsRI7m0dmAAh4c"
+    },
+    {
+      "business_name": "Prashanth sonu studio",
+      "category": "Photographer",
+      "address": "162, Khan Bahadur Abdul Rehman Rd, F Kittel Nagar, Austin Town, Neelasandra, Bengaluru, Karnataka 560047",
+      "phone": "09686583881",
+      "website": "",
+      "rating": "5.0",
+      "reviews": "14",
+      "maps_url": "https://www.google.com/maps/place/Prashanth+sonu+studio/data=!4m7!3m6!1s0x3bae150b7d657bbf:0xd3093e3f1259f5ec!8m2!3d12.9597391!4d77.6145321!16s%2Fg%2F11xm89d_zp!19sChIJv3tlfQsVrjsR7PVZEj8-CdM"
+    },
+    {
+      "business_name": "Venture Studios",
+      "category": "Photography studio",
+      "address": "Citi Centre, 28, Church St, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001",
+      "phone": "09364097252",
+      "website": "https://venturephotography.in/",
+      "rating": "4.8",
+      "reviews": "80",
+      "maps_url": "https://www.google.com/maps/place/Venture+Studios/data=!4m7!3m6!1s0x3bae179e2e94ec35:0xddd5a673c61bf71a!8m2!3d12.9750967!4d77.6040523!16s%2Fg%2F11wh6hfx_p!19sChIJNeyULp4XrjsRGvcbxnOm1d0"
+    },
+    {
+      "business_name": "Studio Bangalore",
+      "category": "Portrait studio",
+      "address": "338, 9th Main Rd, Stage 2, Eshwara Layout, Indiranagar, Bengaluru, Karnataka 560008",
+      "phone": "09845005658",
+      "website": "",
+      "rating": "4.6",
+      "reviews": "80",
+      "maps_url": "https://www.google.com/maps/place/Studio+Bangalore/data=!4m7!3m6!1s0x3bae16a306db723f:0xf8dec2256aaad1f3!8m2!3d12.9776126!4d77.6343415!16s%2Fg%2F11g6nbsx5l!19sChIJP3LbBqMWrjsR89GqaiXC3vg"
+    }
+  ]
 }

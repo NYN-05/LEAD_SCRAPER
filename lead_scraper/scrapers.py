@@ -64,14 +64,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .config import ScrapeConfig, project_path
-from .storage import LeadDatabase, export_social_profiles
+from .storage import LeadDatabase, export_social_profiles_from_database
 
 try:
     from playwright.sync_api import TimeoutError as PlaywrightTimeoutError, sync_playwright
 except ImportError:
     PlaywrightTimeoutError = TimeoutError
     sync_playwright = None
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
 from urllib.parse import unquote, urlparse, parse_qs
 from urllib.parse import quote_plus, urljoin, urlunparse
 
@@ -600,6 +600,7 @@ def merge_linkedin_page(record: dict[str, Any], page: dict[str, Any] | None) -> 
     address = person.get("address")
     if isinstance(address, dict):
         location = ", ".join(filter(None, [clean_text(address.get("addressLocality")), clean_text(address.get("addressRegion")), clean_text(address.get("addressCountry"))]))
+        location = _clean_linkedin_location(location)
         if location:
             record["location"] = location
     # The page description is used as an About candidate only when the public
@@ -622,21 +623,35 @@ def merge_instagram_page(record: dict[str, Any], page: dict[str, Any] | None) ->
     identity_text = f"{title} {description}".casefold()
     segment = description if username and f"@{username}".casefold() in identity_text else ""
     if segment:
-        match = re.search(r"([\d,.]+(?:\s?[KMB])?)\s+Followers,\s*([\d,.]+(?:\s?[KMB])?)\s+Following,\s*([\d,.]+(?:\s?[KMB])?)\s+Posts", segment, re.I)
+        identity_region = re.split(
+            r"\bon Instagram\b", segment, maxsplit=1, flags=re.I
+        )[0]
+        match = re.search(r"([\d,.]+(?:\s?[KMB])?)\s+Followers,\s*([\d,.]+(?:\s?[KMB])?)\s+Following,\s*([\d,.]+(?:\s?[KMB])?)\s+Posts", identity_region, re.I)
         if match:
             record["followers"] = match.group(1).replace(" ", "")
             record["following"] = match.group(2).replace(" ", "")
             record["post_count"] = match.group(3).replace(" ", "")
         name_match = re.search(r"^(.+?)\s*\(@" + re.escape(username) + r"\)", title, re.I)
         if name_match:
-            record["full_name"] = clean_text(name_match.group(1).strip(" -|·"))
-        bio_match = re.search(r"Posts\s*[-–—]\s*(?:See Instagram photos and videos from\s+[^:]+:\s*)?[\"“]?(.*)$", segment, re.I)
-        candidate_bio = clean_text(bio_match.group(1).rstrip('\"”')) if bio_match else segment
-        if candidate_bio:
-            record["bio"] = candidate_bio
-        emails = EMAIL_RE.findall(record["bio"])
-        phones = [x for x in PHONE_RE.findall(record["bio"]) if 10 <= len(digits(x)) <= 15]
-        record["email_or_phone"] = ", ".join(unique_strings(emails + phones))
+            record["full_name"] = clean_instagram_display_name(name_match.group(1))
+        elif record.get("full_name"):
+            record["full_name"] = clean_instagram_display_name(record["full_name"])
+        bio_match = re.search(r"\bon Instagram\s*:\s*[\"“]?(.*)$", segment, re.I | re.S)
+        if bio_match:
+            candidate_bio = clean_text(bio_match.group(1)).strip(' \t\r\n"“”')
+            if candidate_bio:
+                record["bio"] = candidate_bio
+        bio = record.get("bio") or ""
+        emails = EMAIL_RE.findall(bio)
+        phones = [x for x in PHONE_RE.findall(bio) if 10 <= len(digits(x)) <= 15]
+        existing = [
+            part.strip()
+            for part in (record.get("email_or_phone") or "").split(",")
+            if part.strip()
+        ]
+        record["email_or_phone"] = ", ".join(
+            unique_strings(existing + emails + phones)
+        )
     record["data_source"] = "public_profile_html+search_result" if record.get("source_snippet") else "public_profile_html"
     record["profile_page_access"] = "public_html_accessible"
     if any(record.get(k) for k in ("full_name", "bio", "followers", "following", "post_count")):
@@ -875,12 +890,109 @@ def _looks_like_person_name(candidate: str) -> bool:
 def _clean_linkedin_headline(value: str) -> str:
     value = re.split(r"\s*(?:\.\.\.|…)\s*", value, maxsplit=1)[0]
     value = re.sub(r"\s*\|\s*LinkedIn.*$", "", value, flags=re.I)
-    return clean_text(value)
+    value = clean_text(value).strip(" -–—|·:")
+    if not re.search(r"[A-Za-z0-9]", value):
+        return ""
+    return value
 
 
 def _clean_linkedin_company(value: str) -> str:
     value = re.split(r"\s*(?:[|·•]|\.\.\.|…)\s*", value, maxsplit=1)[0]
+    value = re.sub(
+        r",\s*(?:ex|former|formerly|prev|previous|previously|now|current|currently)\b.*$",
+        "",
+        value,
+        flags=re.I,
+    )
     return clean_text(value).strip(" ,-")
+
+
+# Administrative regions/countries and major cities seen in public profile
+# snippets. Used only to stop a location segment being stored as a company.
+_KNOWN_PLACES = {
+    "india", "karnataka", "maharashtra", "telangana", "tamil nadu", "kerala",
+    "andhra pradesh", "gujarat", "rajasthan", "punjab", "haryana", "goa",
+    "delhi", "new delhi", "bengaluru", "bangalore", "mumbai", "bombay",
+    "pune", "poona", "hyderabad", "chennai", "madras", "kolkata", "calcutta",
+    "gurugram", "gurgaon", "noida", "ahmedabad", "kochi", "coimbatore",
+    "jaipur", "chandigarh", "indore", "lucknow", "mysuru", "mysore",
+    "canada", "united states", "usa", "united kingdom", "uk", "singapore",
+    "australia", "germany", "france", "netherlands", "ireland", "uae",
+    "united arab emirates", "dubai", "remote",
+    "california", "new york", "texas", "washington", "massachusetts",
+    "illinois", "georgia", "florida", "seattle", "san francisco",
+    "new york city", "london", "toronto", "vancouver", "berlin", "paris",
+}
+_COMPANY_WORDS = (
+    "pvt", "ltd", "llp", "inc", "llc", "corp", "company", "technolog",
+    "solutions", "services", "systems", "labs", "studio", "group",
+    "consult", "analytics", "media", "photograph", "university", "college",
+    "school", "institute",
+)
+
+
+def _normalized_place(value: str) -> str:
+    return re.sub(r"[^a-z ]", " ", value.casefold()).strip()
+
+
+def _is_location_like(value: str) -> bool:
+    """Return True when a whole label is a city/region/country, not a company."""
+    parts = [part.strip() for part in clean_text(value).split(",") if part.strip()]
+    if not 1 <= len(parts) <= 3:
+        return False
+    return all(_normalized_place(part) in _KNOWN_PLACES for part in parts)
+
+
+def _is_location_name(value: str) -> bool:
+    """Recognise a trailing city/region on labels such as ``Tesco, Bengaluru``."""
+    normalized = _normalized_place(value)
+    if not normalized or len(normalized) > 40:
+        return False
+    if normalized in _KNOWN_PLACES:
+        return True
+    if any(word in normalized for word in _COMPANY_WORDS):
+        return False
+    words = value.split()
+    return 1 <= len(words) <= 3 and all(word[:1].isupper() for word in words)
+
+
+def _split_company_location(value: str) -> tuple[str, str]:
+    """Split an optional trailing city from a company label."""
+    value = _clean_linkedin_company(value)
+    if not value:
+        return "", ""
+    parts = [part.strip() for part in value.split(",") if part.strip()]
+    if len(parts) >= 2 and _is_location_name(parts[-1]):
+        return _clean_linkedin_company(", ".join(parts[:-1])), parts[-1]
+    return value, ""
+
+
+def _company_matches_name(company: str, name: str) -> bool:
+    """Reject title segments that merely repeat the person's own name."""
+    company_key = clean_text(company).casefold()
+    name_key = clean_text(name).casefold()
+    return bool(
+        company_key
+        and name_key
+        and (
+            company_key == name_key
+            or company_key in name_key
+            or name_key in company_key
+        )
+    )
+
+
+def _clean_linkedin_location(value: str) -> str:
+    """Keep a place name; discard postal codes and punctuation fragments."""
+    value = clean_text(value).strip(" ,.-")
+    if not value or not re.search(r"[A-Za-z]", value):
+        return ""
+    # A leading postal code may precede a valid place name.
+    value = re.sub(r"^\d{4,8}\s*[, -]\s*(?=[A-Za-z])", "", value)
+    value = clean_text(value).strip(" ,.-")
+    if not re.search(r"[A-Za-z]", value):
+        return ""
+    return value
 
 
 def _is_plausible_company(value: str) -> bool:
@@ -955,9 +1067,20 @@ def parse_linkedin(hit: dict[str, Any] | None, profile_url: str) -> dict[str, An
             record["name"] = candidate
             record["headline"] = _clean_linkedin_headline(parts[1])
             if len(parts) >= 3:
-                company = _clean_linkedin_company(_clean_linkedin_headline(parts[2]))
-                if _is_plausible_company(company):
-                    record["current_company"] = company
+                third = _clean_linkedin_headline(parts[2])
+                if _is_location_like(third):
+                    # Google sometimes appends the location as the third
+                    # title segment; never store it as the current company.
+                    record["location"] = _clean_linkedin_location(third)
+                else:
+                    company, city = _split_company_location(third)
+                    if (
+                        _is_plausible_company(company)
+                        and not _company_matches_name(company, record["name"])
+                    ):
+                        record["current_company"] = company
+                        if city:
+                            record["location"] = _clean_linkedin_location(city)
     elif len(parts) == 1:
         candidate = parts[0]
         if _looks_like_person_name(candidate):
@@ -966,10 +1089,14 @@ def parse_linkedin(hit: dict[str, Any] | None, profile_url: str) -> dict[str, An
     headline = record["headline"]
     company_match = re.search(r"\s+(?:at|@)\s+(.+)$", headline, re.I)
     if not record["current_company"] and company_match:
-        company = _clean_linkedin_company(company_match.group(1))
-        if _is_plausible_company(company):
+        company, city = _split_company_location(company_match.group(1))
+        record["headline"] = headline[:company_match.start()].strip()
+        if _is_plausible_company(company) and not _company_matches_name(
+            company, record["name"]
+        ):
             record["current_company"] = company
-            record["headline"] = headline[:company_match.start()].strip()
+            if city and not record["location"]:
+                record["location"] = _clean_linkedin_location(city)
 
     # Public snippets often expose a compact "Experience: Company" label even
     # when the full profile page is blocked. Require a real separator so
@@ -978,9 +1105,13 @@ def parse_linkedin(hit: dict[str, Any] | None, profile_url: str) -> dict[str, An
         r"(?:^|[·•|;])\s*Experience\s*:\s*([^·•|;\n]{2,80})", body, re.I
     )
     if not record["current_company"] and experience_match:
-        company = _clean_linkedin_company(experience_match.group(1))
-        if _is_plausible_company(company):
+        company, city = _split_company_location(experience_match.group(1))
+        if _is_plausible_company(company) and not _company_matches_name(
+            company, record["name"]
+        ):
             record["current_company"] = company
+            if city and not record["location"]:
+                record["location"] = _clean_linkedin_location(city)
 
     location_match = re.search(
         r"(?:Location|Based in)\s*:?\s*([^·•|;\n]{2,80}?)"
@@ -989,7 +1120,7 @@ def parse_linkedin(hit: dict[str, Any] | None, profile_url: str) -> dict[str, An
         re.I,
     )
     if location_match:
-        record["location"] = location_match.group(1).strip(" ,")
+        record["location"] = _clean_linkedin_location(location_match.group(1))
 
     # Search snippets are not the full LinkedIn About section. Use only prose
     # from an exact, accepted snippet; never invent or pad the field.
@@ -1031,36 +1162,68 @@ def instagram_profile_segment(body: str, username: str) -> tuple[str, str]:
     return "", "profile_not_identifiable_in_search_snippet"
 
 
+IG_NAME_BOILERPLATE = re.compile(r"^See Instagram photos and videos from\s+", re.I)
+IG_TRUNCATED_STATS = re.compile(
+    r"^(?:[A-Za-z]{1,8},\s*)?"
+    r"(?:[\d.,]+\s?[KMB]?\s*(?:Followers?|Following|Posts?)\s*,?\s*)+"
+    r"[-–—]?\s*",
+    re.I,
+)
+
+
+def clean_instagram_display_name(value: str) -> str:
+    """Remove Instagram stats/title boilerplate from a display-name candidate."""
+    value = clean_text(value)
+    # Any stat wrapper ends at the final "Posts - " separator.
+    value = re.sub(r"^.*?\bPosts\s*[-–—]\s*", "", value, flags=re.I)
+    value = IG_NAME_BOILERPLATE.sub("", value)
+    # Snippets can begin mid-stat, e.g. "lowers, 1,573 Following, ...".
+    value = IG_TRUNCATED_STATS.sub("", value)
+    value = value.strip(" -–—:|\"'")
+    if not value or value.casefold() in {
+        "instagram", "photos and videos", "see instagram photos and videos"
+    }:
+        return ""
+    return clean_text(value)
+
+
 def parse_instagram(hit: dict[str, Any] | None, profile_url: str) -> dict[str, Any]:
     username = profile_identifier("instagram", profile_url)
     raw_title = clean_text(hit.get("title")) if hit else ""
     body = clean_text(hit.get("body")) if hit else ""
     segment, status = instagram_profile_segment(body, username) if hit else ("", "profile_url_only_no_public_snippet")
     safe = bool(segment)
+    identity_region = (
+        re.split(r"\bon Instagram\b", segment, maxsplit=1, flags=re.I)[0]
+        if safe
+        else ""
+    )
 
     full_name = ""
     if safe:
-        name_match = re.search(r"([^\n]{2,120}?)\s*\(@" + re.escape(username) + r"\)", segment, re.I)
+        name_match = re.search(
+            r"([^\n]*?)\s*\(@" + re.escape(username) + r"\)",
+            identity_region,
+            re.I,
+        )
         if name_match:
-            candidate = name_match.group(1).strip(" -–—:\"'")
-            # Remove a leading stats wrapper without truncating thousands counts.
-            candidate = re.sub(
-                r"^[\d,.]+(?:\s?[KMB])?\s+Followers,.*?\bPosts\s*[-–—]\s*", "", candidate, flags=re.I
-            )
-            full_name = clean_text(candidate)
+            full_name = clean_instagram_display_name(name_match.group(1))
 
     def metric(label: str) -> str:
         if not safe:
             return ""
-        match = re.search(rf"([\d,.]+(?:\s?[KMB])?)\s+{label}\b", segment, re.I)
+        match = re.search(
+            rf"([\d,.]+(?:\s?[KMB])?)\s+{label}\b", identity_region, re.I
+        )
         return match.group(1).replace(" ", "") if match else ""
 
     bio = ""
     if safe:
-        bio_match = re.search(r"on Instagram:\s*[\"“]?(.*)$", segment, re.I)
-        bio = bio_match.group(1).strip().rstrip("\"”") if bio_match else segment
-        # Avoid retaining the account's metric/name preamble as bio text.
-        bio = re.sub(r"^.*?\bPosts\s*[-–—]\s*", "", bio, flags=re.I)
+        # Only an explicit bio portion of the snippet is retained. The generic
+        # "See Instagram photos and videos from ..." page title is not a bio.
+        bio_match = re.search(r"\bon Instagram\s*:\s*(.+)$", segment, re.I | re.S)
+        if bio_match:
+            bio = clean_text(bio_match.group(1)).strip(' \t\r\n"“”')
 
     emails = EMAIL_RE.findall(bio) if safe else []
     phones: list[str] = []
@@ -1224,10 +1387,28 @@ def run_self_tests() -> None:
     assert ig["post_count"] == "1,234", ig
     assert "9620434357" in ig["email_or_phone"], ig
 
+    boilerplate = parse_instagram(
+        {
+            "title": "Bangalore Photographers (@bangalore.photographers ...",
+            "body": "1,621 Followers, 1,098 Following, 121 Posts - See Instagram "
+            "photos and videos from Bangalore Photographers "
+            "(@bangalore.photographers)",
+        },
+        "https://www.instagram.com/bangalore.photographers/",
+    )
+    assert boilerplate["full_name"] == "Bangalore Photographers", boilerplate
+    assert boilerplate["bio"] == "", boilerplate
+
     linkedin_url = "https://www.linkedin.com/in/jane-doe/"
     li = parse_linkedin({"title": "Jane Doe - Data Scientist at Example Corp | LinkedIn", "body": "Based in Bengaluru"}, linkedin_url)
     assert li["name"] == "Jane Doe", li
     assert li["current_company"] == "Example Corp", li
+    location_only = parse_linkedin(
+        {"title": "Jane Doe - Data Scientist - Bengaluru, Karnataka | LinkedIn", "body": ""},
+        linkedin_url,
+    )
+    assert location_only["current_company"] == "", location_only
+    assert location_only["location"] == "Bengaluru, Karnataka", location_only
     aggregate_title = "Jane Doe - Data Scientist | LinkedIn | John Smith - Engineer | LinkedIn"
     aggregate = parse_linkedin({"title": aggregate_title, "body": ""}, "https://www.linkedin.com/in/unrelated-slug/")
     assert aggregate["verification"] == "rejected_aggregated_or_ambiguous_snippet", aggregate
@@ -1326,6 +1507,14 @@ def main(argv: list[str] | None = None) -> int:
                 database.save_social_profile("linkedin", row)
             for row in instagram:
                 database.save_social_profile("instagram", row)
+            export_social_profiles_from_database(
+                database, project_path(args.output_dir)
+            )
+            # Keep the historical output/ root files in sync so existing scripts,
+            # downloads, and the assignment's documented paths keep working.
+            legacy_output_dir = project_path("output")
+            if Path(config.output_dir).resolve() != legacy_output_dir.resolve():
+                export_social_profiles_from_database(database, legacy_output_dir)
         finally:
             database.close()
 
@@ -1377,13 +1566,6 @@ def main(argv: list[str] | None = None) -> int:
             summary["search_error_categories"][category] = summary["search_error_categories"].get(category, 0) + 1
 
         output_dir = Path(config.output_dir)
-        export_social_profiles(output_dir, linkedin, instagram)
-        # Keep the historical output/ root files in sync so existing scripts,
-        # downloads, and the assignment's documented paths keep working.
-        legacy_output_dir = project_path("output")
-        if output_dir.resolve() != legacy_output_dir.resolve():
-            export_social_profiles(legacy_output_dir, linkedin, instagram)
-
         print("\nSCRAPE SUMMARY")
         print(json.dumps(summary, indent=2, ensure_ascii=False))
         print(f"\nFiles saved to: {output_dir.resolve()}")
@@ -1408,19 +1590,33 @@ class MapsScraper:
         delay: tuple[float, float] = (2.0, 3.5),
         navigation_timeout_ms: int = 30000,
         place_timeout_ms: int = 15000,
+        max_attempts: int = 2,
+        progress: Callable[[str], None] | None = None,
     ) -> None:
         if sync_playwright is None:
             raise RuntimeError("Google Maps scraping requires the 'playwright' package.")
         if delay[0] < 0 or delay[1] < delay[0]:
             raise ValueError("Invalid delay range.")
+        if max_attempts < 1:
+            raise ValueError("max_attempts must be at least 1.")
         self.headless = headless
         self.delay = delay
         self.navigation_timeout_ms = navigation_timeout_ms
         self.place_timeout_ms = place_timeout_ms
+        self.max_attempts = max_attempts
+        self.progress = progress
         self.errors: list[dict] = []
 
     def _sleep(self) -> None:
         time.sleep(random.uniform(*self.delay))
+
+    def _report(self, message: str) -> None:
+        if self.progress is not None:
+            try:
+                self.progress(message)
+            except Exception:
+                # Progress reporting must never interrupt collection.
+                pass
 
     @staticmethod
     def _canonical_maps_url(href: str, base_url: str = "https://www.google.com") -> str:
@@ -1442,7 +1638,7 @@ class MapsScraper:
         absolute = urljoin("https://www.google.com", href)
         parsed = urlparse(absolute)
         host = (parsed.hostname or "").lower()
-        if "google." in host or host.endswith("googleusercontent.com"):
+        if "google." in host and parsed.path.rstrip("/") in {"", "/url"}:
             params = parse_qs(parsed.query)
             target = (params.get("q") or params.get("url") or [""])[0]
             target = unquote(target).strip()
@@ -1462,13 +1658,16 @@ class MapsScraper:
                 )
             )
         if parsed.scheme in {"http", "https"} and parsed.hostname:
+            # Never expose a Maps page as the business's own website.
+            if "google." in host and parsed.path.startswith("/maps"):
+                return ""
             return absolute
         return ""
 
     @classmethod
     def _normalize_record(cls, data: dict) -> dict:
         normalized = {
-            key: str(data.get(key, "") or "").strip()
+            key: ("" if data.get(key) is None else str(data.get(key)).strip())
             for key in (
                 "business_name", "category", "address", "phone", "website",
                 "rating", "reviews",
@@ -1500,6 +1699,56 @@ class MapsScraper:
             pass
         return ""
 
+    @classmethod
+    def _first_text(cls, page, selectors: tuple[str, ...] | list[str]) -> str:
+        for selector in selectors:
+            value = cls._safe_text(page, selector)
+            if value:
+                return value
+        return ""
+
+    @classmethod
+    def _first_attr(
+        cls, page, selectors: tuple[str, ...] | list[str], attribute: str = "aria-label"
+    ) -> str:
+        for selector in selectors:
+            value = cls._safe_attr(page, selector, attribute)
+            if value:
+                return value
+        return ""
+
+    @staticmethod
+    def _strip_label(value: str, label: str) -> str:
+        """Remove Maps accessibility prefixes such as ``Address:``."""
+        return re.sub(
+            rf"^{re.escape(label)}\s*:?\s*", "", (value or "").strip(), flags=re.I
+        ).strip()
+
+    @staticmethod
+    def _parse_rating_value(value: str) -> str:
+        """Return a 1.0-5.0 rating when the accessible label contains one."""
+        value = (value or "").strip()
+        for pattern in (
+            r"([1-5](?:[.,]\d)?)\s*stars?",
+            r"([1-5](?:[.,]\d)?)\s*\(",
+        ):
+            match = re.search(pattern, value, re.I)
+            if match:
+                return match.group(1).replace(",", ".")
+        match = re.fullmatch(r"([1-5](?:[.,]\d)?)", value)
+        return match.group(1).replace(",", ".") if match else ""
+
+    @staticmethod
+    def _parse_review_count(value: str) -> str:
+        """Return review counts as digits, without inventing a missing count."""
+        value = (value or "").strip()
+        match = re.search(r"([\d][\d,]*(?:\.\d+)?)\s+reviews?", value, re.I)
+        if not match:
+            match = re.search(r"\(([\d,]+)\)", value)
+        if not match:
+            return ""
+        return re.sub(r"[^\d]", "", match.group(1))
+
     def _accept_consent_if_present(self, page) -> None:
         for selector in (
             "button:has-text('Accept all')",
@@ -1525,7 +1774,8 @@ class MapsScraper:
                 if attempt + 1 < attempts:
                     self._sleep()
         raise RuntimeError(
-            f"Navigation failed after {attempts} attempt(s): {url}"
+            f"Navigation failed after {attempts} attempt(s): {url} "
+            f"({type(last_error).__name__}: {last_error})"
         ) from last_error
 
     def _collect_urls(self, page, search_query: str, limit: int) -> list[str]:
@@ -1536,19 +1786,24 @@ class MapsScraper:
         self._goto(page, search_url, self.navigation_timeout_ms)
         self._accept_consent_if_present(page)
 
+        # An exact query can redirect straight to a single place page.
+        single = self._canonical_maps_url(page.url)
+        if single:
+            return [single]
+
         feed = page.locator('div[role="feed"]').first
         try:
             feed.wait_for(state="visible", timeout=self.place_timeout_ms)
         except PlaywrightTimeoutError:
-            # Google may open a single place directly instead of a results feed.
-            current = self._canonical_maps_url(page.url)
-            return [current] if "/maps/place/" in current else []
+            single = self._canonical_maps_url(page.url)
+            return [single] if single else []
 
         seen: set[str] = set()
         urls: list[str] = []
         unchanged_rounds = 0
+        max_idle_rounds = 4
 
-        while len(urls) < limit and unchanged_rounds < 5:
+        while len(urls) < limit and unchanged_rounds < max_idle_rounds:
             previous_count = len(urls)
             anchors = feed.locator('a[href*="/maps/place/"]')
             try:
@@ -1566,6 +1821,7 @@ class MapsScraper:
                     if len(urls) >= limit:
                         break
 
+            self._report(f"Scrolling Maps results ({len(urls)} found)")
             if len(urls) >= limit:
                 break
 
@@ -1578,11 +1834,16 @@ class MapsScraper:
 
             try:
                 feed.evaluate("(el) => { el.scrollTop = el.scrollHeight; }")
-                page.wait_for_timeout(1200)
+                page.wait_for_timeout(900)
             except Exception:
                 break
 
-            self._sleep()
+            if len(urls) > previous_count:
+                # New listings loaded: keep the pace respectful.
+                self._sleep()
+            else:
+                # Let lazy content settle before deciding the feed is exhausted.
+                page.wait_for_timeout(500)
             unchanged_rounds = (
                 unchanged_rounds + 1 if len(urls) == previous_count else 0
             )
@@ -1595,55 +1856,87 @@ class MapsScraper:
             url + ("&hl=en" if "?" in url else "?hl=en"),
             self.navigation_timeout_ms,
         )
-        page.locator('div[role="main"]').wait_for(
+        page.locator('div[role="main"] h1').first.wait_for(
             state="visible", timeout=self.place_timeout_ms
         )
         self._sleep()
 
-        name = self._safe_text(page, 'div[role="main"] h1')
-        category = self._safe_text(
-            page, 'button[jsaction*="category"], button.DkEaL'
+        name = self._first_text(
+            page, ('div[role="main"] h1', "h1.DUwDvf", "h1")
+        )
+        if not name:
+            raise RuntimeError("Business name did not render on the place page.")
+
+        category = self._first_text(
+            page,
+            (
+                'button[jsaction*="pane.rating.category"]',
+                'button[jsaction*="category"]',
+                "button.DkEaL",
+            ),
         )
 
-        address_label = self._safe_attr(
-            page, 'button[data-item-id="address"]'
+        address_label = self._first_attr(
+            page, ('[data-item-id="address"]', 'button[data-item-id="address"]')
         )
-        address = re.sub(r"^Address:\s*", "", address_label, flags=re.I).strip()
-
-        phone_item = self._safe_attr(
-            page, 'button[data-item-id^="phone:tel:"]', "data-item-id"
-        )
-        phone = phone_item.replace("phone:tel:", "", 1) if phone_item else ""
-        if not phone:
-            phone_label = self._safe_attr(
-                page, 'button[data-item-id^="phone:tel:"]'
+        address = self._strip_label(address_label, "Address")
+        if not address:
+            address = self._strip_label(
+                self._safe_text(page, '[data-item-id="address"]'), "Address"
             )
-            phone = re.sub(r"^Phone:\s*", "", phone_label, flags=re.I).strip()
 
-        website = self._safe_attr(
-            page, 'a[data-item-id="authority"]', "href"
+        phone_item = self._first_attr(
+            page,
+            (
+                '[data-item-id^="phone:tel:"]',
+                'button[data-item-id^="phone:tel:"]',
+            ),
+            "data-item-id",
+        )
+        phone = (
+            phone_item.split("phone:tel:", 1)[1].strip()
+            if "phone:tel:" in phone_item
+            else ""
+        )
+        if not phone:
+            phone = self._strip_label(
+                self._first_attr(
+                    page,
+                    (
+                        '[data-item-id^="phone:tel:"]',
+                        'button[data-item-id^="phone:tel:"]',
+                    ),
+                ),
+                "Phone",
+            )
+
+        website = self._first_attr(
+            page, ('a[data-item-id="authority"]',), "href"
         )
 
-        rating_label = self._safe_attr(
-            page, 'span[role="img"][aria-label*="star"]'
+        rating_label = self._first_attr(
+            page,
+            (
+                'span[role="img"][aria-label*="star"]',
+                'div.F7nice span[aria-label*="star"]',
+            ),
         )
         if not rating_label:
             rating_label = self._safe_text(page, "div.F7nice")
+        rating = self._parse_rating_value(rating_label)
 
-        rating_match = re.search(r"\b([1-5](?:\.\d)?)\b", rating_label)
-        rating = rating_match.group(1) if rating_match else ""
-
-        review_label = self._safe_attr(
-            page, 'span[aria-label*="review"]'
+        review_label = self._first_attr(
+            page,
+            (
+                'button[jsaction*="moreReviews"]',
+                'span[aria-label*="review"]',
+            ),
         )
-        header_text = self._safe_text(page, "div.F7nice")
-        review_match = re.search(r"([\d,]+)\s+reviews?", review_label, re.I)
-        if not review_match:
-            review_match = re.search(r"\(([\d,]+)\)", header_text)
-        reviews = (
-            review_match.group(1).replace(",", "")
-            if review_match else ""
-        )
+        reviews = self._parse_review_count(review_label)
+        if not reviews:
+            reviews = self._parse_review_count(
+                self._safe_text(page, "div.F7nice")
+            )
 
         return self._normalize_record({
             "business_name": name,
@@ -1658,11 +1951,11 @@ class MapsScraper:
 
     @staticmethod
     def _is_usable_lead(data: dict) -> bool:
-        # Phone, website, rating and review count are optional on Maps.
+        # Phone, website, address, rating and review count are optional on Maps;
+        # missing values are exported as empty strings rather than invented.
         return bool(
             data.get("business_name")
             and data.get("maps_url")
-            and data.get("address")
             and "/maps/place/" in data.get("maps_url", "")
         )
 
@@ -1674,15 +1967,18 @@ class MapsScraper:
         require_complete: bool = True,
     ) -> list[dict]:
         """Scrape up to max_results unique listings; retain per-place errors."""
-        if not keyword.strip() or not location.strip():
+        if not isinstance(keyword, str) or not keyword.strip():
             raise ValueError("Both keyword and location are required.")
-        if max_results < 1:
+        if not isinstance(location, str) or not location.strip():
+            raise ValueError("Both keyword and location are required.")
+        if not isinstance(max_results, int) or isinstance(max_results, bool) or max_results < 1:
             raise ValueError("max_results must be at least 1.")
 
         self.errors = []
         search_query = f"{keyword.strip()} {location.strip()}"
-        # Fetch extra candidates because some listings may lack core fields.
-        candidate_limit = max_results * 3 if require_complete else max_results
+        # Collect a modest buffer so a few unparseable cards do not leave the
+        # run short of the requested number of results.
+        candidate_limit = max_results + min(25, max(5, max_results // 4))
         results: list[dict] = []
         seen: set[str] = set()
 
@@ -1690,6 +1986,7 @@ class MapsScraper:
             browser = None
             context = None
             try:
+                self._report("Starting browser")
                 browser = playwright.chromium.launch(
                     headless=self.headless,
                     timeout=self.navigation_timeout_ms,
@@ -1702,6 +1999,7 @@ class MapsScraper:
                 page = context.new_page()
                 page.set_default_timeout(self.place_timeout_ms)
                 try:
+                    self._report("Searching Google Maps listings")
                     place_urls = self._collect_urls(
                         page, search_query, candidate_limit
                     )
@@ -1713,36 +2011,54 @@ class MapsScraper:
                     })
                     return []
 
-                for place_url in place_urls:
+                if not place_urls:
+                    self._report("No listings found")
+                    return []
+
+                self._report(f"Extracting {len(place_urls)} listing(s)")
+                for index, place_url in enumerate(place_urls, 1):
                     if place_url in seen:
                         continue
                     seen.add(place_url)
 
-                    try:
-                        data = self._normalize_record(
-                            self._parse_place(page, place_url)
-                        )
-                        if require_complete and not self._is_usable_lead(data):
-                            self.errors.append({
-                                "stage": "validation",
-                                "url": place_url,
-                                "error": "Missing business name, address, or Maps URL.",
-                            })
-                            continue
-
-                        results.append(data)
-                        if len(results) >= max_results:
+                    data = None
+                    for attempt in range(1, self.max_attempts + 1):
+                        try:
+                            data = self._normalize_record(
+                                self._parse_place(page, place_url)
+                            )
                             break
+                        except Exception as exc:
+                            if attempt < self.max_attempts:
+                                # Transient loading/network timeouts get one retry.
+                                self._sleep()
+                                continue
+                            self.errors.append({
+                                "stage": "place_extraction",
+                                "url": place_url,
+                                "error": f"{type(exc).__name__}: {exc}",
+                                "attempts": attempt,
+                            })
 
-                    except Exception as exc:
-                        # A single broken listing must not stop the whole run.
+                    if data is None:
+                        continue
+                    if require_complete and not self._is_usable_lead(data):
                         self.errors.append({
-                            "stage": "place_extraction",
+                            "stage": "validation",
                             "url": place_url,
-                            "error": f"{type(exc).__name__}: {exc}",
+                            "error": "Missing business name or canonical Maps URL.",
                         })
                         continue
 
+                    results.append(data)
+                    if index % 5 == 0 or len(results) >= max_results:
+                        self._report(
+                            f"Collected {len(results)} of {max_results} listing(s)"
+                        )
+                    if len(results) >= max_results:
+                        break
+
+                self._report(f"Collected {len(results)} listing(s)")
                 return results
             except Exception as exc:
                 self.errors.append({
@@ -1753,9 +2069,15 @@ class MapsScraper:
                 return results
             finally:
                 if context is not None:
-                    context.close()
+                    try:
+                        context.close()
+                    except Exception:
+                        pass
                 if browser is not None:
-                    browser.close()
+                    try:
+                        browser.close()
+                    except Exception:
+                        pass
 
     def scrape_json(
         self,

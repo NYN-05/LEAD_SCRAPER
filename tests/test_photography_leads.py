@@ -300,5 +300,159 @@ class PhotographyLeadTests(unittest.TestCase):
         self.assertEqual(posts[0]["post_url"], "https://mastodon.example/@a/1")
 
 
+    def test_classification_balanced_hot_warm_cold(self):
+        """Verify HOT, WARM, COLD classification produces realistic distribution."""
+
+        # HOT: Explicit requests to hire, book, or purchase photography services
+        hot_cases = [
+            "Looking to hire a wedding photographer in Bengaluru. Any recommendations?",
+            "Need a photographer for my product launch next week. Budget is flexible.",
+            "Hiring a freelance photographer for corporate event coverage. DM me.",
+            "How much does a wedding photographer cost? Looking for quotes.",
+            "Seeking a newborn photographer for photoshoot in March. Please recommend.",
+            "Book a portrait photographer for family photos this weekend.",
+        ]
+        for text in hot_cases:
+            result = classify_post({"post_text": text})
+            self.assertEqual(result["lead_temperature"], "Hot",
+                             f"Expected Hot for: {text}")
+            self.assertTrue(result["qualified"],
+                            f"Expected qualified for: {text}")
+            self.assertIn("photo", result["intent_evidence"].lower(),
+                          f"Evidence should reference post content: {text}")
+
+        # WARM: Genuine interest, comparisons, recommendations, future plans
+        warm_cases = [
+            "Our wedding is next month and we need photography coverage.",
+            "Planning a birthday party and looking for photography ideas.",
+            "Which is better: wedding photographer A or B? Need comparisons.",
+            "Engagement photoshoot ideas for summer 2027.",
+            "Looking for recommendations for event photographers in Mumbai.",
+            "We are planning a product launch and need photography soon.",
+        ]
+        for text in warm_cases:
+            result = classify_post({"post_text": text})
+            self.assertEqual(result["lead_temperature"], "Warm",
+                             f"Expected Warm for: {text}")
+            self.assertTrue(result["qualified"],
+                            f"Expected qualified for: {text}")
+            self.assertIn("photo", result["intent_evidence"].lower(),
+                          f"Evidence should reference post content: {text}")
+        # COLD: Weak, indirect, or general photography interest without clear intent
+        cold_cases = [
+            "Photography tips and camera settings discussion.",
+            "Just bought a new Canon EOS R5. Love the image quality!",
+            "Beautiful sunset photo I took yesterday.",
+            "Learning portrait photography techniques.",
+            "Camera gear recommendations for beginners.",
+        ]
+        for text in cold_cases:
+            result = classify_post({"post_text": text})
+            self.assertEqual(result["lead_temperature"], "Cold",
+                             f"Expected Cold for: {text}")
+            self.assertFalse(result["qualified"],
+                             f"Expected not qualified for: {text}")
+
+
+    def test_classification_false_positives_and_ambiguous(self):
+        """Test posts that could be misclassified."""
+
+        # Photographer self-promotion (should be Cold)
+        promotion = classify_post({
+            "post_text": "Book me for photography sessions. DM for bookings. Available for weddings and events.",
+        })
+        self.assertFalse(promotion["qualified"])
+
+        # Business name/title style promotion at start of post
+        portfolio = classify_post({
+            "post_text": "Event Photographer Riyadh. Refined interiors and a visual celebration of elegance!",
+        })
+        self.assertFalse(portfolio["qualified"])
+
+        # "Looking for photography clients" - photographer seeking clients
+        provider_hunt = classify_post({
+            "post_title": "Looking for photography clients without random inquiries",
+        })
+        self.assertFalse(provider_hunt["qualified"])
+
+        # Gear discussion (should be Cold)
+        gear = classify_post({
+            "post_title": "Canon 600D for concert photography, need recommendations!",
+        })
+        self.assertFalse(gear["qualified"])
+
+        # Past event recap (should be Cold)
+        recap = classify_post({
+            "post_text": "I spent a recent Saturday photographing an event. Here is my favourite photo from the set.",
+        })
+        self.assertFalse(recap["qualified"])
+
+        # Testimonial / third-party recommendation (should be Cold)
+        testimonial = classify_post({
+            "post_title": "Wedding Photographer Recommendation! DawnPoint Studios",
+        })
+        self.assertFalse(testimonial["qualified"])
+
+        # Ambiguous: mentions photography but no clear intent
+        ambiguous = classify_post({
+            "post_text": "Photography is my passion and I love capturing moments.",
+        })
+        self.assertEqual(ambiguous["lead_temperature"], "Cold")
+        self.assertFalse(ambiguous["qualified"])
+
+        # Ambiguous: asking about photography services but not hiring
+        inquiry = classify_post({
+            "post_text": "What does a photographer actually do at a wedding?",
+        })
+        self.assertEqual(inquiry["lead_temperature"], "Cold")
+        self.assertFalse(inquiry["qualified"])
+
+    def test_classification_evidence_preserved(self):
+        """Verify original post text is preserved as classification evidence."""
+        post_text = "Looking to hire a wedding photographer in Bengaluru. Any recommendations?"
+        result = classify_post({"post_text": post_text})
+        self.assertEqual(result["intent_evidence"], "looking to hire a wedding photographer")
+        self.assertIsNotNone(result["classification_reason"])
+        self.assertIsInstance(result["classification_reason"], str)
+        self.assertGreater(len(result["classification_reason"]), 0)
+
+    def test_classification_database_persistence_and_exports(self):
+        """Verify classification results persist in database."""
+        import tempfile
+        import os
+        from lead_scraper.storage import LeadDatabase
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            db_path = os.path.join(tmpdir, "test_leads.db")
+            db = LeadDatabase(db_path)
+
+            post = {
+                "source": "reddit",
+                "source_post_id": "test123",
+                "post_url": "https://www.reddit.com/r/test/comments/test123/",
+                "post_text": "Looking to hire a wedding photographer in Bengaluru.",
+                "author_name": "test_user",
+                "author_handle": "test_user",
+                "created_at": 1791887997.0,
+                "location": "Bengaluru",
+                "public_contact": "",
+                "query": "wedding photographer",
+            }
+            db.save_post(post)
+            result = classify_post(post)
+            post.update(result)
+            db.save_lead(post)
+
+            # Retrieve and verify persistence
+            leads = db.get_leads()
+            self.assertEqual(len(leads), 1)
+            lead = leads[0]
+            self.assertEqual(lead["lead_temperature"], "Hot")
+            self.assertTrue(lead["qualified"])
+            self.assertEqual(lead["intent_category"], "direct_request")
+            self.assertIn("looking to hire", lead["intent_evidence"].lower())
+            db.conn.close()
+
+
 if __name__ == "__main__":
     unittest.main()
